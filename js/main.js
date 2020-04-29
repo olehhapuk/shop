@@ -1,6 +1,6 @@
 new Glider(document.querySelector('.glider'), {
   slidesToShow: 'auto',
-  itemWidth: 270,
+  itemWidth: 230,
   arrows: {
     prev: '.glider-prev',
     next: '.glider-next'
