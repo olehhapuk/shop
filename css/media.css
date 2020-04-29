@@ -1,0 +1,50 @@
+@media (max-width: 1200px) {
+  .popular__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 970px) {
+  .popular__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 810px) {
+  .popular > .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    margin-right: 0;
+    margin-bottom: 0.7em;
+  }
+
+  .sidebar__header {
+    display: none;
+  }
+
+  .sidebar__toggle {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .sidebar__list:not(.sidebar__list_inner) {
+    margin-top: 1em;
+  }
+
+  .sidebar__list {
+    display: none;
+  }
+
+  .sidebar__list_open {
+    display: block;
+  }
+}
+
+@media (max-width: 730px) {
+  .popular__grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
