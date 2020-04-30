@@ -1,15 +1,22 @@
 new Glider(document.querySelector('.glider'), {
-  slidesToShow: 'auto',
+  slidesToShow: 1,
   itemWidth: 270,
   arrows: {
     prev: '.glider-prev',
     next: '.glider-next'
   },
-  draggable: true,
+  draggable: false,
   scrollLock: true,
   scrollLockDelay: 100,
-  dragVelocity: 1.7,
-  duration: 0.9
+  duration: 0.9,
+  responsive: [
+    {
+      breakpoint: 425,
+      settings: {
+        slidesToShow: 'auto'
+      }
+    }
+  ]
 });
 
 document.querySelector('.sidebar__toggle').addEventListener('click', e => {
