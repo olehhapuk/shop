@@ -25,13 +25,18 @@ document.querySelector('.sidebar__toggle').addEventListener('click', e => {
   target.classList.toggle('sidebar__list_open');
 });
 
-document.querySelector('.sidebar__list-item').addEventListener('click', e => {
-  try {
-    const targetId = e.target.dataset.target;
-    const target = document.getElementById(targetId);
-
-    target.classList.toggle('sidebar__list_open');
-  } catch (error) {
-    return;
-  }
-});
+document.querySelectorAll('.sidebar__list-item').forEach(item => {
+  item.addEventListener('click', e => {
+    console.log(e);
+  
+    try {
+      const targetId = e.target.dataset.target;
+      const target = document.getElementById(targetId);
+  
+      target.classList.toggle('sidebar__list_open');
+      e.target.classList.toggle('sidebar__list-item_open');
+    } catch (error) {
+      return;
+    }
+  });
+})
