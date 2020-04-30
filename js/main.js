@@ -27,8 +27,8 @@ document.querySelector('.sidebar__toggle').addEventListener('click', e => {
 
 document.querySelectorAll('.sidebar__list-item').forEach(item => {
   item.addEventListener('click', e => {
-    console.log(e);
-  
+    console.log(e.target);
+
     try {
       const targetId = e.target.dataset.target;
       const target = document.getElementById(targetId);
@@ -36,7 +36,7 @@ document.querySelectorAll('.sidebar__list-item').forEach(item => {
       target.classList.toggle('sidebar__list_open');
       e.target.classList.toggle('sidebar__list-item_open');
     } catch (error) {
-      return;
+      console.log(error);
     }
   });
 })
