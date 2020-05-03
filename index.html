@@ -12,15 +12,15 @@
   <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
+  <!-- Glider -->
+  <link rel="stylesheet" href="css/glider.min.css">
+
   <!-- User stylesheet -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/media.css">
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-
-  <!-- Glider -->
-  <link rel="stylesheet" href="css/glider.min.css">
 
 </head>
 
@@ -30,7 +30,7 @@
     <!-- Container -->
     <div class="container">
 
-      <a href="#" class="nav__logo">Shop</a>
+      <a href="index.html" class="nav__logo">Shop</a>
 
       <!-- Nav menu -->
       <ul class="nav__menu">
@@ -140,9 +140,18 @@
 
     <!-- Popular -->
     <section class="popular">
-      <h2 class="section-header">Популярные товары</h2>
-
       <div class="container">
+        <h2 class="section-header">Популярные товары</h2>
+
+        <!-- Breadcumbs -->
+        <div class="breadcumbs">
+          <a class="breadcumbs__item breadcumbs__item_active" href="index.html">Домой</a>
+          <a class="breadcumbs__item" href="product.html">Вода</a>
+        </div>
+        <!-- ./Breadcumbs -->
+      </div>
+
+      <div class="container container_flex">
 
         <aside class="sidebar">
           <h3 class="sidebar__header">Категории товаров</h3>
@@ -291,6 +300,7 @@
 
   </main>
 
+  <!-- Footer -->
   <footer class="footer">
     <!-- Container -->
     <div class="container">
@@ -362,6 +372,7 @@
     </div>
     <!-- ./Container -->
   </footer>
+  <!-- ./Footer -->
 
 
 
