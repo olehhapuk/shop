@@ -62,7 +62,7 @@
       <!-- Cart -->
       <div class="cart">
 
-        <table class="cart__items table" cellspacing="0">
+        <table class="cart__items table table_responsive" cellspacing="0">
           <thead>
             <tr>
               <th></th>
@@ -78,31 +78,32 @@
             <tr>
 
               <td>
-                <a class="cart__remove-item" href="remove_item">
-                  <i class="fas fa-times-circle"></i>
-                </a>
-              </td>
-
-              <td>
                 <div class="cart__item-thumbnail">
                   <img src="http://placekitten.com/500" alt="item thumbnail" class="cart__item-thumbnail">
                 </div>
               </td>
 
               <td>
+                <button class="btn cart__remove-item" href="remove_item">
+                  <i class="fas fa-times-circle"></i>
+                  <span>Удалить</span>
+                </button>
+              </td>
+
+              <td aria-label="Товар">
                 <a href="product.html">Кола</a>
               </td>
 
-              <td>
-                30$
+              <td aria-label="Цена">
+                <span>30$</span>
               </td>
 
-              <td>
+              <td aria-label="Количество">
                 <input class="cart__item-count" type="number" min="1" step="1" value="1">
               </td>
 
-              <td>
-                30$
+              <td aria-label="Вместе">
+                <span>30$</span>
               </td>
             </tr>
           </tbody>
