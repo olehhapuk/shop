@@ -25,6 +25,7 @@
 </head>
 
 <body>
+  <header>
   <!-- Navbar -->
   <nav class="nav">
     <!-- Container -->
@@ -53,19 +54,31 @@
 
   </nav>
   <!-- ./Navbar -->
+  </header>
+
+  <div class="container">
+    <!-- Breadcumbs -->
+    <div class="breadcumbs">
+      <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <a itemprop="item" class="breadcumbs__item breadcumbs__item_active" href="index.html"><span itemprop="name">Домой</span></a>
+          <meta itemprop="position" content="1" />
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <a itemprop="item" class="breadcumbs__item" href="product.html"><span itemprop="name">Вода</span></a>
+          <meta itemprop="position" content="2" />
+        </li>
+      </ol>
+    </div>
+    <!-- ./Breadcumbs -->
+  </div>
+
+
 
   <main>
 
     <!-- Product -->
-    <section class="product">
-      <div class="container">
-        <!-- Breadcumbs -->
-        <div class="breadcumbs">
-          <a class="breadcumbs__item breadcumbs__item_active" href="index.html">Домой</a>
-          <a class="breadcumbs__item" href="product.html">Вода</a>
-        </div>
-        <!-- ./Breadcumbs -->
-      </div>
+    <section class="product" itemscope itemtype="https://schema.org/Product">
 
       <div class="container">
 
@@ -82,7 +95,7 @@
                 <!-- Glider slide -->
                 <div>
                   <div class="product__thumbnail">
-                    <img src="https://dummyimage.com/500.jpg" alt="Product thumbnail">
+                    <img src="https://dummyimage.com/500.jpg" alt="Product thumbnail" itemprop="image">
                   </div>
                 </div>
                 <!-- ./Glider slide -->
@@ -90,7 +103,7 @@
                 <!-- Glider slide -->
                 <div>
                   <div class="product__thumbnail">
-                    <img src="https://dummyimage.com/500.jpg" alt="Product thumbnail">
+                    <img src="https://dummyimage.com/500.jpg" alt="Product thumbnail" itemprop="image">
                   </div>
                 </div>
                 <!-- ./Glider slide -->
@@ -98,7 +111,7 @@
                 <!-- Glider slide -->
                 <div>
                   <div class="product__thumbnail">
-                    <img src="https://dummyimage.com/500.jpg" alt="Product thumbnail">
+                    <img src="https://dummyimage.com/500.jpg" alt="Product thumbnail" itemprop="image">
                   </div>
                 </div>
                 <!-- ./Glider slide -->
@@ -116,18 +129,29 @@
 
           <!-- Product col -->
           <div class="product__col product__col_info">
-            <h3 class="product__title">Кола</h3>
+            <h1 class="product__title" itemprop="name">Кола</h1>
             <!-- TODO -->
-            <div class="product__rating">3/5</div>
-            <p class="product__price">$30</p>
+            <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+              <meta itemprop="availability" content="https://schema.org/InStock" />
+              <meta itemprop="priceCurrency" content="CZK" />
+              <p class="product__price"><span itemprop="price">30</span> <span itemprop="priceCurrency">CZK</span></p>
+            </div>
+            <div>Производитель: <span itemprop="brand">coca - cola group</span> </div>
+
             <p class="product__description">
               Краткое описание колы
             </p>
+            <!-- наличие считаю лишним стоит убрать -->
             <p class="product__availability">9 в наличии</p>
             <form class="form product__form">
               <input type="number" class="product__count" min="1" step="1" value="1">
               <button type="submit" class="btn">Добавить в корзину</button>
             </form>
+            <div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+              Рейтинг <span itemprop="ratingValue">4</span>/5
+              основан на <span itemprop="reviewCount">11</span> оценках
+              </div>
+
           </div>
           <!-- ./Product col -->
 
@@ -143,8 +167,31 @@
           </div>
 
           <div class="product__details-text-container">
-            <p class="product__details-text-item" id="detailsDescription">Развернутое описание колы</p>
-            <p class="product__details-text-item" id="detailsInfo">Какая-то информация</p>
+            <p class="product__details-text-item" id="detailsDescription" itemprop="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam doloribus quaerat vero fugit eum perspiciatis voluptas cumque voluptatibus repellendus officiis culpa magnam, ullam beatae nostrum voluptatum veniam eius a nam.</p>
+            <div class="product__details-text-item" id="detailsInfo">
+              <table>
+                <tr>
+                  <th class="product__details-table-property">Свойство</th>
+                  <th class="product__details-table-desc">Описание</th>      
+                </tr>
+                <tr>
+                  <td>Вес</td>
+                  <td>500 грамм</td>
+                </tr>
+                <tr>
+                  <td>Количество</td>
+                  <td>1  штука</td>
+                </tr>
+                <tr>
+                  <td>Размеры</td>
+                  <td>10см * 15см * 25см</td>
+                </tr>
+                <tr>
+                  <td>Производитель</td>
+                  <td>Хер с горы</td>
+                </tr>
+              </table>
+            </div>
             <p class="product__details-text-item" id="detailsReviews">Отзывы</p>
           </div>
         </div>
