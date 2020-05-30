@@ -59,61 +59,60 @@
     <section class="contacts">
       <!-- Container -->
       <div class="container">
-        <!-- Contacts col -->
-        <div class="contacts__col contacts__col_info">
+        <div class="contacts__col contacts__col_info" itemscope itemtype="http://schema.org/Organization">
 
-          <h2 class="contacts__title">Shop</h2>
+
+          <h1 itemprop="name">Дичь убитая веслом</h1>
           <p class="contacts__description">Магазин русских продуктов в Брно</p>
 
-          <!-- Contacts contact -->
-          <span class="contacts__contact">
-            <i class="fas fa-map-marker-alt"></i>
-            <span>Brno Táborská 278</span>
-          </span>
-          <!-- ./Contacts contact -->
+          <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+            <img itemprop="contentUrl" src="ссылка_на_логотип_" alt="Logo">
+            <meta itemprop="width" content="ширина_логотипа_в_пикселях">
+            <meta itemprop="height" content="высота_логотипа_в_пикселях">
+          </div>
+          <link itemprop="url" href="ссылка_на_сайт">
+          <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+            <span class="contacts__contact">
+              <i class="fas fa-map-marker-alt"></i>
+              <span itemprop="streetAddress">Táborská 278</span>, 
+              <span itemprop="addressLocality">Brno</span>, <br>
+              <span itemprop="addressRegion">Juhomoravský kraj</span>, 
+              <span itemprop="addressCountry">Czechia</span>, 
+              <span itemprop="postalCode">615 00</span>
+            </span>
 
-          <!-- Contacts contact -->
+          </div>
+
           <span class="contacts__contact contacts__contact_work-time">
             <i class="far fa-clock"></i>
             <span>
               Время работы:<br>
-              пн-сб с 9:00 до 20:00
+              <time itemprop="openingHours" datetime="Mo-Fr, 9:00−18:00">Пн-Пт, 9:00 – 20:00</time>
             </span>
           </span>
-          <!-- ./Contacts contact -->
 
-          <!-- Contacts contact -->
-          <a class="contacts__contact" href="tel:+420">
+          <a class="contacts__contact" href="tel:+420 420 420 420">
             <i class="fas fa-phone-alt"></i>
-            <span>+420 420 420 420</span>
+            <span itemprop="telephone">+420 420 420 420</span>
           </a>
-          <!-- ./Contacts contact -->
 
-          <!-- Contacts contact -->
           <a class="contacts__contact" href="vk.com" target="_blank">
             <i class="fab fa-vk"></i>
             <span>ВКонтакте</span>
           </a>
-          <!-- ./Contacts contact -->
 
-          <!-- Contacts contact -->
           <a class="contacts__contact" href="instagram.com" target="_blank">
             <i class="fab fa-instagram"></i>
             <span>Инстаграм</span>
           </a>
-          <!-- ./Contacts contact -->
 
-          <!-- Contacts contact -->
           <a class="contacts__contact" href="facebook.com" target="_blank">
             <i class="fab fa-facebook-f"></i>
             <span>Фейсбук</span>
           </a>
-          <!-- ./Contacts contact -->
 
         </div>
-        <!-- ./Contacts col -->
 
-        <!-- Contacts col -->
         <div class="contacts__col contacts__col_map">
 
           <iframe class="contacts__map"
@@ -123,7 +122,6 @@
           </iframe>
 
         </div>
-        <!-- ./Contacts col -->
 
       </div>
       <!-- ./Container -->
