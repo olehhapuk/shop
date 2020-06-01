@@ -85,6 +85,10 @@
             <div>
               <!-- Product card -->
               <article class="product-card" itemscope itemprop="itemListElement" itemtype="http://schema.org/Product">
+                <div class="product-card__discount">
+                  <span class="product-card__discounter">скидка 25%</span>
+                </div>
+
                 <div class="product-card__img">
                   <img src="https://dummyimage.com/700.jpg" alt="" itemprop="image">
                 </div>
@@ -110,6 +114,9 @@
             <div>
               <!-- Product card -->
               <article class="product-card" itemscope itemprop="itemListElement" itemtype="http://schema.org/Product">
+                <div class="product-card__discount">
+                  <span class="product-card__discounter">скидка 25%</span>
+                </div>
                 <div class="product-card__img">
                   <img src="https://dummyimage.com/700.jpg" alt="" itemprop="image">
                 </div>
@@ -265,9 +272,13 @@
             </div>
 
             <nav class="product-card__nav">
-              <a href="product.html" class="product-card__more" itemprop="url">Подробнее</a>
-              <a href="cart.html" class="btn btn_cta product-card__cart">В корзину</a>
+              <a href="product.html" class="product-card__btn product-card__more" itemprop="url">Подробнее</a>
+              <a href="cart.html" class="btn product-card__btn btn_cta product-card__cart">В корзину</a>
             </nav>
+
+            <div class="product-card__excerpt-block">
+              <p class="product-card__excerpt">Краткое описание товара</p>
+            </div>
           </article>
           <!-- ./Product card -->
           
