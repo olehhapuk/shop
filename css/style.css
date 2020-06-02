@@ -8,16 +8,16 @@ html {
   --accent-color_lighter: #328ff3;
   --accent-color_darker: #076cd8;
 
-  --light-color: #ffffff;
+  --light-color: #fff;
   --lighter-color: #a9a9a9;
   --dark-color: #141414;
-  --darker-color: #333333;
+  --darker-color: #333;
 
-  --cta-color: #e64343;
+  /* --cta-color: #ef5350; */
 
-  --border-color: #dddddd;
+  --border-color: #ddd;
 
-  --product-badge-clr: #00c851;
+  --product-badge-clr: #ef5350;
 
   --bg-light: #f5f5f5;
 }
@@ -166,6 +166,7 @@ main {
   font-size: 1.7em;
   margin-top: 2.5em;
   margin-bottom: 1.5em;
+  text-transform: uppercase;
 }
 
 /* ./Section header */
@@ -175,7 +176,7 @@ main {
 /* Badge */
 
 .badge {
-  background: var(--cta-color);
+  background: var(--product-badge-clr);
   color: var(--light-color);
 
   font-size: .7em;
@@ -272,6 +273,12 @@ main {
   font-size: 1.4em;
 }
 
+.product-card__price-old{
+  margin-left: .5em;
+  color: var(--lighter-color);
+  text-decoration: line-through;
+}
+
 .product-card__price {
   margin-top: .5em;
   margin-left: .5em;
@@ -283,6 +290,11 @@ main {
   justify-content: space-around;
   align-items: center;
   padding-bottom: .7em;
+}
+
+.product-card__nav a{
+  text-align: center;
+  justify-content: center;
 }
 
 .product-card__more {
@@ -446,8 +458,16 @@ main {
   display: flex;
 }
 
+.nav a:hover{
+  color: var(--light-color);
+}
+
 .nav__item:not(:last-child) {
   margin-right: 1em;
+}
+
+.nav__link_discount{
+  width: 20px;
 }
 
 .nav__link_cart {
