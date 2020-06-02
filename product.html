@@ -61,11 +61,11 @@
     <div class="breadcumbs">
       <ol itemscope itemtype="http://schema.org/BreadcrumbList">
         <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-          <a itemprop="item" class="breadcumbs__item breadcumbs__item_active" href="index.html"><span itemprop="name">Домой</span></a>
+          <a itemprop="item" class="breadcumbs__item" href="index.html"><span itemprop="name">Домой</span></a>
           <meta itemprop="position" content="1" />
         </li>
         <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-          <a itemprop="item" class="breadcumbs__item" href="product.html"><span itemprop="name">Вода</span></a>
+          <a itemprop="item" class="breadcumbs__item breadcumbs__item_active" href="product.html"><span itemprop="name">Вода</span></a>
           <meta itemprop="position" content="2" />
         </li>
       </ol>
@@ -169,7 +169,7 @@
           <div class="product__details-text-container">
             <p class="product__details-text-item" id="detailsDescription" itemprop="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam doloribus quaerat vero fugit eum perspiciatis voluptas cumque voluptatibus repellendus officiis culpa magnam, ullam beatae nostrum voluptatum veniam eius a nam.</p>
             <div class="product__details-text-item" id="detailsInfo">
-              <table>
+              <table class="table" cellspacing="0">
                 <tr>
                   <th class="product__details-table-property">Свойство</th>
                   <th class="product__details-table-desc">Описание</th>      
@@ -192,7 +192,24 @@
                 </tr>
               </table>
             </div>
-            <p class="product__details-text-item" id="detailsReviews">Отзывы</p>
+            <div class="product__details-text-item" id="detailsReviews">
+              <article class="product__review">
+                Отзыв 1
+              </article>
+              <article class="product__review">
+                Отзыв 2
+              </article>
+              <article class="product__review">
+                Отзыв 3
+              </article>
+
+              <form class="product__review-form">
+                <h3 class="product__review-title">Оставить отзыв</h3>
+                <textarea name="text" cols="30" rows="10"></textarea>
+                <br>
+                <input type="submit" class="btn" value="Оставить отзыв">
+              </form>
+            </dib>
           </div>
         </div>
         <!-- ./Product details -->

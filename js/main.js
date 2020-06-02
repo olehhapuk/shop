@@ -3,6 +3,8 @@ window.addEventListener('load', () => {
   const sidebarToggle = document.querySelector('.sidebar__toggle');
   const sidebarItem = document.querySelectorAll('.sidebar__list-item');
   const accordion = document.querySelectorAll('.product__details-title-item');
+  const deliveryCheckbox = document.querySelector('#deliveryCheckbox');
+  const deliveryInputContainer = document.querySelector('.form__input-container_delivery');
 
   if (glider !== null) {
     new Glider(glider, {
@@ -70,5 +72,9 @@ window.addEventListener('load', () => {
       });
     });
   }
+
+  deliveryCheckbox.addEventListener('change', e => {
+    deliveryInputContainer.style.display = deliveryCheckbox.checked ? 'block' : 'none';
+  });
 
 });
