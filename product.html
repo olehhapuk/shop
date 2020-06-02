@@ -26,34 +26,34 @@
 
 <body>
   <header>
-  <!-- Navbar -->
-  <nav class="nav">
-    <!-- Container -->
-    <div class="container">
+    <!-- Navbar -->
+    <nav class="nav">
+      <!-- Container -->
+      <div class="container">
 
-      <a href="index.html" class="nav__logo">Shop</a>
+        <a href="index.html" class="nav__logo">Shop</a>
 
-      <!-- Nav menu -->
-      <ul class="nav__menu">
+        <!-- Nav menu -->
+        <ul class="nav__menu">
 
-        <li class="nav__item">
-          <a href="contacts.html" class="nav__link">Контакты</a>
-        </li>
+          <li class="nav__item">
+            <a href="contacts.html" class="nav__link">Контакты</a>
+          </li>
 
-        <li class="nav__item">
-          <a href="cart.html" class="nav__link nav__link_cart" aria-describedby="Корзина" title="Корзина">
-            <i class="fas fa-shopping-cart"></i>
-            <sup class="badge">1</sup>
-          </a>
-        </li>
+          <li class="nav__item">
+            <a href="cart.html" class="nav__link nav__link_cart" aria-describedby="Корзина" title="Корзина">
+              <i class="fas fa-shopping-cart"></i>
+              <sup class="badge">1</sup>
+            </a>
+          </li>
 
-      </ul>
-      <!-- ./Nav menu -->
-    </div>
-    <!-- ./Container -->
+        </ul>
+        <!-- ./Nav menu -->
+      </div>
+      <!-- ./Container -->
 
-  </nav>
-  <!-- ./Navbar -->
+    </nav>
+    <!-- ./Navbar -->
   </header>
 
   <div class="container">
@@ -65,7 +65,8 @@
           <meta itemprop="position" content="1" />
         </li>
         <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-          <a itemprop="item" class="breadcumbs__item breadcumbs__item_active" href="product.html"><span itemprop="name">Вода</span></a>
+          <a itemprop="item" class="breadcumbs__item breadcumbs__item_active" href="product.html"><span
+              itemprop="name">Вода</span></a>
           <meta itemprop="position" content="2" />
         </li>
       </ol>
@@ -84,7 +85,7 @@
 
         <!-- Product info -->
         <div class="product__info">
-          
+
           <!-- Product col -->
           <div class="product__col product__col_slider">
 
@@ -115,7 +116,7 @@
                   </div>
                 </div>
                 <!-- ./Glider slide -->
-                
+
               </div>
 
               <button role="button" aria-label="Previous" class="glider-prev">«</button>
@@ -150,7 +151,7 @@
             <div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
               Рейтинг <span itemprop="ratingValue">4</span>/5
               основан на <span itemprop="reviewCount">11</span> оценках
-              </div>
+            </div>
 
           </div>
           <!-- ./Product col -->
@@ -161,18 +162,20 @@
         <!-- Product details -->
         <div class="product__details">
           <div class="product__details-title-container">
-              <button class="product__details-title-item" type="button" data-target="detailsDescription">Описание</button>
-              <button class="product__details-title-item" type="button" data-target="detailsInfo">Характеристики</button>
-              <button class="product__details-title-item" type="button" data-target="detailsReviews">Отзывы</button>
+            <button class="product__details-title-item" type="button" data-target="detailsDescription">Описание</button>
+            <button class="product__details-title-item" type="button" data-target="detailsInfo">Характеристики</button>
+            <button class="product__details-title-item" type="button" data-target="detailsReviews">Отзывы</button>
           </div>
 
           <div class="product__details-text-container">
-            <p class="product__details-text-item" id="detailsDescription" itemprop="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam doloribus quaerat vero fugit eum perspiciatis voluptas cumque voluptatibus repellendus officiis culpa magnam, ullam beatae nostrum voluptatum veniam eius a nam.</p>
+            <p class="product__details-text-item" id="detailsDescription" itemprop="description">Lorem ipsum dolor sit
+              amet consectetur adipisicing elit. Quam doloribus quaerat vero fugit eum perspiciatis voluptas cumque
+              voluptatibus repellendus officiis culpa magnam, ullam beatae nostrum voluptatum veniam eius a nam.</p>
             <div class="product__details-text-item" id="detailsInfo">
               <table class="table" cellspacing="0">
                 <tr>
                   <th class="product__details-table-property">Свойство</th>
-                  <th class="product__details-table-desc">Описание</th>      
+                  <th class="product__details-table-desc">Описание</th>
                 </tr>
                 <tr>
                   <td>Вес</td>
@@ -180,7 +183,7 @@
                 </tr>
                 <tr>
                   <td>Количество</td>
-                  <td>1  штука</td>
+                  <td>1 штука</td>
                 </tr>
                 <tr>
                   <td>Размеры</td>
@@ -192,10 +195,53 @@
                 </tr>
               </table>
             </div>
+
+
             <div class="product__details-text-item" id="detailsReviews">
-              <article class="product__review">
-                Отзыв 1
+
+              <article class="product__review" itemscope itemtype="https://schema.org/Review">
+
+                <meta itemprop="datePublished" content="2012-07-15" />
+                  <h2 itemprop="name">
+                    <link itemprop="url" href="https://example.com/review?10231">
+                  </h2>
+                  <div class="" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    <span class="testimonials__name" itemprop="name">username</span>
+                  </div>
+                  <div>
+                    <div id="reviewStars-input">
+                      <input id="star-4" type="radio" name="reviewStars" />
+                      <label title="gorgeous" for="star-4"></label>
+                      <input id="star-3" type="radio" name="reviewStars" />
+                      <label title="good" for="star-3"></label>
+                      <input id="star-2" type="radio" name="reviewStars" />
+                      <label title="regular" for="star-2"></label>
+                      <input id="star-1" type="radio" name="reviewStars" />
+                      <label title="poor" for="star-1"></label>
+                      <input id="star-0" type="radio" name="reviewStars" />
+                      <label title="bad" for="star-0"></label>
+                    </div>
+                  </div>
+                  <div itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                    <meta itemprop="worstRating" content="1">
+                    <meta itemprop="ratingValue" content="3">
+                    <meta itemprop="bestRating" content="5" />
+                  </div>
+                  <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Product">
+                    <meta itemprop="name" content="Дичь убитая веслом">
+                    <link itemprop="url" href="https://example.ru/" />
+                  </div>
+                  <div>
+                    <p class="testimonials__txt" itemprop="reviewBody">Lorem ipsum dolor sit amet consectetur
+                      adipisicing elit. Dicta vel vitae qui
+                      aliquid cumque
+                      doloribus unde ut quibusdam asperiores. Quam excepturi ab corrupti quos quasi? Non, deserunt
+                      excepturi.
+                      Debitis, vel!</p>
+                  </div>
+
               </article>
+
               <article class="product__review">
                 Отзыв 2
               </article>
@@ -209,12 +255,12 @@
                 <br>
                 <input type="submit" class="btn" value="Оставить отзыв">
               </form>
-            </dib>
+              </dib>
+            </div>
           </div>
+          <!-- ./Product details -->
+
         </div>
-        <!-- ./Product details -->
-  
-      </div>
     </section>
     <!-- ./Product -->
 

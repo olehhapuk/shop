@@ -72,12 +72,13 @@
 
   <main>
 
+    <!-- 1 screen -->
     <div class="container" style="height: calc(100vh - 64px); position: relative;">
       <div class="main-title">
         <h1>Дичь убитая веслом</h1>
         <p>Магазин русских продуктов в Брно</p>
       </div>
-    </div>
+    </div><!-- // 1 screen -->
 
     <!-- Discounts -->
     <section class="discounts" id="discounts">
@@ -176,7 +177,7 @@
               </article>
               <!-- ./Product card -->
             </div>
-            <!-- ./Glider slide --> 
+            <!-- ./Glider slide -->
             <!-- Glider slide -->
             <div>
               <!-- Product card -->
@@ -268,12 +269,10 @@
           <button role="button" aria-label="Previous" class="glider-prev">«</button>
           <button role="button" aria-label="Next" class="glider-next">»</button>
 
-        </div>
-        <!-- ./Slider discounts -->
+        </div><!-- ./Slider discounts -->
 
       </div>
-    </section>
-    <!-- ./Discounts -->
+    </section><!-- //Discounts -->
 
     <!-- Popular -->
     <section class="popular">
@@ -458,8 +457,87 @@
         <!-- ./Grid container -->
 
       </div>
-    </section>
-    <!-- ./Popular -->
+    </section><!-- // Popular -->
+
+    <!-- testimonials -->
+    <section>
+      <div class="container testimonials">
+        <h2 class="section-header">отзывы</h2>
+
+        <!-- обертка -->
+        <div>
+          
+          <!-- отзыв -->
+          <article itemscope itemtype="https://schema.org/Review">
+          <meta itemprop="datePublished" content="2012-07-15"/>
+          <h2 itemprop="name">
+            <link itemprop="url" href="https://example.com/review?10231">
+          </h2>
+          <div class="" itemprop="author" itemscope itemtype="https://schema.org/Person">
+            <span class="testimonials__name" itemprop="name">username</span>
+          </div>
+
+          <div>
+            <div id="reviewStars-input">
+              <input id="star-4" type="radio" name="reviewStars" />
+              <label title="gorgeous" for="star-4"></label>
+
+              <input id="star-3" type="radio" name="reviewStars" />
+              <label title="good" for="star-3"></label>
+
+              <input id="star-2" type="radio" name="reviewStars" />
+              <label title="regular" for="star-2"></label>
+
+              <input id="star-1" type="radio" name="reviewStars" />
+              <label title="poor" for="star-1"></label>
+
+              <input id="star-0" type="radio" name="reviewStars" />
+              <label title="bad" for="star-0"></label>
+            </div>
+          </div>
+
+          <div itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+            <meta itemprop="worstRating" content="1">
+            <meta itemprop="ratingValue" content="3">
+            <meta itemprop="bestRating" content="5"/>
+          </div>
+
+          <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Organization">
+            <meta itemprop="name" content="Дичь убитая веслом">
+            <meta itemprop="telephone" content="420 420 420 420">
+            <link itemprop="url" href="https://example.ru/"/>
+            <meta itemprop="email" content="mail@example.ru">
+            <p itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                <meta itemprop="addressLocality" content="Brno">
+                <meta itemprop="streetAddress" content="Taborska 228">
+            </p>
+        </div>
+
+
+          <div>
+            <p class="testimonials__txt" itemprop="reviewBody">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta vel vitae qui
+              aliquid cumque
+              doloribus unde ut quibusdam asperiores. Quam excepturi ab corrupti quos quasi? Non, deserunt excepturi.
+              Debitis, vel!</p>
+          </div>
+
+          </article><!-- / отзыв -->
+
+        </div><!-- / обертка -->
+
+      </div>
+
+      </div>
+    </section><!-- //testimonials -->
+
+    <!-- ceo_txt  -->
+    <section class="text__block">
+      <p class="text__block_txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis consequuntur, laboriosam
+        optio est placeat quasi facere deleniti quisquam maxime quibusdam impedit vero nobis iste! Excepturi ex
+        aspernatur ad nisi tempore.</p>
+    </section><!-- // ceo_txt  -->
+
+
 
   </main>
 
