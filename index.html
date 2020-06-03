@@ -94,7 +94,7 @@
             <!-- Glider slide -->
             <div>
               <!-- Product card -->
-              <article class="product-card" itemscope itemprop="itemListElement" itemtype="http://schema.org/Product">
+              <article class="product-card" itemscope itemprop="itemListElement" itemprop="position" content="1" itemtype="http://schema.org/Product">
                 <div class="product-card__discount">
                   <span class="product-card__discounter">скидка 25%</span>
                 </div>
@@ -104,16 +104,21 @@
                 </div>
 
                 <h4 class="product-card__title" itemprop="name">Test</h4>
+              
 
                 <div itemscope itemprop="offers" itemtype="http://schema.org/Offer">
+                  <span class="product-card__price-old">500<span> CZK</span></span>
                   <span class="product-card__price" itemprop="price">400</span> <span
                     itemprop="priceCurrency">CZK</span>
                   <meta itemprop="priceCurrency" content="CZK">
                   <meta itemprop="availability" content="https://schema.org/InStock" />
+                  <meta itemprop="priceValidUntil" content="2100-11-20" />
+                  <!-- <span itemprop="position" content="1"></span> -->
+                  <meta itemprop="url" content="https://xyz.ru" />
                 </div>
 
                 <nav class="product-card__nav">
-                  <a href="product.html" class="product-card__btn product-card__more" itemprop="url">Подробнее</a>
+                  <a itemprop="url" href="product.html" class="product-card__btn product-card__more">Подробнее</a>
                   <a href="cart.html" class="btn product-card__btn btn_cta product-card__cart">В корзину</a>
                 </nav>
               </article>
@@ -359,6 +364,9 @@
               <span class="product-card__price" itemprop="price">400</span> <span itemprop="priceCurrency">CZK</span>
               <meta itemprop="priceCurrency" content="CZK">
               <meta itemprop="availability" content="https://schema.org/InStock" />
+              <meta itemprop="priceValidUntil" content="2100-11-20" />
+              <meta itemprop="url" content="https://xyz.ru" />
+
             </div>
 
             <nav class="product-card__nav">
@@ -466,60 +474,61 @@
 
         <!-- обертка -->
         <div>
-          
+
           <!-- отзыв -->
           <article itemscope itemtype="https://schema.org/Review">
-          <meta itemprop="datePublished" content="2012-07-15"/>
-          <h2 itemprop="name">
-            <link itemprop="url" href="https://example.com/review?10231">
-          </h2>
-          <div class="" itemprop="author" itemscope itemtype="https://schema.org/Person">
-            <span class="testimonials__name" itemprop="name">username</span>
-          </div>
-
-          <div>
-            <div id="reviewStars-input">
-              <input id="star-4" type="radio" name="reviewStars" />
-              <label title="gorgeous" for="star-4"></label>
-
-              <input id="star-3" type="radio" name="reviewStars" />
-              <label title="good" for="star-3"></label>
-
-              <input id="star-2" type="radio" name="reviewStars" />
-              <label title="regular" for="star-2"></label>
-
-              <input id="star-1" type="radio" name="reviewStars" />
-              <label title="poor" for="star-1"></label>
-
-              <input id="star-0" type="radio" name="reviewStars" />
-              <label title="bad" for="star-0"></label>
+            <meta itemprop="datePublished" content="2012-07-15" />
+            <h2 itemprop="name">
+              <link itemprop="url" href="https://example.com/review?10231">
+            </h2>
+            <div class="" itemprop="author" itemscope itemtype="https://schema.org/Person">
+              <span class="testimonials__name" itemprop="name">username</span>
             </div>
-          </div>
 
-          <div itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
-            <meta itemprop="worstRating" content="1">
-            <meta itemprop="ratingValue" content="3">
-            <meta itemprop="bestRating" content="5"/>
-          </div>
+            <div>
+              <div id="reviewStars-input">
+                <input id="star-4" type="radio" name="reviewStars" />
+                <label title="gorgeous" for="star-4"></label>
 
-          <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Organization">
-            <meta itemprop="name" content="Дичь убитая веслом">
-            <meta itemprop="telephone" content="420 420 420 420">
-            <link itemprop="url" href="https://example.ru/"/>
-            <meta itemprop="email" content="mail@example.ru">
-            <p itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                <input id="star-3" type="radio" name="reviewStars" />
+                <label title="good" for="star-3"></label>
+
+                <input id="star-2" type="radio" name="reviewStars" />
+                <label title="regular" for="star-2"></label>
+
+                <input id="star-1" type="radio" name="reviewStars" />
+                <label title="poor" for="star-1"></label>
+
+                <input id="star-0" type="radio" name="reviewStars" />
+                <label title="bad" for="star-0"></label>
+              </div>
+            </div>
+
+            <div itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+              <meta itemprop="worstRating" content="1">
+              <meta itemprop="ratingValue" content="3">
+              <meta itemprop="bestRating" content="5" />
+            </div>
+
+            <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Organization">
+              <meta itemprop="name" content="Дичь убитая веслом">
+              <meta itemprop="telephone" content="420 420 420 420">
+              <link itemprop="url" href="https://example.ru/" />
+              <meta itemprop="email" content="mail@example.ru">
+              <p itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
                 <meta itemprop="addressLocality" content="Brno">
                 <meta itemprop="streetAddress" content="Taborska 228">
-            </p>
-        </div>
+              </p>
+            </div>
 
 
-          <div>
-            <p class="testimonials__txt" itemprop="reviewBody">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta vel vitae qui
-              aliquid cumque
-              doloribus unde ut quibusdam asperiores. Quam excepturi ab corrupti quos quasi? Non, deserunt excepturi.
-              Debitis, vel!</p>
-          </div>
+            <div>
+              <p class="testimonials__txt" itemprop="reviewBody">Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Dicta vel vitae qui
+                aliquid cumque
+                doloribus unde ut quibusdam asperiores. Quam excepturi ab corrupti quos quasi? Non, deserunt excepturi.
+                Debitis, vel!</p>
+            </div>
 
           </article><!-- / отзыв -->
 
@@ -536,8 +545,6 @@
         optio est placeat quasi facere deleniti quisquam maxime quibusdam impedit vero nobis iste! Excepturi ex
         aspernatur ad nisi tempore.</p>
     </section><!-- // ceo_txt  -->
-
-
 
   </main>
 
