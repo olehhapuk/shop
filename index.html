@@ -41,12 +41,20 @@
           </li>
 
           <li itemprop="name" class="nav__item">
-            <a itemprop="url" href="contacts.html" class="nav__link">Контакты</a>
+            <a itemprop="url" href="index.html#discounts" class="nav__link">Скидки</a>
+          </li>
+
+          <!-- <li>
+            <a itemprop="url" href="index.html#discounts" class="nav__link" title="discounts">Скидки <img class="nav__link_discount" src="img/sale.svg" alt=""></a>
+          </li> -->
+
+          <li itemprop="name" class="nav__item">
+            <a itemprop="url" href="contacts.html" class="nav__link" title="contacts">Контакты</a>
           </li>
 
           <li itemprop="name" class="nav__item">
             <a itemprop="url" href="cart.html" class="nav__link nav__link_cart" aria-describedby="Корзина"
-              title="Корзина">
+              title="shoping cart">
               <i class="fas fa-shopping-cart"></i>
               <sup class="badge">1</sup>
             </a>
@@ -64,15 +72,16 @@
 
   <main>
 
+    <!-- 1 screen -->
     <div class="container" style="height: calc(100vh - 64px); position: relative;">
       <div class="main-title">
         <h1>Дичь убитая веслом</h1>
-        <p>Магазин русских продуктов</p>
+        <p>Магазин русских продуктов в Брно</p>
       </div>
-    </div>
+    </div><!-- // 1 screen -->
 
     <!-- Discounts -->
-    <section class="discounts">
+    <section class="discounts" id="discounts">
       <div class="container">
 
         <h2 class="section-header">Акция</h2>
@@ -81,31 +90,30 @@
         <!-- Slider discounts -->
         <div class="glider-contain">
 
-          <div class="glider" itemscope itemtype="http://schema.org/ItemList">
+          <div class="glider">
             <!-- Glider slide -->
             <div>
               <!-- Product card -->
-              <article class="product-card" itemscope itemprop="itemListElement" itemtype="http://schema.org/Product">
+              <article class="product-card">
                 <div class="product-card__discount">
                   <span class="product-card__discounter">скидка 25%</span>
                 </div>
 
                 <div class="product-card__img">
-                  <img src="https://dummyimage.com/700.jpg" alt="" itemprop="image">
+                  <img src="https://dummyimage.com/700.jpg" alt="">
                 </div>
 
-                <h4 class="product-card__title" itemprop="name">Test</h4>
+                <h4 class="product-card__title">Test</h4>
+              
 
-                <div itemscope itemprop="offers" itemtype="http://schema.org/Offer">
-                  <span class="product-card__price" itemprop="price">400</span> <span
-                    itemprop="priceCurrency">CZK</span>
-                  <meta itemprop="priceCurrency" content="CZK">
-                  <meta itemprop="availability" content="https://schema.org/InStock" />
+                <div>
+                  <span class="product-card__price-old">500<span> CZK</span></span>
+                  <span class="product-card__price">400</span> <span>CZK</span>
                 </div>
 
                 <nav class="product-card__nav">
-                  <a href="product.html" class="product-card__more" itemprop="url">Подробнее</a>
-                  <a href="cart.html" class="btn btn_cta product-card__cart">В корзину</a>
+                  <a href="product.html" class="product-card__btn product-card__more">Подробнее</a>
+                  <a href="cart.html" class="btn product-card__btn btn_cta product-card__cart">В корзину</a>
                 </nav>
               </article>
               <!-- ./Product card -->
@@ -114,27 +122,26 @@
             <!-- Glider slide -->
             <div>
               <!-- Product card -->
-              <article class="product-card" itemscope itemprop="itemListElement" itemtype="http://schema.org/Product">
+              <article class="product-card">
                 <div class="product-card__discount">
                   <span class="product-card__discounter">скидка 25%</span>
                 </div>
 
                 <div class="product-card__img">
-                  <img src="https://dummyimage.com/700.jpg" alt="" itemprop="image">
+                  <img src="https://dummyimage.com/700.jpg" alt="">
                 </div>
 
-                <h4 class="product-card__title" itemprop="name">Test</h4>
+                <h4 class="product-card__title">Test</h4>
+              
 
-                <div itemscope itemprop="offers" itemtype="http://schema.org/Offer">
-                  <span class="product-card__price" itemprop="price">400</span> <span
-                    itemprop="priceCurrency">CZK</span>
-                  <meta itemprop="priceCurrency" content="CZK">
-                  <meta itemprop="availability" content="https://schema.org/InStock" />
+                <div>
+                  <span class="product-card__price-old">500<span> CZK</span></span>
+                  <span class="product-card__price">400</span> <span>CZK</span>
                 </div>
 
                 <nav class="product-card__nav">
-                  <a href="product.html" class="product-card__more" itemprop="url">Подробнее</a>
-                  <a href="cart.html" class="btn btn_cta product-card__cart">В корзину</a>
+                  <a href="product.html" class="product-card__btn product-card__more">Подробнее</a>
+                  <a href="cart.html" class="btn product-card__btn btn_cta product-card__cart">В корзину</a>
                 </nav>
               </article>
               <!-- ./Product card -->
@@ -143,56 +150,54 @@
             <!-- Glider slide -->
             <div>
               <!-- Product card -->
-              <article class="product-card" itemscope itemprop="itemListElement" itemtype="http://schema.org/Product">
+              <article class="product-card">
                 <div class="product-card__discount">
                   <span class="product-card__discounter">скидка 25%</span>
                 </div>
 
                 <div class="product-card__img">
-                  <img src="https://dummyimage.com/700.jpg" alt="" itemprop="image">
+                  <img src="https://dummyimage.com/700.jpg" alt="">
                 </div>
 
-                <h4 class="product-card__title" itemprop="name">Test</h4>
+                <h4 class="product-card__title">Test</h4>
+              
 
-                <div itemscope itemprop="offers" itemtype="http://schema.org/Offer">
-                  <span class="product-card__price" itemprop="price">400</span> <span
-                    itemprop="priceCurrency">CZK</span>
-                  <meta itemprop="priceCurrency" content="CZK">
-                  <meta itemprop="availability" content="https://schema.org/InStock" />
+                <div>
+                  <span class="product-card__price-old">500<span> CZK</span></span>
+                  <span class="product-card__price">400</span> <span>CZK</span>
                 </div>
 
                 <nav class="product-card__nav">
-                  <a href="product.html" class="product-card__more" itemprop="url">Подробнее</a>
-                  <a href="cart.html" class="btn btn_cta product-card__cart">В корзину</a>
+                  <a href="product.html" class="product-card__btn product-card__more">Подробнее</a>
+                  <a href="cart.html" class="btn product-card__btn btn_cta product-card__cart">В корзину</a>
                 </nav>
               </article>
               <!-- ./Product card -->
             </div>
-            <!-- ./Glider slide --> 
+            <!-- ./Glider slide -->
             <!-- Glider slide -->
             <div>
               <!-- Product card -->
-              <article class="product-card" itemscope itemprop="itemListElement" itemtype="http://schema.org/Product">
+              <article class="product-card">
                 <div class="product-card__discount">
                   <span class="product-card__discounter">скидка 25%</span>
                 </div>
 
                 <div class="product-card__img">
-                  <img src="https://dummyimage.com/700.jpg" alt="" itemprop="image">
+                  <img src="https://dummyimage.com/700.jpg" alt="">
                 </div>
 
-                <h4 class="product-card__title" itemprop="name">Test</h4>
+                <h4 class="product-card__title">Test</h4>
+              
 
-                <div itemscope itemprop="offers" itemtype="http://schema.org/Offer">
-                  <span class="product-card__price" itemprop="price">400</span> <span
-                    itemprop="priceCurrency">CZK</span>
-                  <meta itemprop="priceCurrency" content="CZK">
-                  <meta itemprop="availability" content="https://schema.org/InStock" />
+                <div>
+                  <span class="product-card__price-old">500<span> CZK</span></span>
+                  <span class="product-card__price">400</span> <span>CZK</span>
                 </div>
 
                 <nav class="product-card__nav">
-                  <a href="product.html" class="product-card__more" itemprop="url">Подробнее</a>
-                  <a href="cart.html" class="btn btn_cta product-card__cart">В корзину</a>
+                  <a href="product.html" class="product-card__btn product-card__more">Подробнее</a>
+                  <a href="cart.html" class="btn product-card__btn btn_cta product-card__cart">В корзину</a>
                 </nav>
               </article>
               <!-- ./Product card -->
@@ -202,26 +207,26 @@
             <!-- Glider slide -->
             <div>
               <!-- Product card -->
-              <article class="product-card" itemscope itemprop="itemListElement" itemtype="http://schema.org/Product">
+              <article class="product-card">
                 <div class="product-card__discount">
                   <span class="product-card__discounter">скидка 25%</span>
                 </div>
+
                 <div class="product-card__img">
-                  <img src="https://dummyimage.com/700.jpg" alt="" itemprop="image">
+                  <img src="https://dummyimage.com/700.jpg" alt="">
                 </div>
 
-                <h4 class="product-card__title" itemprop="name">Test</h4>
+                <h4 class="product-card__title">Test</h4>
+              
 
-                <div itemscope itemprop="offers" itemtype="http://schema.org/Offer">
-                  <span class="product-card__price" itemprop="price">400</span> <span
-                    itemprop="priceCurrency">CZK</span>
-                  <meta itemprop="priceCurrency" content="CZK">
-                  <meta itemprop="availability" content="https://schema.org/InStock" />
+                <div>
+                  <span class="product-card__price-old">500<span> CZK</span></span>
+                  <span class="product-card__price">400</span> <span>CZK</span>
                 </div>
 
                 <nav class="product-card__nav">
-                  <a href="product.html" class="product-card__more" itemprop="url">Подробнее</a>
-                  <a href="cart.html" class="btn btn_cta product-card__cart">В корзину</a>
+                  <a href="product.html" class="product-card__btn product-card__more">Подробнее</a>
+                  <a href="cart.html" class="btn product-card__btn btn_cta product-card__cart">В корзину</a>
                 </nav>
               </article>
               <!-- ./Product card -->
@@ -231,23 +236,26 @@
             <!-- Glider slide -->
             <div>
               <!-- Product card -->
-              <article class="product-card" itemscope itemprop="itemListElement" itemtype="http://schema.org/Product">
-                <div class="product-card__img">
-                  <img src="https://dummyimage.com/700.jpg" alt="" itemprop="image">
+              <article class="product-card">
+                <div class="product-card__discount">
+                  <span class="product-card__discounter">скидка 25%</span>
                 </div>
 
-                <h4 class="product-card__title" itemprop="name">Test</h4>
+                <div class="product-card__img">
+                  <img src="https://dummyimage.com/700.jpg" alt="">
+                </div>
 
-                <div itemscope itemprop="offers" itemtype="http://schema.org/Offer">
-                  <span class="product-card__price" itemprop="price">400</span> <span
-                    itemprop="priceCurrency">CZK</span>
-                  <meta itemprop="priceCurrency" content="CZK">
-                  <meta itemprop="availability" content="https://schema.org/InStock" />
+                <h4 class="product-card__title">Test</h4>
+              
+
+                <div>
+                  <span class="product-card__price-old">500<span> CZK</span></span>
+                  <span class="product-card__price">400</span> <span>CZK</span>
                 </div>
 
                 <nav class="product-card__nav">
-                  <a href="product.html" class="product-card__more" itemprop="url">Подробнее</a>
-                  <a href="cart.html" class="btn btn_cta product-card__cart">В корзину</a>
+                  <a href="product.html" class="product-card__btn product-card__more">Подробнее</a>
+                  <a href="cart.html" class="btn product-card__btn btn_cta product-card__cart">В корзину</a>
                 </nav>
               </article>
               <!-- ./Product card -->
@@ -260,12 +268,10 @@
           <button role="button" aria-label="Previous" class="glider-prev">«</button>
           <button role="button" aria-label="Next" class="glider-next">»</button>
 
-        </div>
-        <!-- ./Slider discounts -->
+        </div><!-- ./Slider discounts -->
 
       </div>
-    </section>
-    <!-- ./Discounts -->
+    </section><!-- //Discounts -->
 
     <!-- Popular -->
     <section class="popular">
@@ -335,110 +341,128 @@
 
 
         <!-- Grid container -->
-        <div class="popular__grid" itemscope itemtype="http://schema.org/ItemList">
+        <div class="popular__grid">
           <!-- Product card -->
-          <article class="product-card" itemscope itemprop="itemListElement" itemtype="http://schema.org/Product">
-            <div class="product-card__img">
-              <img src="https://dummyimage.com/700.jpg" alt="" itemprop="image">
+          <article class="product-card">
+            <div class="product-card__discount">
+              <span class="product-card__discounter">скидка 25%</span>
             </div>
 
-            <h4 class="product-card__title" itemprop="name">Test</h4>
+            <div class="product-card__img">
+              <img src="https://dummyimage.com/700.jpg" alt="">
+            </div>
 
-            <div itemscope itemprop="offers" itemtype="http://schema.org/Offer">
-              <span class="product-card__price" itemprop="price">400</span> <span itemprop="priceCurrency">CZK</span>
-              <meta itemprop="priceCurrency" content="CZK">
-              <meta itemprop="availability" content="https://schema.org/InStock" />
+            <h4 class="product-card__title">Test</h4>
+          
+
+            <div>
+              <span class="product-card__price-old">500<span> CZK</span></span>
+              <span class="product-card__price">400</span> <span>CZK</span>
             </div>
 
             <nav class="product-card__nav">
-              <a href="product.html" class="product-card__btn product-card__more" itemprop="url">Подробнее</a>
+              <a href="product.html" class="product-card__btn product-card__more">Подробнее</a>
               <a href="cart.html" class="btn product-card__btn btn_cta product-card__cart">В корзину</a>
             </nav>
-
-
           </article>
           <!-- ./Product card -->
 
           <!-- Product card -->
-          <article class="product-card" itemscope itemprop="itemListElement" itemtype="http://schema.org/Product">
-            <div class="product-card__img">
-              <img src="https://dummyimage.com/700.jpg" alt="" itemprop="image">
+          <article class="product-card">
+            <div class="product-card__discount">
+              <span class="product-card__discounter">скидка 25%</span>
             </div>
 
-            <h4 class="product-card__title" itemprop="name">Test</h4>
+            <div class="product-card__img">
+              <img src="https://dummyimage.com/700.jpg" alt="">
+            </div>
 
-            <div itemscope itemprop="offers" itemtype="http://schema.org/Offer">
-              <span class="product-card__price" itemprop="price">400</span> <span itemprop="priceCurrency">CZK</span>
-              <meta itemprop="priceCurrency" content="CZK">
-              <meta itemprop="availability" content="https://schema.org/InStock" />
+            <h4 class="product-card__title">Test</h4>
+          
+
+            <div>
+              <span class="product-card__price-old">500<span> CZK</span></span>
+              <span class="product-card__price">400</span> <span>CZK</span>
             </div>
 
             <nav class="product-card__nav">
-              <a href="product.html" class="product-card__more" itemprop="url">Подробнее</a>
-              <a href="cart.html" class="btn btn_cta product-card__cart">В корзину</a>
+              <a href="product.html" class="product-card__btn product-card__more">Подробнее</a>
+              <a href="cart.html" class="btn product-card__btn btn_cta product-card__cart">В корзину</a>
             </nav>
           </article>
           <!-- ./Product card -->
 
           <!-- Product card -->
-          <article class="product-card" itemscope itemprop="itemListElement" itemtype="http://schema.org/Product">
-            <div class="product-card__img">
-              <img src="https://dummyimage.com/700.jpg" alt="" itemprop="image">
+          <article class="product-card">
+            <div class="product-card__discount">
+              <span class="product-card__discounter">скидка 25%</span>
             </div>
 
-            <h4 class="product-card__title" itemprop="name">Test</h4>
+            <div class="product-card__img">
+              <img src="https://dummyimage.com/700.jpg" alt="">
+            </div>
 
-            <div itemscope itemprop="offers" itemtype="http://schema.org/Offer">
-              <span class="product-card__price" itemprop="price">400</span> <span itemprop="priceCurrency">CZK</span>
-              <meta itemprop="priceCurrency" content="CZK">
-              <meta itemprop="availability" content="https://schema.org/InStock" />
+            <h4 class="product-card__title">Test</h4>
+          
+
+            <div>
+              <span class="product-card__price-old">500<span> CZK</span></span>
+              <span class="product-card__price">400</span> <span>CZK</span>
             </div>
 
             <nav class="product-card__nav">
-              <a href="product.html" class="product-card__more" itemprop="url">Подробнее</a>
-              <a href="cart.html" class="btn btn_cta product-card__cart">В корзину</a>
+              <a href="product.html" class="product-card__btn product-card__more">Подробнее</a>
+              <a href="cart.html" class="btn product-card__btn btn_cta product-card__cart">В корзину</a>
             </nav>
           </article>
           <!-- ./Product card -->
 
           <!-- Product card -->
-          <article class="product-card" itemscope itemprop="itemListElement" itemtype="http://schema.org/Product">
-            <div class="product-card__img">
-              <img src="https://dummyimage.com/700.jpg" alt="" itemprop="image">
+          <article class="product-card">
+            <div class="product-card__discount">
+              <span class="product-card__discounter">скидка 25%</span>
             </div>
 
-            <h4 class="product-card__title" itemprop="name">Test</h4>
+            <div class="product-card__img">
+              <img src="https://dummyimage.com/700.jpg" alt="">
+            </div>
 
-            <div itemscope itemprop="offers" itemtype="http://schema.org/Offer">
-              <span class="product-card__price" itemprop="price">400</span> <span itemprop="priceCurrency">CZK</span>
-              <meta itemprop="priceCurrency" content="CZK">
-              <meta itemprop="availability" content="https://schema.org/InStock" />
+            <h4 class="product-card__title">Test</h4>
+          
+
+            <div>
+              <span class="product-card__price-old">500<span> CZK</span></span>
+              <span class="product-card__price">400</span> <span>CZK</span>
             </div>
 
             <nav class="product-card__nav">
-              <a href="product.html" class="product-card__more" itemprop="url">Подробнее</a>
-              <a href="cart.html" class="btn btn_cta product-card__cart">В корзину</a>
+              <a href="product.html" class="product-card__btn product-card__more">Подробнее</a>
+              <a href="cart.html" class="btn product-card__btn btn_cta product-card__cart">В корзину</a>
             </nav>
           </article>
           <!-- ./Product card -->
 
           <!-- Product card -->
-          <article class="product-card" itemscope itemprop="itemListElement" itemtype="http://schema.org/Product">
-            <div class="product-card__img">
-              <img src="https://dummyimage.com/700.jpg" alt="" itemprop="image">
+          <article class="product-card">
+            <div class="product-card__discount">
+              <span class="product-card__discounter">скидка 25%</span>
             </div>
 
-            <h4 class="product-card__title" itemprop="name">Test</h4>
+            <div class="product-card__img">
+              <img src="https://dummyimage.com/700.jpg" alt="">
+            </div>
 
-            <div itemscope itemprop="offers" itemtype="http://schema.org/Offer">
-              <span class="product-card__price" itemprop="price">400</span> <span itemprop="priceCurrency">CZK</span>
-              <meta itemprop="priceCurrency" content="CZK">
-              <meta itemprop="availability" content="https://schema.org/InStock" />
+            <h4 class="product-card__title">Test</h4>
+          
+
+            <div>
+              <span class="product-card__price-old">500<span> CZK</span></span>
+              <span class="product-card__price">400</span> <span>CZK</span>
             </div>
 
             <nav class="product-card__nav">
-              <a href="product.html" class="product-card__more" itemprop="url">Подробнее</a>
-              <a href="cart.html" class="btn btn_cta product-card__cart">В корзину</a>
+              <a href="product.html" class="product-card__btn product-card__more">Подробнее</a>
+              <a href="cart.html" class="btn product-card__btn btn_cta product-card__cart">В корзину</a>
             </nav>
           </article>
           <!-- ./Product card -->
@@ -446,8 +470,86 @@
         <!-- ./Grid container -->
 
       </div>
-    </section>
-    <!-- ./Popular -->
+    </section><!-- // Popular -->
+
+    <!-- testimonials -->
+    <section>
+      <div class="container testimonials">
+        <h2 class="section-header">отзывы</h2>
+
+        <!-- обертка -->
+        <div>
+
+          <!-- отзыв -->
+          <article itemscope itemtype="https://schema.org/Review">
+            <meta itemprop="datePublished" content="2012-07-15" />
+            <h2 itemprop="name">
+              <link itemprop="url" href="https://example.com/review?10231">
+            </h2>
+            <div class="" itemprop="author" itemscope itemtype="https://schema.org/Person">
+              <span class="testimonials__name" itemprop="name">username</span>
+            </div>
+
+            <div>
+              <div id="reviewStars-input">
+                <input id="star-4" type="radio" name="reviewStars" />
+                <label title="gorgeous" for="star-4"></label>
+
+                <input id="star-3" type="radio" name="reviewStars" />
+                <label title="good" for="star-3"></label>
+
+                <input id="star-2" type="radio" name="reviewStars" />
+                <label title="regular" for="star-2"></label>
+
+                <input id="star-1" type="radio" name="reviewStars" />
+                <label title="poor" for="star-1"></label>
+
+                <input id="star-0" type="radio" name="reviewStars" />
+                <label title="bad" for="star-0"></label>
+              </div>
+            </div>
+
+            <div itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+              <meta itemprop="worstRating" content="1">
+              <meta itemprop="ratingValue" content="3">
+              <meta itemprop="bestRating" content="5" />
+            </div>
+
+            <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Organization">
+              <meta itemprop="name" content="Дичь убитая веслом">
+              <meta itemprop="telephone" content="420 420 420 420">
+              <link itemprop="url" href="https://example.ru/" />
+              <meta itemprop="email" content="mail@example.ru">
+              <p itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                <meta itemprop="addressLocality" content="Brno">
+                <meta itemprop="streetAddress" content="Taborska 228">
+              </p>
+            </div>
+
+
+            <div>
+              <p class="testimonials__txt" itemprop="reviewBody">Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Dicta vel vitae qui
+                aliquid cumque
+                doloribus unde ut quibusdam asperiores. Quam excepturi ab corrupti quos quasi? Non, deserunt excepturi.
+                Debitis, vel!</p>
+            </div>
+
+          </article><!-- / отзыв -->
+
+        </div><!-- / обертка -->
+
+      </div>
+
+      </div>
+    </section><!-- //testimonials -->
+
+    <!-- ceo_txt  -->
+    <section class="text__block">
+      <p class="text__block_txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis consequuntur, laboriosam
+        optio est placeat quasi facere deleniti quisquam maxime quibusdam impedit vero nobis iste! Excepturi ex
+        aspernatur ad nisi tempore.</p>
+    </section><!-- // ceo_txt  -->
 
   </main>
 

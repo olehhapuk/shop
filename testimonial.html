@@ -19,104 +19,93 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 
-  <!-- Glider -->
-  <link rel="stylesheet" href="css/glider.min.css">
 
 </head>
 
 <body>
-  <!-- Navbar -->
-  <nav class="nav">
-    <!-- Container -->
-    <div class="container">
 
-      <a href="index.html" class="nav__logo">Shop</a>
+  <header>
+    <!-- Navbar -->
+    <nav class="nav">
+      <!-- Container -->
+      <div class="container">
 
-      <!-- Nav menu -->
-      <ul class="nav__menu">
+        <a href="index.html" class="nav__logo">Shop</a>
 
-        <li class="nav__item">
-          <a href="contacts.html" class="nav__link">Контакты</a>
-        </li>
+        <!-- Nav menu -->
+        <ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="nav__menu">
 
-        <li class="nav__item">
-          <a href="cart.html" class="nav__link nav__link_cart" aria-describedby="Корзина" title="Корзина">
-            <i class="fas fa-shopping-cart"></i>
-            <sup class="badge">1</sup>
-          </a>
-        </li>
+          <li itemprop="name" class="nav__item">
+            <a itemprop="url" href="index.html" class="nav__link">Главная</a>
+          </li>
 
-      </ul>
-      <!-- ./Nav menu -->
-    </div>
-    <!-- ./Container -->
+          <li itemprop="name" class="nav__item">
+            <a itemprop="url" href="index.html#discounts" class="nav__link">Скидки</a>
+          </li>
 
-  </nav>
-  <!-- ./Navbar -->
+          <!-- <li>
+            <a itemprop="url" href="index.html#discounts" class="nav__link" title="discounts">Скидки <img class="nav__link_discount" src="img/sale.svg" alt=""></a>
+          </li> -->
+
+          <li itemprop="name" class="nav__item">
+            <a itemprop="url" href="contacts.html" class="nav__link" title="contacts">Контакты</a>
+          </li>
+
+          <li itemprop="name" class="nav__item">
+            <a itemprop="url" href="cart.html" class="nav__link nav__link_cart" aria-describedby="Корзина"
+              title="shoping cart">
+              <i class="fas fa-shopping-cart"></i>
+              <sup class="badge">1</sup>
+            </a>
+          </li>
+
+        </ul>
+        <!-- ./Nav menu -->
+      </div>
+      <!-- ./Container -->
+
+    </nav>
+    <!-- ./Navbar -->
+  </header>
 
   <main>
-    <!-- Container -->
-    <div class="container">
-      <h2 class="section-header">Корзина</h2>
-    
-      <!-- Cart -->
-      <div class="cart">
 
-        <table class="cart__items table table_responsive" cellspacing="0">
-          <thead>
-            <tr>
-              <th></th>
-              <th></th>
-              <th>Товар</th>
-              <th>Цена</th>
-              <th>Количество</th>
-              <th>Стоимость</th>
-            </tr>
-          </thead>
+    <div class="container testimonial">
 
-          <tbody>
-            <tr>
+      <form action="" method="POST">
 
-              <td>
-                <div class="cart__item-thumbnail">
-                  <img src="http://placekitten.com/500" alt="item thumbnail" class="cart__item-thumbnail">
-                </div>
-              </td>
+        <label for="user__name">как вас зовут?</label>
+        <input class="testimonial__username" id="user__name" type="text" name="" required placeholder="ваше имя" minlength="2" maxlength="15">
 
-              <td>
-                <button class="btn cart__remove-item" href="remove_item">
-                  <i class="fas fa-times-circle"></i>
-                  <span>Удалить</span>
-                </button>
-              </td>
 
-              <td aria-label="Товар">
-                <a href="product.html">Кола</a>
-              </td>
+        <label for="user__mail">Оставьте свой e-mail</label>
+        <input class="testimonial__mail" id="user__mail" type="email" name="" required placeholder="ваш e-mail">
 
-              <td aria-label="Цена">
-                <span>30$</span>
-              </td>
+        <span>Оставьте ваш отзыв</span>
+        <label for="user__text"></label>
+        <input class="testimonial__txt" id="user__text" type="text" name="" required placeholder="ваше имя">
 
-              <td aria-label="Количество">
-                <input class="cart__item-count" type="number" min="1" step="1" value="1">
-              </td>
+        <div id="reviewStars-input">
+          <input id="star-4" type="radio" name="reviewStars" />
+          <label title="gorgeous" for="star-4"></label>
 
-              <td aria-label="Вместе">
-                <span>30$</span>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+          <input id="star-3" type="radio" name="reviewStars" />
+          <label title="good" for="star-3"></label>
 
-        <p class="cart__price-all"><span>Итого:</span> 30$</p>
+          <input id="star-2" type="radio" name="reviewStars" />
+          <label title="regular" for="star-2"></label>
 
-        <a href="checkout.html" class="btn cart__checkout">Оформить заказ</a>
+          <input id="star-1" type="radio" name="reviewStars" />
+          <label title="poor" for="star-1"></label>
 
-      </div>
-      <!-- ./Cart -->
+          <input id="star-0" type="radio" name="reviewStars" />
+          <label title="bad" for="star-0"></label>
+        </div>
+
+      </form>
+
     </div>
-    <!-- ./Container -->
+
   </main>
 
   <footer class="footer">
@@ -190,6 +179,7 @@
     </div>
     <!-- ./Container -->
   </footer>
-  
+
 </body>
+
 </html>

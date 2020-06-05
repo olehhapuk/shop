@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shop</title>
+  <title>название товара</title>
+  <meta name="description" content="описание товара с таба описание">
 
   <!-- Normalize -->
   <link rel="stylesheet" href="css/normalize.css">
@@ -26,36 +27,50 @@
 
 <body>
   <header>
-  <!-- Navbar -->
-  <nav class="nav">
-    <!-- Container -->
-    <div class="container">
+    <!-- Navbar -->
+    <nav class="nav">
+      <!-- Container -->
+      <div class="container">
 
-      <a href="index.html" class="nav__logo">Shop</a>
+        <a href="index.html" class="nav__logo">Shop</a>
 
-      <!-- Nav menu -->
-      <ul class="nav__menu">
+        <!-- Nav menu -->
+        <ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="nav__menu">
 
-        <li class="nav__item">
-          <a href="contacts.html" class="nav__link">Контакты</a>
-        </li>
+          <li itemprop="name" class="nav__item">
+            <a itemprop="url" href="index.html" class="nav__link">Главная</a>
+          </li>
 
-        <li class="nav__item">
-          <a href="cart.html" class="nav__link nav__link_cart" aria-describedby="Корзина" title="Корзина">
-            <i class="fas fa-shopping-cart"></i>
-            <sup class="badge">1</sup>
-          </a>
-        </li>
+          <li itemprop="name" class="nav__item">
+            <a itemprop="url" href="index.html#discounts" class="nav__link">Скидки</a>
+          </li>
 
-      </ul>
-      <!-- ./Nav menu -->
-    </div>
-    <!-- ./Container -->
+          <!-- <li>
+            <a itemprop="url" href="index.html#discounts" class="nav__link" title="discounts">Скидки <img class="nav__link_discount" src="img/sale.svg" alt=""></a>
+          </li> -->
 
-  </nav>
-  <!-- ./Navbar -->
+          <li itemprop="name" class="nav__item">
+            <a itemprop="url" href="contacts.html" class="nav__link" title="contacts">Контакты</a>
+          </li>
+
+          <li itemprop="name" class="nav__item">
+            <a itemprop="url" href="cart.html" class="nav__link nav__link_cart" aria-describedby="Корзина"
+              title="shoping cart">
+              <i class="fas fa-shopping-cart"></i>
+              <sup class="badge">1</sup>
+            </a>
+          </li>
+
+        </ul>
+        <!-- ./Nav menu -->
+      </div>
+      <!-- ./Container -->
+
+    </nav>
+    <!-- ./Navbar -->
   </header>
 
+  <!-- breadcrumbs -->
   <div class="container">
     <!-- Breadcumbs -->
     <div class="breadcumbs">
@@ -65,15 +80,14 @@
           <meta itemprop="position" content="1" />
         </li>
         <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-          <a itemprop="item" class="breadcumbs__item breadcumbs__item_active" href="product.html"><span itemprop="name">Вода</span></a>
+          <a itemprop="item" class="breadcumbs__item breadcumbs__item_active" href="product.html"><span
+              itemprop="name">Вода</span></a>
           <meta itemprop="position" content="2" />
         </li>
       </ol>
     </div>
     <!-- ./Breadcumbs -->
   </div>
-
-
 
   <main>
 
@@ -84,7 +98,7 @@
 
         <!-- Product info -->
         <div class="product__info">
-          
+
           <!-- Product col -->
           <div class="product__col product__col_slider">
 
@@ -115,7 +129,7 @@
                   </div>
                 </div>
                 <!-- ./Glider slide -->
-                
+
               </div>
 
               <button role="button" aria-label="Previous" class="glider-prev">«</button>
@@ -127,30 +141,39 @@
           </div>
           <!-- ./Product col -->
 
+          <!-- TODO stars , slider to litle bit left-->
           <!-- Product col -->
           <div class="product__col product__col_info">
             <h1 class="product__title" itemprop="name">Кола</h1>
-            <!-- TODO -->
-            <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-              <meta itemprop="availability" content="https://schema.org/InStock" />
-              <meta itemprop="priceCurrency" content="CZK" />
-              <p class="product__price"><span itemprop="price">30</span> <span itemprop="priceCurrency">CZK</span></p>
-            </div>
-            <div>Производитель: <span itemprop="brand">coca - cola group</span> </div>
+            <meta itemprop="name" content="Кола" />
 
             <p class="product__description">
               Краткое описание колы
             </p>
+
+            <div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+              Оценка: <span itemprop="ratingValue">4.3</span> (<span itemprop="reviewCount">13</span> отзывов)
+            </div>
+
+            <div itemprop="offers" itemscope itemtype="https://schema.org/Offer" itemscope>
+              <!-- Указываем ссылку на товар -->
+              <link itemprop="url" href="https://example.com/" />
+              <meta itemprop="itemCondition" content="https://schema.org/NewCondition" />
+              <p class="product__price"><span itemprop="price">30</span> <span itemprop="priceCurrency" content="CZK">CZK</span></p>
+              <meta itemprop="priceValidUntil" content="2100-11-20" />
+              <span>
+                <link itemprop="availability" href="http://schema.org/InStock">в наличии</span>
+              <div itemprop="seller" itemtype="http://schema.org/Organization" itemscope></div>
+              <meta itemprop="name" content="Дичь убитая веслом" />
+
+            </div>
+
             <!-- наличие считаю лишним стоит убрать -->
-            <p class="product__availability">9 в наличии</p>
             <form class="form product__form">
               <input type="number" class="product__count" min="1" step="1" value="1">
               <button type="submit" class="btn">Добавить в корзину</button>
             </form>
-            <div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-              Рейтинг <span itemprop="ratingValue">4</span>/5
-              основан на <span itemprop="reviewCount">11</span> оценках
-              </div>
+
 
           </div>
           <!-- ./Product col -->
@@ -161,18 +184,20 @@
         <!-- Product details -->
         <div class="product__details">
           <div class="product__details-title-container">
-              <button class="product__details-title-item" type="button" data-target="detailsDescription">Описание</button>
-              <button class="product__details-title-item" type="button" data-target="detailsInfo">Характеристики</button>
-              <button class="product__details-title-item" type="button" data-target="detailsReviews">Отзывы</button>
+            <button class="product__details-title-item" type="button" data-target="detailsDescription">Описание</button>
+            <button class="product__details-title-item" type="button" data-target="detailsInfo">Характеристики</button>
+            <button class="product__details-title-item" type="button" data-target="detailsReviews">Отзывы</button>
           </div>
 
           <div class="product__details-text-container">
-            <p class="product__details-text-item" id="detailsDescription" itemprop="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam doloribus quaerat vero fugit eum perspiciatis voluptas cumque voluptatibus repellendus officiis culpa magnam, ullam beatae nostrum voluptatum veniam eius a nam.</p>
+            <p class="product__details-text-item" id="detailsDescription" itemprop="description">Lorem ipsum dolor sit
+              amet consectetur adipisicing elit. Quam doloribus quaerat vero fugit eum perspiciatis voluptas cumque
+              voluptatibus repellendus officiis culpa magnam, ullam beatae nostrum voluptatum veniam eius a nam.</p>
             <div class="product__details-text-item" id="detailsInfo">
               <table class="table" cellspacing="0">
                 <tr>
                   <th class="product__details-table-property">Свойство</th>
-                  <th class="product__details-table-desc">Описание</th>      
+                  <th class="product__details-table-desc">Описание</th>
                 </tr>
                 <tr>
                   <td>Вес</td>
@@ -180,7 +205,7 @@
                 </tr>
                 <tr>
                   <td>Количество</td>
-                  <td>1  штука</td>
+                  <td>1 штука</td>
                 </tr>
                 <tr>
                   <td>Размеры</td>
@@ -192,10 +217,64 @@
                 </tr>
               </table>
             </div>
+
+
             <div class="product__details-text-item" id="detailsReviews">
-              <article class="product__review">
-                Отзыв 1
+
+              <article class="product__review" itemscope itemtype="https://schema.org/Review">
+                <!-- Указывается схема Person.-->
+                <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+                  <!-- В поле name указываем имя автора.-->
+                  <span itemprop="name" class="testimonials__name">username</span>
+                </span>
+
+                <div id="reviewStars-input">
+                  <input id="star-4" type="radio" name="reviewStars" />
+                  <label title="gorgeous" for="star-4"></label>
+                  <input id="star-3" type="radio" name="reviewStars" />
+                  <label title="good" for="star-3"></label>
+                  <input id="star-2" type="radio" name="reviewStars" />
+                  <label title="regular" for="star-2"></label>
+                  <input id="star-1" type="radio" name="reviewStars" />
+                  <label title="poor" for="star-1"></label>
+                  <input id="star-0" type="radio" name="reviewStars" />
+                  <label title="bad" for="star-0"></label>
+                </div>
+
+                <span itemprop="name">Отзыв о продукте</span>
+                <meta itemprop="datePublished" content="2017-06-20">20 июня 2017 года
+
+
+                <span itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
+                  <!-- В поле worstRating метаинформацией указываем минимально возможный рейтинг.-->
+                  <meta itemprop="worstRating" content="1">
+                  <!-- В поле ratingValue мета информацией указываем текущий рейтинг.-->
+                  <meta itemprop="ratingValue" content="3">
+                  <!-- В поле bestRating метаинформацией указываем максимально возможный рейтинг.-->
+                  <meta itemprop="bestRating" content="5" />
+                </span>
+
+                
+
+                <div itemprop="itemReviewed" itemscope="" itemtype="https://schema.org/Offer">
+
+
+
+
+                  <meta itemprop="name" content="название продукта">
+                  <link itemprop="url" href="https://example.ru/" />
+                </div>
+                <div>
+                  <p class="testimonials__txt" itemprop="reviewBody">Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Dicta vel vitae qui
+                    aliquid cumque
+                    doloribus unde ut quibusdam asperiores. Quam excepturi ab corrupti quos quasi? Non, deserunt
+                    excepturi.
+                    Debitis, vel!</p>
+                </div>
+
               </article>
+
               <article class="product__review">
                 Отзыв 2
               </article>
@@ -209,11 +288,11 @@
                 <br>
                 <input type="submit" class="btn" value="Оставить отзыв">
               </form>
-            </dib>
+            </div>
           </div>
         </div>
         <!-- ./Product details -->
-  
+
       </div>
     </section>
     <!-- ./Product -->
