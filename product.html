@@ -26,7 +26,9 @@
 </head>
 
 <body>
-  <header>
+  <header itemscope itemtype="http://schema.org/WPHeader">
+    <meta itemprop="headline" content="Название сайта">
+    <meta itemprop="description" content="Описание сайта">
     <!-- Navbar -->
     <nav class="nav">
       <!-- Container -->
@@ -146,32 +148,46 @@
           <div class="product__col product__col_info">
             <h1 class="product__title" itemprop="name">Кола</h1>
             <meta itemprop="name" content="Кола" />
-
+            
+            <div id="reviewStars-input" class="">
+              <input id="star-4" type="radio" name="reviewStars" />
+              <label title="gorgeous" for="star-4"></label>
+              <input id="star-3" type="radio" name="reviewStars" />
+              <label title="good" for="star-3"></label>
+              <input id="star-2" type="radio" name="reviewStars" />
+              <label title="regular" for="star-2"></label>
+              <input id="star-1" type="radio" name="reviewStars" />
+              <label title="poor" for="star-1"></label>
+              <input id="star-0" type="radio" name="reviewStars" />
+              <label title="bad" for="star-0"></label>
+            </div>
+            
+            <div class="product__rating_txt" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+              <span class="ocenka">Оценка:</span> <span itemprop="ratingValue">4.3</span> (<span itemprop="reviewCount">13</span> <span class="kol-vo">отзывов</span> )
+            </div>
             <p class="product__description">
-              Краткое описание колы
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita quia accusamus dignissimos harum
             </p>
 
-            <div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-              Оценка: <span itemprop="ratingValue">4.3</span> (<span itemprop="reviewCount">13</span> отзывов)
-            </div>
+            
 
             <div itemprop="offers" itemscope itemtype="https://schema.org/Offer" itemscope>
               <!-- Указываем ссылку на товар -->
               <link itemprop="url" href="https://example.com/" />
               <meta itemprop="itemCondition" content="https://schema.org/NewCondition" />
-              <p class="product__price"><span itemprop="price">30</span> <span itemprop="priceCurrency" content="CZK">CZK</span></p>
+              <p class="product__price"><span itemprop="price">30</span> <span itemprop="priceCurrency"
+                  content="CZK">CZK</span></p>
               <meta itemprop="priceValidUntil" content="2100-11-20" />
-              <span>
-                <link itemprop="availability" href="http://schema.org/InStock">в наличии</span>
-              <div itemprop="seller" itemtype="http://schema.org/Organization" itemscope></div>
-              <meta itemprop="name" content="Дичь убитая веслом" />
-
+              <link itemprop="availability" href="http://schema.org/InStock"><span class="product__instock">в наличии</span></link>
+              <div itemprop="seller" itemtype="http://schema.org/Organization" itemscope>
+                <meta itemprop="name" content="Дичь убитая веслом" />
+              </div>
             </div>
 
             <!-- наличие считаю лишним стоит убрать -->
             <form class="form product__form">
               <input type="number" class="product__count" min="1" step="1" value="1">
-              <button type="submit" class="btn">Добавить в корзину</button>
+              <button type="submit" class="btn" title="в корзину">Добавить в корзину</button>
             </form>
 
 
@@ -184,9 +200,9 @@
         <!-- Product details -->
         <div class="product__details">
           <div class="product__details-title-container">
-            <button class="product__details-title-item" type="button" data-target="detailsDescription">Описание</button>
-            <button class="product__details-title-item" type="button" data-target="detailsInfo">Характеристики</button>
-            <button class="product__details-title-item" type="button" data-target="detailsReviews">Отзывы</button>
+            <button class="product__details-title-item" type="button" title="описание" data-target="detailsDescription">Описание</button>
+            <button class="product__details-title-item" type="button" title="Характеристики" data-target="detailsInfo">Характеристики</button>
+            <button class="product__details-title-item" type="button" title="Отзывы" data-target="detailsReviews">Отзывы</button>
           </div>
 
           <div class="product__details-text-container">
@@ -221,13 +237,14 @@
 
             <div class="product__details-text-item" id="detailsReviews">
 
-              <article class="product__review" itemscope itemtype="https://schema.org/Review">
+              <article class="product__review">
                 <!-- Указывается схема Person.-->
-                <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <span >
                   <!-- В поле name указываем имя автора.-->
-                  <span itemprop="name" class="testimonials__name">username</span>
+                  <span class="testimonials__name">username</span>
                 </span>
 
+                <br>
                 <div id="reviewStars-input">
                   <input id="star-4" type="radio" name="reviewStars" />
                   <label title="gorgeous" for="star-4"></label>
@@ -239,40 +256,16 @@
                   <label title="poor" for="star-1"></label>
                   <input id="star-0" type="radio" name="reviewStars" />
                   <label title="bad" for="star-0"></label>
-                </div>
+                </div><br>
 
-                <span itemprop="name">Отзыв о продукте</span>
-                <meta itemprop="datePublished" content="2017-06-20">20 июня 2017 года
-
-
-                <span itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
-                  <!-- В поле worstRating метаинформацией указываем минимально возможный рейтинг.-->
-                  <meta itemprop="worstRating" content="1">
-                  <!-- В поле ratingValue мета информацией указываем текущий рейтинг.-->
-                  <meta itemprop="ratingValue" content="3">
-                  <!-- В поле bestRating метаинформацией указываем максимально возможный рейтинг.-->
-                  <meta itemprop="bestRating" content="5" />
-                </span>
-
-                
-
-                <div itemprop="itemReviewed" itemscope="" itemtype="https://schema.org/Offer">
-
-
-
-
-                  <meta itemprop="name" content="название продукта">
-                  <link itemprop="url" href="https://example.ru/" />
-                </div>
                 <div>
-                  <p class="testimonials__txt" itemprop="reviewBody">Lorem ipsum dolor sit amet consectetur
+                  <p class="testimonials__txt" >Lorem ipsum dolor sit amet consectetur
                     adipisicing elit. Dicta vel vitae qui
                     aliquid cumque
                     doloribus unde ut quibusdam asperiores. Quam excepturi ab corrupti quos quasi? Non, deserunt
                     excepturi.
                     Debitis, vel!</p>
                 </div>
-
               </article>
 
               <article class="product__review">
@@ -282,8 +275,30 @@
                 Отзыв 3
               </article>
 
-              <form class="product__review-form">
+              <form action="" method="POST" class="product__review-form">
                 <h3 class="product__review-title">Оставить отзыв</h3>
+                <div id="reviewStars-input">
+                  <input id="star-4" type="radio" name="reviewStars" />
+                  <label title="gorgeous" for="star-4"></label>
+                  <input id="star-3" type="radio" name="reviewStars" />
+                  <label title="good" for="star-3"></label>
+                  <input id="star-2" type="radio" name="reviewStars" />
+                  <label title="regular" for="star-2"></label>
+                  <input id="star-1" type="radio" name="reviewStars" />
+                  <label title="poor" for="star-1"></label>
+                  <input id="star-0" type="radio" name="reviewStars" />
+                  <label title="bad" for="star-0"></label>
+                </div><br><br><br>
+
+                <label for="user__name">как вас зовут?</label>
+                <input class="testimonials__username" id="user__name" type="text" name="" required placeholder="ваше имя"
+                  minlength="2" maxlength="15"><br>
+
+
+                <label for="user__mail">Оставьте свой e-mail</label>
+                <input class="testimonials__mail" id="user__mail" type="email" name="" required placeholder="ваш e-mail">
+                <br>
+                <span>Ваш отзыв</span><br>
                 <textarea name="text" cols="30" rows="10"></textarea>
                 <br>
                 <input type="submit" class="btn" value="Оставить отзыв">
@@ -296,6 +311,19 @@
       </div>
     </section>
     <!-- ./Product -->
+
+        <!-- Discounts -->
+        <section class="similar" id="similar">
+          <div class="container">
+    
+            <h2 class="section-header">Похожие продукты</h2>
+       
+    
+    
+            </div><!-- ./Slider discounts -->
+    
+          </div>
+        </section><!-- //Discounts -->
 
   </main>
 

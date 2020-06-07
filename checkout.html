@@ -72,17 +72,35 @@
         <div class="checkout-col checkout-col_payment">
           <h3 class="checkout-col__header">Платёжные данные</h3>
 
-          <form class="form">
+          <form class="form" autocomplete="on">
+
             <div class="form__input-container">
               <label for="" class="form__input-label">Имя</label>
-              <input type="text" class="form__input">
+              <input type="text" class="form__input" autofocus="autofocus" required>
             </div>
+
             <div class="form__input-container">
               <label for="" class="form__input-label">Фамилия</label>
-              <input type="text" class="form__input">
+              <input type="text" class="form__input" required>
             </div>
+
             <div class="form__input-container">
-              <input type="checkbox" id="deliveryCheckbox">
+              <label for="" class="form__input-label">Когда нужен заказ?</label>
+              <input type="date" class="form__input">
+            </div>
+
+            <div class="form__input-container">
+              <label for="" class="form__input-label">Во сколько нужен заказ?</label>
+              <input type="time" class="form__input">
+            </div>
+
+            <div class="form__input-container">
+              <label for="" class="form__input-label">Телефон</label>
+              <input type="text" class="form__input" required>
+            </div>
+
+            <div class="form__input-container">
+              <input type="checkbox" id="deliveryCheckbox" style="display: inline;">
               <label for="delivery" class="form__input-label" style="display: inline;">Доставка курьером</label>
             </div>
 
@@ -97,14 +115,6 @@
               </div>
             </div>
 
-            <div class="form__input-container">
-              <label for="" class="form__input-label">Телефон</label>
-              <input type="text" class="form__input">
-            </div>
-            <div class="form__input-container">
-              <label for="" class="form__input-label">Электронная почта</label>
-              <input type="text" class="form__input">
-            </div>
             <div class="form__input-container">
               <label for="" class="form__input-label">Примечания к заказу</label>
               <textarea class="form__input" rows="5"></textarea>
