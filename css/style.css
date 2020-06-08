@@ -638,6 +638,41 @@ a.contacts__contact>span {
 /* ./Contacts */
 
 
+/* advantages */
+.advantages{
+  /* background-color: var(--border-color); */
+  padding: 2em 0;
+}
+
+.advantages .container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.advantages .item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 300px;
+  margin: 0 1em;
+}
+
+.advantages .item__desc {
+  text-align: center;
+  font-size: 1.1em;
+  margin-top: .9em;
+}
+
+.advantages img{
+  max-height: 100px;
+  transition: .15s;
+}
+.advantages img:hover{
+  transform: scale(1.07);
+}
+/* / advantages */
+
 
 /* Table */
 
