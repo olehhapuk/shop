@@ -63,7 +63,29 @@ p {
   padding: 0;
 }
 
+.visually-hidden {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	padding:0 !important;
+	border:0 !important;
+	height: 1px !important; 
+	width: 1px !important; 
+	overflow: hidden;
+}
+
 /* ./Default elements */
+
+
+
+/* Swiper */
+
+.swiper-container {
+  height: 300px;
+  padding: 10px 0 90px;
+}
+
+/* ./Swiper */
 
 
 
@@ -237,7 +259,7 @@ main {
   border-radius: 5px;
 }
 
-.product-card:hover {
+.product-card_hoverable:hover {
   transform: scale(1.02);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
@@ -526,7 +548,8 @@ main {
 
 /* seo text */
 .text__block {
-  display: flex;
+  text-align: center;
+  margin: 0 auto;
   margin-top: 5em;
   max-width: 1100px;
   padding-left: 15px;
@@ -534,29 +557,103 @@ main {
   color: var(--lighter-color);
 }
 
-/* //seo text */
+/* ./seo text */
 
 
-/* main testimonials */
-.testimonials div{
-  display: flex;
-  flex-direction: column;
-}
 
-.testimonials #reviewStars-input{
-  display: flex;
-  flex-direction: row;
-}
+/* Testimonials */
 
-.testimonials__name{
-  
+.testimonials__name {
   font-size: 1.4em;
 }
 
-.testimonials__txt{
+.testimonials__txt {
   margin-top: 2em;
 }
-/* //main testimonials */
+
+/* ./Testimonials */
+
+
+
+/* Rating */
+
+.rating {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.rating__group {
+  position: relative;
+  width: 10em;
+  height: 2em;
+  background-image: url(../img/star_disabled.svg);
+  background-size: 2em auto;
+  background-repeat: repeat-x;
+}
+
+.rating__group:focus-within {
+  outline: solid 2px var(--accent-color_lighter);
+}
+
+.rating__star {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2em;
+  height: 2em;
+  margin: 0;
+  font-size: inherit;
+
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  background-size: 2em auto;
+  background-repeat: repeat-x;
+}
+
+.rating__star:focus {
+  outline: none;
+}
+
+.rating__star:checked,
+.rating__star:hover {
+  background-image: url(../img/start_enabled.svg);
+}
+
+.rating__star:hover ~ .rating__star {
+  background-image: url(../img/star_disabled.svg);
+}
+
+.rating__star:nth-of-type(1) {
+  width: 2em;
+  z-index: 5;
+}
+
+.rating__star:nth-of-type(2) {
+  width: 4em;
+  z-index: 4;
+}
+
+.rating__star:nth-of-type(3) {
+  width: 6em;
+  z-index: 3;
+}
+
+.rating__star:nth-of-type(4) {
+  width: 8em;
+  z-index: 2;
+}
+
+.rating__star:nth-of-type(5) {
+  width: 10em;
+  z-index: 1;
+}
+
+/* ./Rating */
+
+
 
 /* Contacts */
 
@@ -656,17 +753,28 @@ a.contacts__contact>span {
 
 /* Cart */
 
-.cart__item-thumbnail {
-  max-width: 70px;
-  max-height: 100px;
-  margin: 0 auto;
+.cart__remove-cell {
+  width: 30px;
 }
 
 .cart__remove-item {
-  font-size: 0.9em;
+  border: none;
+  background: none;
+  color: var(--product-badge-clr);
+  font-size: 1.3em;
 }
 
-.cart__item-thumbnail>img {
+.cart__thumbnail-cell {
+  width: 100px;
+}
+
+.cart__item-thumbnail {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.cart__item-thumbnail > img {
   display: block;
   width: 100%;
   height: 100%;
@@ -874,99 +982,3 @@ a.footer__text>span {
 }
 
 /* ./Product */
-
-
-
-/* PAGE TESTIMONIAL */
-
-.testimonial span,
-input {
-  display: block;
-}
-
-/* testimonials stars */
-
-
-#reviewStars-input input:checked~label,
-#reviewStars-input label,
-#reviewStars-input label:hover,
-#reviewStars-input label:hover~label {
-  background: url('http://positivecrash.com/wp-content/uploads/ico-s71a7fdede6.png') no-repeat;
-  
-}
-
-#reviewStars-input {
-
-  /*fix floating problems*/
-  overflow: hidden;
-  *zoom: 1;
-  /*end of fix floating problems*/
-
-  position: relative;
-  float: left;
-}
-
-#reviewStars-input input {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-  opacity: 0;
-
-  width: 43px;
-  height: 40px;
-
-  position: absolute;
-  top: 0;
-  z-index: 0;
-}
-
-#reviewStars-input input:checked~label {
-  background-position: 0 -40px;
-  height: 40px;
-  width: 43px;
-}
-
-#reviewStars-input label {
-  background-position: 0 0;
-  height: 40px;
-  width: 43px;
-  float: right;
-  cursor: pointer;
-  margin-right: 10px;
-
-  position: relative;
-  z-index: 1;
-}
-
-#reviewStars-input label:hover,
-#reviewStars-input label:hover~label {
-  background-position: 0 -40px;
-  height: 40px;
-  width: 43px;
-}
-
-#reviewStars-input #star-0 {
-  left: 0px;
-}
-
-#reviewStars-input #star-1 {
-  left: 53px;
-}
-
-#reviewStars-input #star-2 {
-  left: 106px;
-}
-
-#reviewStars-input #star-3 {
-  left: 159px;
-}
-
-#reviewStars-input #star-4 {
-  left: 212px;
-}
-
-#reviewStars-input #star-5 {
-  left: 265px;
-}
-
-/* //testimonials stars */
-
-/* //PAGE TESTIMONIAL */
