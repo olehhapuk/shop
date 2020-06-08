@@ -63,12 +63,12 @@ p {
   padding: 0;
 }
 
-<<<<<<< HEAD
 input:focus, textarea:focus, select:focus, option:hover{
   outline: none;
   border: 1px solid var(--accent-color_lighter);
   border-radius: 3px;
-=======
+}
+
 .visually-hidden {
 	position: absolute !important;
 	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
@@ -78,7 +78,6 @@ input:focus, textarea:focus, select:focus, option:hover{
 	height: 1px !important; 
 	width: 1px !important; 
 	overflow: hidden;
->>>>>>> slider
 }
 
 /* ./Default elements */
@@ -1029,7 +1028,6 @@ a.footer__text>span {
   margin-bottom: 0.7em;
 }
 
-<<<<<<< HEAD
 .testimonials__username, .testimonials__mail, textarea{
   min-width: 300px;
   min-height: 25px;
@@ -1130,6 +1128,4 @@ input {
 /* /testimonials stars */
 
 /* /PAGE TESTIMONIAL */
-=======
 /* ./Product */
->>>>>>> slider
