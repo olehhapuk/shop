@@ -11,6 +11,8 @@
     padding: 0.5em 1em;
     margin: 0.5em;
   }
+  
+}
 
 @media (max-width: 1200px) {
   .container {
@@ -21,7 +23,6 @@
     grid-template-columns: repeat(3, 1fr);
   }
 
-  
 }
 
 @media (max-width: 1020px) {
@@ -33,7 +34,6 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  
 }
 
 @media (max-width: 820px) {
@@ -166,9 +166,11 @@
   .footer__social-link {
     font-size: 2em;
   }
+
   .testimonials__name{
     font-size: 1.2rem;
   }
+
   .product__col_info{
     max-width: 100%;
   }
@@ -191,9 +193,11 @@
   .product__col_slider {
     margin: 0 30px;
   }
+
   .testimonials__name{
     font-size: 1.1rem;
   }
+
   .testimonials__txt{
     font-size: .9em;
   }
