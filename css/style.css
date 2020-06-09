@@ -911,7 +911,6 @@ a.footer__text>span {
 
 .product__count {
   border: 1px solid var(--border-color);
-  width: 3em;
   padding: .3em;
   display: inline;
 }
