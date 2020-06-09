@@ -20,6 +20,8 @@ html {
   --product-badge-clr: #ef5350;
 
   --bg-light: #f5f5f5;
+
+  --bg-light2: #f0f0f0;
 }
 
 body {
@@ -165,7 +167,7 @@ main {
 }
 
 .breadcumbs__item_active {
-  color: var(--darker-color);
+  color: var(--accent-color_lighter);
   pointer-events: none;
 }
 
@@ -545,7 +547,88 @@ margin-top: 3em;
 
 /* ./Discounts */
 
+/* Types */
+.types{
+  padding: 2em 1em;
+  background-color: var(--bg-light);
+  background-color: #e1f5fe  ;
 
+}
+
+.types .items__wrap{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2em 1em;
+}
+
+.types .item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+  padding: 1.5em 0;
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--accent-color);
+  transition: .12s;
+  transition: box-shadow .12s ease-in-out;
+  border-radius: 10px;
+}
+
+.types .item:hover{
+  transform: scale(1.07);
+  box-shadow:  0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.types .item__img{
+  max-height: 70px;
+  margin-bottom: .5em;
+}
+
+
+
+.types .item__text{
+  text-align: center;
+} 
+
+
+/* / Types */
+
+/* advantages */
+.advantages{
+  /* background-color: var(--border-color); */
+  padding: 2em 0;
+  margin-bottom: 3em;
+}
+
+.advantages .container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.advantages .item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 300px;
+  margin: 0 1em;
+}
+
+.advantages .item__desc {
+  text-align: center;
+  font-size: 1.1em;
+  margin-top: .9em;
+}
+
+.advantages img{
+  max-height: 100px;
+  transition: .15s;
+}
+.advantages img:hover{
+  transform: scale(1.07);
+}
+/* / advantages */
 
 /* Popular */
 
@@ -1056,3 +1139,43 @@ input {
 
 /* /PAGE TESTIMONIAL */
 /* ./Product */
+
+
+
+/* PAGE CATEGORY */
+.category__preview {
+  margin: 2em 1em;
+}
+
+.category__preview .container{
+  display: flex;
+  flex-direction: row;
+  background-color: var(--bg-light2);
+  border-radius: 20px;
+  padding: 2em;
+}
+
+.category__preview .preview__img{
+margin-right: 3em;
+}
+
+.category__preview img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 20px;
+}
+
+.category__preview .preview__title{
+  font-size: 2.5em;
+  line-height: .7;
+  color: var(--accent-color);
+  margin-bottom: .4em;
+}
+
+.category__preview .preview__text{
+  font-size: 1.5em;
+}
+
+/* / PAGE CATEGORY */
