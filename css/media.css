@@ -138,6 +138,11 @@
     justify-content: flex-start;
   }
 
+  .checkout-col {
+    margin: 0 0;
+    /* padding: 0 1em; */
+  }
+
   .checkout-col_order {
     order: 1;
     margin-bottom: 2.5em;
@@ -296,6 +301,11 @@
   }
   .types .item{
     width: 50%;
+  }
+
+  .discounts .container{
+    padding-left: 1em;
+    padding-right: 1em;
   }
 }
 

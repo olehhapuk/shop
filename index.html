@@ -4,24 +4,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/" rel="preconnect" crossorigin>
-  <link href="https://cdnjs.cloudflare.com/" rel="preconnect" crossorigin>
-  <link href="https://unpkg.com/" rel="preconnect" crossorigin>
-
   <title>Shop</title>
   <meta name="description" content="Shop description">
+  <link href="https://fonts.googleapis.com/" rel="preconnect" crossorigin>
+  <link href="https://unpkg.com/"            rel="preconnect" crossorigin>
 
   <!-- каноническая ссылка  -->
-  <link rel="canonical" hreflang="ru-RU" href="https://" />
+  <link rel="canonical" hreflang="ru" href="https://" />
 
   <!-- Normalize -->
   <link rel="stylesheet" href="css/normalize.css">
 
   <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
-  <!-- Glider -->
-  <!-- <link rel="stylesheet" href="css/glider.min.css"> -->
 
   <!-- Swiper -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
@@ -282,7 +277,7 @@
       </div>
       <!-- ./Container -->
     </section>
-    <!-- //Discounts -->
+    <!-- /Discounts -->
 
     <!-- advantages -->
     <section class="advantages">
@@ -761,22 +756,22 @@
         <h3 class="footer__title">Контакты</h3>
 
         <a class="footer__text" href="tel:+420">
-          <i class="fas fa-phone-alt"></i>
+          <img class="footer__icons" src="img/phone.svg" alt="" >
           <span>+420 420 420 420</span>
         </a>
 
         <a class="footer__text" href="mailto:roga_i_kopyta@seznam.cz">
-          <i class="far fa-envelope"></i>
+          <img class="footer__icons" src="img/mail.svg" alt="" >
           <span>roga_i_kopyta@seznam.cz</span>
         </a>
 
         <span class="footer__text">
-          <i class="fas fa-map-marker-alt"></i>
+          <img class="footer__icons" src="img/pin.svg" alt="" >
           <span>Brno Táborská 278</span>
         </span>
 
         <span class="footer__text footer__text_work-time">
-          <i class="far fa-clock"></i>
+          <img class="footer__icons" src="img/clock.svg" alt="" >
           <span>
             Время работы:<br>
             пн-сб с 9:00 до 20:00
@@ -816,17 +811,13 @@
       <!-- ./Footer col -->
     </div>
     <!-- ./Container -->
-    <div>MySite.com<span itemprop="copyrightYear"> 2020</span>. Все права защищены</div>
+    <div class="footer__copy"><span itemprop="copyrightYear">MySite.com 2020. Все права защищены</span></div>
   </footer>
   <!-- ./Footer -->
 
 
 
   <!-- Scripts -->
-
-  <!-- Glider -->
-  <!-- <script src="js/glider.min.js"></script> -->
-
   <!-- Swiper -->
   <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
 
@@ -839,12 +830,32 @@
       // Optional parameters
       direction: 'horizontal',
       loop: true,
-      slidesPerView: 5,
+      slidesPerView: 1,
       spaceBetween: 30,
-      slidesOffsetBefore: 50,
+      slidesOffsetBefore: 5,
+      mousewheel: true,
+      grabCursor: true,
 
       autoplay: {
-        delay: 7000,
+        delay: 3000,
+      },
+
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+          slidesOffsetBefore: 5,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 40,
+          slidesOffsetBefore: 8,
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 25,
+          slidesOffsetBefore: 20,
+        },
       },
 
       // If we need pagination
@@ -862,12 +873,29 @@
 
     var testimonialsSlider = new Swiper('.swiper-container_testimonials', {
       // Optional parameters
+      slidesPerView: 1,
       direction: 'horizontal',
       loop: true,
       slidesPerView: 1,
-
+      mousewheel: true,
+      grabCursor: true,
       autoplay: {
-        delay: 10000,
+        delay: 5000,
+      },
+
+      breakpoints: {
+        640: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 1,
+          spaceBetween: 40,
+        },
+        1024: {
+          slidesPerView: 1,
+          spaceBetween: 50,
+        },
       },
 
       // Navigation arrows
