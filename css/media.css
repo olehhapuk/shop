@@ -1,3 +1,17 @@
+@media (max-width: 1240px) {
+  .product-card__nav {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+
+  .product-card__btn {
+    box-sizing: border-box;
+    display: block;
+    padding: 0.5em 1em;
+    margin: 0.5em;
+  }
+
 @media (max-width: 1200px) {
   .container {
     padding: 0 10px;
@@ -17,19 +31,6 @@
 
   .popular__grid {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .product-card__nav {
-    display: block;
-    margin: 0;
-    padding: 0;
-  }
-
-  .product-card__btn {
-    box-sizing: border-box;
-    display: block;
-    padding: 0.5em 1em;
-    margin: 0.5em;
   }
 
   

@@ -14,7 +14,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
   <!-- Glider -->
-  <link rel="stylesheet" href="css/glider.min.css">
+  <!-- <link rel="stylesheet" href="css/glider.min.css"> -->
+
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
 
   <!-- User stylesheet -->
   <link rel="stylesheet" href="css/style.css">
@@ -26,6 +29,13 @@
 </head>
 
 <body>
+
+  <style>
+    .swiper-container_thumbnail {
+      padding: 0;
+    }
+  </style>
+
   <header itemscope itemtype="http://schema.org/WPHeader">
     <meta itemprop="headline" content="Название сайта">
     <meta itemprop="description" content="Описание сайта">
@@ -104,41 +114,84 @@
           <!-- Product col -->
           <div class="product__col product__col_slider">
 
-            <!-- Glider slider -->
-            <div class="glider-contain">
-              <div class="glider">
-
-                <!-- Glider slide -->
-                <div>
+            <!-- Slider main container -->
+            <div class="swiper-container swiper-container_thumbnail">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slide -->
+                <div class="swiper-slide">
                   <div class="product__thumbnail">
                     <img src="https://dummyimage.com/500.jpg" alt="Product thumbnail" itemprop="image">
                   </div>
                 </div>
-                <!-- ./Glider slide -->
-
-                <!-- Glider slide -->
-                <div>
+                <!-- ./Slide -->
+                <!-- Slide -->
+                <div class="swiper-slide">
                   <div class="product__thumbnail">
                     <img src="https://dummyimage.com/500.jpg" alt="Product thumbnail" itemprop="image">
                   </div>
                 </div>
-                <!-- ./Glider slide -->
-
-                <!-- Glider slide -->
-                <div>
+                <!-- ./Slide -->
+                <!-- Slide -->
+                <div class="swiper-slide">
                   <div class="product__thumbnail">
                     <img src="https://dummyimage.com/500.jpg" alt="Product thumbnail" itemprop="image">
                   </div>
                 </div>
-                <!-- ./Glider slide -->
-
+                <!-- ./Slide -->
+                <!-- Slide -->
+                <div class="swiper-slide">
+                  <div class="product__thumbnail">
+                    <img src="https://dummyimage.com/500.jpg" alt="Product thumbnail" itemprop="image">
+                  </div>
+                </div>
+                <!-- ./Slide -->
+                <!-- Slide -->
+                <div class="swiper-slide">
+                  <div class="product__thumbnail">
+                    <img src="https://dummyimage.com/500.jpg" alt="Product thumbnail" itemprop="image">
+                  </div>
+                </div>
+                <!-- ./Slide -->
+                <!-- Slide -->
+                <div class="swiper-slide">
+                  <div class="product__thumbnail">
+                    <img src="https://dummyimage.com/500.jpg" alt="Product thumbnail" itemprop="image">
+                  </div>
+                </div>
+                <!-- ./Slide -->
+                <!-- Slide -->
+                <div class="swiper-slide">
+                  <div class="product__thumbnail">
+                    <img src="https://dummyimage.com/500.jpg" alt="Product thumbnail" itemprop="image">
+                  </div>
+                </div>
+                <!-- ./Slide -->
+                <!-- Slide -->
+                <div class="swiper-slide">
+                  <div class="product__thumbnail">
+                    <img src="https://dummyimage.com/500.jpg" alt="Product thumbnail" itemprop="image">
+                  </div>
+                </div>
+                <!-- ./Slide -->
+                <!-- Slide -->
+                <div class="swiper-slide">
+                  <div class="product__thumbnail">
+                    <img src="https://dummyimage.com/500.jpg" alt="Product thumbnail" itemprop="image">
+                  </div>
+                </div>
+                <!-- ./Slide -->
               </div>
+              <!-- ./Additional required wrapper -->
 
-              <button role="button" aria-label="Previous" class="glider-prev">«</button>
-              <button role="button" aria-label="Next" class="glider-next">»</button>
+              <!-- If we need pagination -->
+              <div class="swiper-pagination"></div>
 
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
             </div>
-            <!-- ./Glider slider -->
+            <!-- ./Slider main container -->
 
           </div>
           <!-- ./Product col -->
@@ -149,18 +202,16 @@
             <h1 class="product__title" itemprop="name">Кола</h1>
             <meta itemprop="name" content="Кола" />
             
-            <div id="reviewStars-input" class="">
-              <input id="star-4" type="radio" name="reviewStars" />
-              <label title="gorgeous" for="star-4"></label>
-              <input id="star-3" type="radio" name="reviewStars" />
-              <label title="good" for="star-3"></label>
-              <input id="star-2" type="radio" name="reviewStars" />
-              <label title="regular" for="star-2"></label>
-              <input id="star-1" type="radio" name="reviewStars" />
-              <label title="poor" for="star-1"></label>
-              <input id="star-0" type="radio" name="reviewStars" />
-              <label title="bad" for="star-0"></label>
-            </div>
+            <fieldset class="rating">
+              <legend class="visually-hidden">Оценка</legend>
+              <div class="rating__group">
+                <input type="radio" class="rating__star" name="rating" value="1" aria-label="Плохо" checked>
+                <input type="radio" class="rating__star" name="rating" value="2" aria-label="Неплохо">
+                <input type="radio" class="rating__star" name="rating" value="3" aria-label="Нормально">
+                <input type="radio" class="rating__star" name="rating" value="4" aria-label="Хорошо">
+                <input type="radio" class="rating__star" name="rating" value="5" aria-label="Прекрасно">
+              </div>
+            </fieldset>
             
             <div class="product__rating_txt" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
               <span class="ocenka">Оценка:</span> <span itemprop="ratingValue">4.3</span> (<span itemprop="reviewCount">13</span> <span class="kol-vo">отзывов</span> )
@@ -239,24 +290,21 @@
 
               <article class="product__review">
                 <!-- Указывается схема Person.-->
-                <span >
+                <span>
                   <!-- В поле name указываем имя автора.-->
                   <span class="testimonials__name">username</span>
                 </span>
 
-                <br>
-                <div id="reviewStars-input">
-                  <input id="star-4" type="radio" name="reviewStars" />
-                  <label title="gorgeous" for="star-4"></label>
-                  <input id="star-3" type="radio" name="reviewStars" />
-                  <label title="good" for="star-3"></label>
-                  <input id="star-2" type="radio" name="reviewStars" />
-                  <label title="regular" for="star-2"></label>
-                  <input id="star-1" type="radio" name="reviewStars" />
-                  <label title="poor" for="star-1"></label>
-                  <input id="star-0" type="radio" name="reviewStars" />
-                  <label title="bad" for="star-0"></label>
-                </div><br>
+                <fieldset class="rating">
+                  <legend class="visually-hidden">Оценка</legend>
+                  <div class="rating__group">
+                    <input type="radio" class="rating__star" name="rating" value="1" aria-label="Плохо" checked>
+                    <input type="radio" class="rating__star" name="rating" value="2" aria-label="Неплохо">
+                    <input type="radio" class="rating__star" name="rating" value="3" aria-label="Нормально">
+                    <input type="radio" class="rating__star" name="rating" value="4" aria-label="Хорошо">
+                    <input type="radio" class="rating__star" name="rating" value="5" aria-label="Прекрасно">
+                  </div>
+                </fieldset>
 
                 <div>
                   <p class="testimonials__txt" >Lorem ipsum dolor sit amet consectetur
@@ -277,18 +325,17 @@
 
               <form action="" method="POST" class="product__review-form">
                 <h3 class="product__review-title">Оставить отзыв</h3>
-                <div id="reviewStars-input">
-                  <input id="star-4" type="radio" name="reviewStars" />
-                  <label title="gorgeous" for="star-4"></label>
-                  <input id="star-3" type="radio" name="reviewStars" />
-                  <label title="good" for="star-3"></label>
-                  <input id="star-2" type="radio" name="reviewStars" />
-                  <label title="regular" for="star-2"></label>
-                  <input id="star-1" type="radio" name="reviewStars" />
-                  <label title="poor" for="star-1"></label>
-                  <input id="star-0" type="radio" name="reviewStars" />
-                  <label title="bad" for="star-0"></label>
-                </div><br><br><br>
+                <fieldset class="rating">
+                  <legend class="visually-hidden">Оценка</legend>
+                  <div class="rating__group">
+                    <input type="radio" class="rating__star" name="rating" value="1" aria-label="Плохо" checked>
+                    <input type="radio" class="rating__star" name="rating" value="2" aria-label="Неплохо">
+                    <input type="radio" class="rating__star" name="rating" value="3" aria-label="Нормально">
+                    <input type="radio" class="rating__star" name="rating" value="4" aria-label="Хорошо">
+                    <input type="radio" class="rating__star" name="rating" value="5" aria-label="Прекрасно">
+                  </div>
+                </fieldset>
+                <br><br><br>
 
                 <label for="user__name">как вас зовут?</label>
                 <input class="testimonials__username" id="user__name" type="text" name="" required placeholder="ваше имя"
@@ -312,18 +359,255 @@
     </section>
     <!-- ./Product -->
 
-        <!-- Discounts -->
+        <!-- Similar -->
         <section class="similar" id="similar">
           <div class="container">
-    
             <h2 class="section-header">Похожие продукты</h2>
-       
-    
-    
-            </div><!-- ./Slider discounts -->
-    
+
+            <!-- Slider -->
+            <div class="swiper-container swiper-container_similar">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+
+                <!-- Slide -->
+                <div class="swiper-slide">
+                  <!-- Product card -->
+                  <article class="product-card">
+                    <div class="product-card__discount">
+                      <span class="product-card__discounter">скидка 25%</span>
+                    </div>
+
+                    <div class="product-card__img">
+                      <img src="https://dummyimage.com/700.jpg" alt="">
+                    </div>
+
+                    <h4 class="product-card__title">Test</h4>
+                  
+
+                    <div>
+                      <span class="product-card__price-old">500<span> CZK</span></span>
+                      <span class="product-card__price">400</span> <span>CZK</span>
+                    </div>
+
+                    <nav class="product-card__nav">
+                      <a href="product.html" class="product-card__btn product-card__more">Подробнее</a>
+                      <a href="cart.html" class="btn product-card__btn btn_cta product-card__cart">В корзину</a>
+                    </nav>
+                  </article>
+                  <!-- ./Product card -->
+                </div>
+                <!-- ./Slide -->
+                <!-- Slide -->
+                <div class="swiper-slide">
+                  <!-- Product card -->
+                  <article class="product-card">
+                    <div class="product-card__discount">
+                      <span class="product-card__discounter">скидка 25%</span>
+                    </div>
+
+                    <div class="product-card__img">
+                      <img src="https://dummyimage.com/700.jpg" alt="">
+                    </div>
+
+                    <h4 class="product-card__title">Test</h4>
+                  
+
+                    <div>
+                      <span class="product-card__price-old">500<span> CZK</span></span>
+                      <span class="product-card__price">400</span> <span>CZK</span>
+                    </div>
+
+                    <nav class="product-card__nav">
+                      <a href="product.html" class="product-card__btn product-card__more">Подробнее</a>
+                      <a href="cart.html" class="btn product-card__btn btn_cta product-card__cart">В корзину</a>
+                    </nav>
+                  </article>
+                  <!-- ./Product card -->
+                </div>
+                <!-- ./Slide -->
+                <!-- Slide -->
+                <div class="swiper-slide">
+                  <!-- Product card -->
+                  <article class="product-card">
+                    <div class="product-card__discount">
+                      <span class="product-card__discounter">скидка 25%</span>
+                    </div>
+
+                    <div class="product-card__img">
+                      <img src="https://dummyimage.com/700.jpg" alt="">
+                    </div>
+
+                    <h4 class="product-card__title">Test</h4>
+                  
+
+                    <div>
+                      <span class="product-card__price-old">500<span> CZK</span></span>
+                      <span class="product-card__price">400</span> <span>CZK</span>
+                    </div>
+
+                    <nav class="product-card__nav">
+                      <a href="product.html" class="product-card__btn product-card__more">Подробнее</a>
+                      <a href="cart.html" class="btn product-card__btn btn_cta product-card__cart">В корзину</a>
+                    </nav>
+                  </article>
+                  <!-- ./Product card -->
+                </div>
+                <!-- ./Slide -->
+                <!-- Slide -->
+                <div class="swiper-slide">
+                  <!-- Product card -->
+                  <article class="product-card">
+                    <div class="product-card__discount">
+                      <span class="product-card__discounter">скидка 25%</span>
+                    </div>
+
+                    <div class="product-card__img">
+                      <img src="https://dummyimage.com/700.jpg" alt="">
+                    </div>
+
+                    <h4 class="product-card__title">Test</h4>
+                  
+
+                    <div>
+                      <span class="product-card__price-old">500<span> CZK</span></span>
+                      <span class="product-card__price">400</span> <span>CZK</span>
+                    </div>
+
+                    <nav class="product-card__nav">
+                      <a href="product.html" class="product-card__btn product-card__more">Подробнее</a>
+                      <a href="cart.html" class="btn product-card__btn btn_cta product-card__cart">В корзину</a>
+                    </nav>
+                  </article>
+                  <!-- ./Product card -->
+                </div>
+                <!-- ./Slide -->
+                <!-- Slide -->
+                <div class="swiper-slide">
+                  <!-- Product card -->
+                  <article class="product-card">
+                    <div class="product-card__discount">
+                      <span class="product-card__discounter">скидка 25%</span>
+                    </div>
+
+                    <div class="product-card__img">
+                      <img src="https://dummyimage.com/700.jpg" alt="">
+                    </div>
+
+                    <h4 class="product-card__title">Test</h4>
+                  
+
+                    <div>
+                      <span class="product-card__price-old">500<span> CZK</span></span>
+                      <span class="product-card__price">400</span> <span>CZK</span>
+                    </div>
+
+                    <nav class="product-card__nav">
+                      <a href="product.html" class="product-card__btn product-card__more">Подробнее</a>
+                      <a href="cart.html" class="btn product-card__btn btn_cta product-card__cart">В корзину</a>
+                    </nav>
+                  </article>
+                  <!-- ./Product card -->
+                </div>
+                <!-- ./Slide -->
+                <!-- Slide -->
+                <div class="swiper-slide">
+                  <!-- Product card -->
+                  <article class="product-card">
+                    <div class="product-card__discount">
+                      <span class="product-card__discounter">скидка 25%</span>
+                    </div>
+
+                    <div class="product-card__img">
+                      <img src="https://dummyimage.com/700.jpg" alt="">
+                    </div>
+
+                    <h4 class="product-card__title">Test</h4>
+                  
+
+                    <div>
+                      <span class="product-card__price-old">500<span> CZK</span></span>
+                      <span class="product-card__price">400</span> <span>CZK</span>
+                    </div>
+
+                    <nav class="product-card__nav">
+                      <a href="product.html" class="product-card__btn product-card__more">Подробнее</a>
+                      <a href="cart.html" class="btn product-card__btn btn_cta product-card__cart">В корзину</a>
+                    </nav>
+                  </article>
+                  <!-- ./Product card -->
+                </div>
+                <!-- ./Slide -->
+                <!-- Slide -->
+                <div class="swiper-slide">
+                  <!-- Product card -->
+                  <article class="product-card">
+                    <div class="product-card__discount">
+                      <span class="product-card__discounter">скидка 25%</span>
+                    </div>
+
+                    <div class="product-card__img">
+                      <img src="https://dummyimage.com/700.jpg" alt="">
+                    </div>
+
+                    <h4 class="product-card__title">Test</h4>
+                  
+
+                    <div>
+                      <span class="product-card__price-old">500<span> CZK</span></span>
+                      <span class="product-card__price">400</span> <span>CZK</span>
+                    </div>
+
+                    <nav class="product-card__nav">
+                      <a href="product.html" class="product-card__btn product-card__more">Подробнее</a>
+                      <a href="cart.html" class="btn product-card__btn btn_cta product-card__cart">В корзину</a>
+                    </nav>
+                  </article>
+                  <!-- ./Product card -->
+                </div>
+                <!-- ./Slide -->
+                <!-- Slide -->
+                <div class="swiper-slide">
+                  <!-- Product card -->
+                  <article class="product-card">
+                    <div class="product-card__discount">
+                      <span class="product-card__discounter">скидка 25%</span>
+                    </div>
+
+                    <div class="product-card__img">
+                      <img src="https://dummyimage.com/700.jpg" alt="">
+                    </div>
+
+                    <h4 class="product-card__title">Test</h4>
+                  
+
+                    <div>
+                      <span class="product-card__price-old">500<span> CZK</span></span>
+                      <span class="product-card__price">400</span> <span>CZK</span>
+                    </div>
+
+                    <nav class="product-card__nav">
+                      <a href="product.html" class="product-card__btn product-card__more">Подробнее</a>
+                      <a href="cart.html" class="btn product-card__btn btn_cta product-card__cart">В корзину</a>
+                    </nav>
+                  </article>
+                  <!-- ./Product card -->
+                </div>
+                <!-- ./Slide -->
+
+              </div>
+              <!-- ./Additional required wrapper -->
+              
+              <!-- If we need pagination -->
+              <div class="swiper-pagination"></div>
+
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+            <!-- ./Slider -->
           </div>
-        </section><!-- //Discounts -->
+        </section>
+        <!-- ./Similar -->
 
   </main>
 
@@ -406,10 +690,60 @@
   <!-- Scripts -->
 
   <!-- Glider -->
-  <script src="js/glider.min.js"></script>
+  <!-- <script src="js/glider.min.js"></script> -->
+
+  <!-- Swiper -->
+  <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
 
   <!-- User script -->
   <script src="js/main.js"></script>
+
+  <!-- Initialize slider -->
+  <script>
+    var thumbnailSlider = new Swiper('.swiper-container', {
+      // Optional parameters
+      direction: 'horizontal',
+      loop: true,
+      slidesPerView: 1,
+
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+
+    var similarSlider = new Swiper('.swiper-container_similar', {
+      // Optional parameters
+      direction: 'horizontal',
+      loop: true,
+      slidesPerView: 5,
+      spaceBetween: 30,
+      slidesOffsetBefore: 50,
+
+      autoplay: {
+        delay: 7000,
+      },
+
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
 
   <!-- ./Scripts -->
 </body>

@@ -35,6 +35,14 @@
 </head>
 
 <body>
+
+  <style>
+    .swiper-container_testimonials {
+      padding: 0;
+      height: auto;
+    }
+  </style>
+
   <header itemscope itemtype="http://schema.org/WPHeader">
     <meta itemprop="headline" content="Название сайта">
     <meta itemprop="description" content="Описание сайта">
@@ -479,49 +487,132 @@
     <section>
       <div class="container testimonials">
         <h2 class="section-header">отзывы</h2>
-
         <!-- обертка -->
         <div>
 
-          <!-- отзыв -->
-          <article itemscope itemtype="https://schema.org/Review">
-            <meta itemprop="datePublished" content="2012-07-15" />
-            <h2 itemprop="name">
-              <link itemprop="url" href="https://example.com/review?10231">
-            </h2>
-            <div class="" itemprop="author" itemscope itemtype="https://schema.org/Person">
-              <span class="testimonials__name" itemprop="name">username</span>
-            </div>
+          <!-- Slider -->
+          <div class="swiper-container swiper-container_testimonials">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
 
-            <fieldset class="rating">
-              <legend class="visually-hidden">Оценка</legend>
-              <div class="rating__group">
-                <input type="radio" class="rating__star" name="rating" value="1" aria-label="Плохо" checked>
-                <input type="radio" class="rating__star" name="rating" value="2" aria-label="Неплохо">
-                <input type="radio" class="rating__star" name="rating" value="3" aria-label="Нормально">
-                <input type="radio" class="rating__star" name="rating" value="4" aria-label="Хорошо">
-                <input type="radio" class="rating__star" name="rating" value="5" aria-label="Прекрасно">
+              <!-- Slide -->
+              <div class="swiper-slide">
+                <!-- отзыв -->
+                <article itemscope itemtype="https://schema.org/Review" class="testimonial">
+                  <meta itemprop="datePublished" content="2012-07-15" />
+                  <h2 itemprop="name">
+                    <link itemprop="url" href="https://example.com/review?10231">
+                  </h2>
+                  <div class="" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    <span class="testimonials__name" itemprop="name">username</span>
+                  </div>
+                  <!-- Rating -->
+                  <fieldset class="rating">
+                    <legend class="visually-hidden">Оценка</legend>
+                    <div class="rating__group">
+                      <input type="radio" class="rating__star" name="rating" value="1" aria-label="Плохо" checked>
+                      <input type="radio" class="rating__star" name="rating" value="2" aria-label="Неплохо">
+                      <input type="radio" class="rating__star" name="rating" value="3" aria-label="Нормально">
+                      <input type="radio" class="rating__star" name="rating" value="4" aria-label="Хорошо">
+                      <input type="radio" class="rating__star" name="rating" value="5" aria-label="Прекрасно">
+                    </div>
+                  </fieldset>
+                  <!-- ./Rating -->
+                  <div>
+                    <p class="testimonials__txt" itemprop="reviewBody">Lorem ipsum dolor sit amet consectetur adipisicing
+                      elit. Dicta vel vitae qui
+                      aliquid cumque
+                      doloribus unde ut quibusdam asperiores. Quam excepturi ab corrupti quos quasi? Non, deserunt excepturi.
+                      Debitis, vel!</p>
+                  </div>
+                </article>
+                <!-- ./ отзыв -->
               </div>
-            </fieldset>
+              <!-- ./Slide -->
+              <!-- Slide -->
+              <div class="swiper-slide">
+                <!-- отзыв -->
+                <article itemscope itemtype="https://schema.org/Review" class="testimonial">
+                  <meta itemprop="datePublished" content="2012-07-15" />
+                  <h2 itemprop="name">
+                    <link itemprop="url" href="https://example.com/review?10231">
+                  </h2>
+                  <div class="" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    <span class="testimonials__name" itemprop="name">username</span>
+                  </div>
+                  <!-- Rating -->
+                  <fieldset class="rating">
+                    <legend class="visually-hidden">Оценка</legend>
+                    <div class="rating__group">
+                      <input type="radio" class="rating__star" name="rating" value="1" aria-label="Плохо" checked>
+                      <input type="radio" class="rating__star" name="rating" value="2" aria-label="Неплохо">
+                      <input type="radio" class="rating__star" name="rating" value="3" aria-label="Нормально">
+                      <input type="radio" class="rating__star" name="rating" value="4" aria-label="Хорошо">
+                      <input type="radio" class="rating__star" name="rating" value="5" aria-label="Прекрасно">
+                    </div>
+                  </fieldset>
+                  <!-- ./Rating -->
+                  <div>
+                    <p class="testimonials__txt" itemprop="reviewBody">Lorem ipsum dolor sit amet consectetur adipisicing
+                      elit. Dicta vel vitae qui
+                      aliquid cumque
+                      doloribus unde ut quibusdam asperiores. Quam excepturi ab corrupti quos quasi? Non, deserunt excepturi.
+                      Debitis, vel!</p>
+                  </div>
+                </article>
+                <!-- ./ отзыв -->
+              </div>
+              <!-- ./Slide -->
+              <!-- Slide -->
+              <div class="swiper-slide">
+                <!-- отзыв -->
+                <article itemscope itemtype="https://schema.org/Review" class="testimonial">
+                  <meta itemprop="datePublished" content="2012-07-15" />
+                  <h2 itemprop="name">
+                    <link itemprop="url" href="https://example.com/review?10231">
+                  </h2>
+                  <div class="" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    <span class="testimonials__name" itemprop="name">username</span>
+                  </div>
+                  <!-- Rating -->
+                  <fieldset class="rating">
+                    <legend class="visually-hidden">Оценка</legend>
+                    <div class="rating__group">
+                      <input type="radio" class="rating__star" name="rating" value="1" aria-label="Плохо" checked>
+                      <input type="radio" class="rating__star" name="rating" value="2" aria-label="Неплохо">
+                      <input type="radio" class="rating__star" name="rating" value="3" aria-label="Нормально">
+                      <input type="radio" class="rating__star" name="rating" value="4" aria-label="Хорошо">
+                      <input type="radio" class="rating__star" name="rating" value="5" aria-label="Прекрасно">
+                    </div>
+                  </fieldset>
+                  <!-- ./Rating -->
+                  <div>
+                    <p class="testimonials__txt" itemprop="reviewBody">Lorem ipsum dolor sit amet consectetur adipisicing
+                      elit. Dicta vel vitae qui
+                      aliquid cumque
+                      doloribus unde ut quibusdam asperiores. Quam excepturi ab corrupti quos quasi? Non, deserunt excepturi.
+                      Debitis, vel!</p>
+                  </div>
+                </article>
+                <!-- ./ отзыв -->
+              </div>
+              <!-- ./Slide -->
+              
+            </div>
+            <!-- ./Additional required wrapper -->
 
-
-          <div>
-            <p class="testimonials__txt" itemprop="reviewBody">Lorem ipsum dolor sit amet consectetur adipisicing
-              elit. Dicta vel vitae qui
-              aliquid cumque
-              doloribus unde ut quibusdam asperiores. Quam excepturi ab corrupti quos quasi? Non, deserunt excepturi.
-              Debitis, vel!</p>
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev swiper-button-prev_testimonials"></div>
+            <div class="swiper-button-next swiper-button-next_testimonials"></div>
+            
           </div>
+          <!-- ./Slider -->
+        </div>
+        <!-- ./ обертка -->
 
-        </article><!-- / отзыв -->
-
-      </div><!-- / обертка -->
-
-
-
-      <div class="container post-testimonial">
-        <a class="btn btn__testimon" href="testimonial.html">оставить отзыв</a>
-      </div>
+        <div class="container post-testimonial">
+          <a class="btn btn__testimon" href="testimonial.html">оставить отзыв</a>
+        </div>
 
       </div>
 
@@ -638,6 +729,51 @@
 
   <!-- User script -->
   <script src="js/main.js"></script>
+
+  <!-- Initialize slider -->
+  <script>
+    var discountsSlider = new Swiper('.swiper-container', {
+      // Optional parameters
+      direction: 'horizontal',
+      loop: true,
+      slidesPerView: 5,
+      spaceBetween: 30,
+      slidesOffsetBefore: 50,
+
+      autoplay: {
+        delay: 7000,
+      },
+
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+
+    var testimonialsSlider = new Swiper('.swiper-container_testimonials', {
+      // Optional parameters
+      direction: 'horizontal',
+      loop: true,
+      slidesPerView: 1,
+
+      autoplay: {
+        delay: 10000,
+      },
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next_testimonials',
+        prevEl: '.swiper-button-prev_testimonials',
+      },
+    });
+  </script>
 
   <!-- ./Scripts -->
 </body>
