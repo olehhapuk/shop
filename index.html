@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/" rel="preconnect" crossorigin>
   <link href="https://cdnjs.cloudflare.com/" rel="preconnect" crossorigin>
+  <link href="https://unpkg.com/" rel="preconnect" crossorigin>
 
   <title>Shop</title>
   <meta name="description" content="Shop description">
@@ -20,7 +21,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
   <!-- Glider -->
-  <link rel="stylesheet" href="css/glider.min.css">
+  <!-- <link rel="stylesheet" href="css/glider.min.css"> -->
+
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
 
   <!-- User stylesheet -->
   <link rel="stylesheet" href="css/style.css">
@@ -32,6 +36,14 @@
 </head>
 
 <body>
+
+  <style>
+    .swiper-container_testimonials {
+      padding: 0;
+      height: auto;
+    }
+  </style>
+
   <header itemscope itemtype="http://schema.org/WPHeader">
     <meta itemprop="headline" content="Название сайта">
     <meta itemprop="description" content="Описание сайта">
@@ -92,45 +104,17 @@
 
     <!-- Discounts -->
     <section class="discounts" id="discounts">
+      <!-- Container -->
       <div class="container">
 
         <h2 class="section-header">Акция</h2>
 
-
-        <!-- Slider discounts -->
-        <div class="glider-contain">
-
-          <div class="glider">
-            <!-- Glider slide -->
-            <div>
-              <!-- Product card -->
-              <article class="product-card">
-                <div class="product-card__discount">
-                  <span class="product-card__discounter">скидка 25%</span>
-                </div>
-
-                <div class="product-card__img">
-                  <img src="https://dummyimage.com/700.jpg" loading="lazy" alt="">
-                </div>
-
-                <h4 class="product-card__title">Test</h4>
-
-
-                <div>
-                  <span class="product-card__price-old">500<span> CZK</span></span>
-                  <span class="product-card__price">400</span> <span>CZK</span>
-                </div>
-
-                <nav class="product-card__nav">
-                  <a href="product.html" class="product-card__btn product-card__more">Подробнее</a>
-                  <a href="cart.html" class="btn product-card__btn btn_cta product-card__cart">В корзину</a>
-                </nav>
-              </article>
-              <!-- ./Product card -->
-            </div>
-            <!-- ./Glider slide -->
-            <!-- Glider slide -->
-            <div>
+        <!-- Slider main container -->
+        <div class="swiper-container">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
               <!-- Product card -->
               <article class="product-card">
                 <div class="product-card__discount">
@@ -156,9 +140,7 @@
               </article>
               <!-- ./Product card -->
             </div>
-            <!-- ./Glider slide -->
-            <!-- Glider slide -->
-            <div>
+            <div class="swiper-slide">
               <!-- Product card -->
               <article class="product-card">
                 <div class="product-card__discount">
@@ -184,9 +166,7 @@
               </article>
               <!-- ./Product card -->
             </div>
-            <!-- ./Glider slide -->
-            <!-- Glider slide -->
-            <div>
+            <div class="swiper-slide">
               <!-- Product card -->
               <article class="product-card">
                 <div class="product-card__discount">
@@ -212,10 +192,7 @@
               </article>
               <!-- ./Product card -->
             </div>
-            <!-- ./Glider slide -->
-
-            <!-- Glider slide -->
-            <div>
+            <div class="swiper-slide">
               <!-- Product card -->
               <article class="product-card">
                 <div class="product-card__discount">
@@ -241,10 +218,7 @@
               </article>
               <!-- ./Product card -->
             </div>
-            <!-- ./Glider slide -->
-
-            <!-- Glider slide -->
-            <div>
+            <div class="swiper-slide">
               <!-- Product card -->
               <article class="product-card">
                 <div class="product-card__discount">
@@ -270,53 +244,80 @@
               </article>
               <!-- ./Product card -->
             </div>
-            <!-- ./Glider slide -->
+            <div class="swiper-slide">
+              <!-- Product card -->
+              <article class="product-card">
+                <div class="product-card__discount">
+                  <span class="product-card__discounter">скидка 25%</span>
+                </div>
+
+                <div class="product-card__img">
+                  <img src="https://dummyimage.com/700.jpg" alt="">
+                </div>
+
+                <h4 class="product-card__title">Test</h4>
 
 
+                <div>
+                  <span class="product-card__price-old">500<span> CZK</span></span>
+                  <span class="product-card__price">400</span> <span>CZK</span>
+                </div>
+
+                <nav class="product-card__nav">
+                  <a href="product.html" class="product-card__btn product-card__more">Подробнее</a>
+                  <a href="cart.html" class="btn product-card__btn btn_cta product-card__cart">В корзину</a>
+                </nav>
+              </article>
+              <!-- ./Product card -->
+            </div>
           </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
 
-          <button role="button" aria-label="Previous" class="glider-prev">«</button>
-          <button role="button" aria-label="Next" class="glider-next">»</button>
-
-        </div><!-- ./Slider discounts -->
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
 
       </div>
-    </section><!-- /Discounts -->
+      <!-- ./Container -->
+    </section>
+    <!-- //Discounts -->
 
     <!-- advantages -->
     <section class="advantages">
-  <h2 class="section-header">Почему мы?</h2>
+      <h2 class="section-header">Почему мы?</h2>
 
-  <div class="container">
+      <div class="container">
 
-    <div class="item">
-      <div class="item__img">
-        <img src="img/logistics.svg" alt="delivery">
+        <div class="item">
+          <div class="item__img">
+            <img src="img/logistics.svg" alt="delivery">
+          </div>
+          <span class="item__desc">
+            Доставка в удобное вам время по всему городу всего за 100CZK
+          </span>
+        </div>
+
+        <div class="item">
+          <div class="item__img">
+            <img src="img/vegetable.svg" alt="">
+          </div>
+          <span class="item__desc">
+            Широкий ассортимент чешских и русских продуктов
+          </span>
+        </div>
+
+        <div class="item">
+          <div class="item__img">
+            <img src="img/quality.svg" alt="">
+          </div>
+          <span class="item__desc">
+            Гарантия качества и свежести продуктов
+          </span>
+        </div>
+
       </div>
-      <span class="item__desc">
-        Доставка в удобное вам время по всему городу всего за 100CZK
-      </span>
-    </div>
-
-    <div class="item">
-      <div class="item__img">
-        <img src="img/vegetable.svg" alt="">
-      </div>
-      <span class="item__desc">
-        Широкий ассортимент чешских и русских продуктов
-      </span>
-    </div>
-
-    <div class="item">
-      <div class="item__img">
-        <img src="img/quality.svg" alt="">
-      </div>
-      <span class="item__desc">
-        Гарантия качества и свежести продуктов
-      </span>
-    </div>
-
-  </div>
     </section>
     <!-- / advantages -->
 
@@ -456,7 +457,7 @@
         <!-- Grid container -->
         <div class="popular__grid">
           <!-- Product card -->
-          <article class="product-card">
+          <article class="product-card product-card_hoverable">
             <div class="product-card__discount">
               <span class="product-card__discounter">скидка 25%</span>
             </div>
@@ -586,70 +587,141 @@
     </section><!-- / Popular -->
 
     <!-- testimonials -->
-    <section class="container testimonials">
-      <h2 class="section-header">отзывы</h2>
+    <section>
+      <div class="container testimonials">
+        <h2 class="section-header">отзывы</h2>
+        <!-- обертка -->
+        <div>
 
-      <!-- обертка -->
-      <div>
+          <!-- Slider -->
+          <div class="swiper-container swiper-container_testimonials">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
 
-        <!-- отзыв -->
-        <article itemscope itemtype="https://schema.org/Review">
-          <meta itemprop="datePublished" content="2012-07-15" />
-          <h2 itemprop="name">
-            <link itemprop="url" href="https://example.com/review?10231">
-          </h2>
-          <div class="" itemprop="author" itemscope itemtype="https://schema.org/Person">
-            <span class="testimonials__name" itemprop="name">username</span>
+              <!-- Slide -->
+              <div class="swiper-slide">
+                <!-- отзыв -->
+                <article itemscope itemtype="https://schema.org/Review" class="testimonial">
+                  <meta itemprop="datePublished" content="2012-07-15" />
+                  <h2 itemprop="name">
+                    <link itemprop="url" href="https://example.com/review?10231">
+                  </h2>
+                  <div class="" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    <span class="testimonials__name" itemprop="name">username</span>
+                  </div>
+                  <!-- Rating -->
+                  <fieldset class="rating">
+                    <legend class="visually-hidden">Оценка</legend>
+                    <div class="rating__group">
+                      <input type="radio" class="rating__star" name="rating" value="1" aria-label="Плохо" checked>
+                      <input type="radio" class="rating__star" name="rating" value="2" aria-label="Неплохо">
+                      <input type="radio" class="rating__star" name="rating" value="3" aria-label="Нормально">
+                      <input type="radio" class="rating__star" name="rating" value="4" aria-label="Хорошо">
+                      <input type="radio" class="rating__star" name="rating" value="5" aria-label="Прекрасно">
+                    </div>
+                  </fieldset>
+                  <!-- ./Rating -->
+                  <div>
+                    <p class="testimonials__txt" itemprop="reviewBody">Lorem ipsum dolor sit amet consectetur
+                      adipisicing
+                      elit. Dicta vel vitae qui
+                      aliquid cumque
+                      doloribus unde ut quibusdam asperiores. Quam excepturi ab corrupti quos quasi? Non, deserunt
+                      excepturi.
+                      Debitis, vel!</p>
+                  </div>
+                </article>
+                <!-- ./ отзыв -->
+              </div>
+              <!-- ./Slide -->
+              <!-- Slide -->
+              <div class="swiper-slide">
+                <!-- отзыв -->
+                <article itemscope itemtype="https://schema.org/Review" class="testimonial">
+                  <meta itemprop="datePublished" content="2012-07-15" />
+                  <h2 itemprop="name">
+                    <link itemprop="url" href="https://example.com/review?10231">
+                  </h2>
+                  <div class="" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    <span class="testimonials__name" itemprop="name">username</span>
+                  </div>
+                  <!-- Rating -->
+                  <fieldset class="rating">
+                    <legend class="visually-hidden">Оценка</legend>
+                    <div class="rating__group">
+                      <input type="radio" class="rating__star" name="rating" value="1" aria-label="Плохо" checked>
+                      <input type="radio" class="rating__star" name="rating" value="2" aria-label="Неплохо">
+                      <input type="radio" class="rating__star" name="rating" value="3" aria-label="Нормально">
+                      <input type="radio" class="rating__star" name="rating" value="4" aria-label="Хорошо">
+                      <input type="radio" class="rating__star" name="rating" value="5" aria-label="Прекрасно">
+                    </div>
+                  </fieldset>
+                  <!-- ./Rating -->
+                  <div>
+                    <p class="testimonials__txt" itemprop="reviewBody">Lorem ipsum dolor sit amet consectetur
+                      adipisicing
+                      elit. Dicta vel vitae qui
+                      aliquid cumque
+                      doloribus unde ut quibusdam asperiores. Quam excepturi ab corrupti quos quasi? Non, deserunt
+                      excepturi.
+                      Debitis, vel!</p>
+                  </div>
+                </article>
+                <!-- ./ отзыв -->
+              </div>
+              <!-- ./Slide -->
+              <!-- Slide -->
+              <div class="swiper-slide">
+                <!-- отзыв -->
+                <article itemscope itemtype="https://schema.org/Review" class="testimonial">
+                  <meta itemprop="datePublished" content="2012-07-15" />
+                  <h2 itemprop="name">
+                    <link itemprop="url" href="https://example.com/review?10231">
+                  </h2>
+                  <div class="" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    <span class="testimonials__name" itemprop="name">username</span>
+                  </div>
+                  <!-- Rating -->
+                  <fieldset class="rating">
+                    <legend class="visually-hidden">Оценка</legend>
+                    <div class="rating__group">
+                      <input type="radio" class="rating__star" name="rating" value="1" aria-label="Плохо" checked>
+                      <input type="radio" class="rating__star" name="rating" value="2" aria-label="Неплохо">
+                      <input type="radio" class="rating__star" name="rating" value="3" aria-label="Нормально">
+                      <input type="radio" class="rating__star" name="rating" value="4" aria-label="Хорошо">
+                      <input type="radio" class="rating__star" name="rating" value="5" aria-label="Прекрасно">
+                    </div>
+                  </fieldset>
+                  <!-- ./Rating -->
+                  <div>
+                    <p class="testimonials__txt" itemprop="reviewBody">Lorem ipsum dolor sit amet consectetur
+                      adipisicing
+                      elit. Dicta vel vitae qui
+                      aliquid cumque
+                      doloribus unde ut quibusdam asperiores. Quam excepturi ab corrupti quos quasi? Non, deserunt
+                      excepturi.
+                      Debitis, vel!</p>
+                  </div>
+                </article>
+                <!-- ./ отзыв -->
+              </div>
+              <!-- ./Slide -->
+
+            </div>
+            <!-- ./Additional required wrapper -->
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev swiper-button-prev_testimonials"></div>
+            <div class="swiper-button-next swiper-button-next_testimonials"></div>
+
           </div>
+          <!-- ./Slider -->
+        </div>
+        <!-- ./ обертка -->
 
-          <div id="reviewStars-input">
-            <input id="star-4" type="radio" name="reviewStars" />
-            <label title="gorgeous" for="star-4"></label>
-            <input id="star-3" type="radio" name="reviewStars" />
-            <label title="good" for="star-3"></label>
-            <input id="star-2" type="radio" name="reviewStars" />
-            <label title="regular" for="star-2"></label>
-            <input id="star-1" type="radio" name="reviewStars" />
-            <label title="poor" for="star-1"></label>
-            <input id="star-0" type="radio" name="reviewStars" />
-            <label title="bad" for="star-0"></label>
-          </div><br>
-
-          <div itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
-            <meta itemprop="worstRating" content="1">
-            <meta itemprop="ratingValue" content="3">
-            <meta itemprop="bestRating" content="5" />
-          </div>
-
-          <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Organization">
-            <meta itemprop="name" content="Дичь убитая веслом">
-            <meta itemprop="telephone" content="420 420 420 420">
-            <link itemprop="url" href="https://example.ru/" />
-            <meta itemprop="email" content="mail@example.ru">
-            <p itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-              <meta itemprop="addressLocality" content="Brno">
-              <meta itemprop="streetAddress" content="Taborska 228">
-            </p>
-          </div>
-
-
-          <div>
-            <p class="testimonials__txt" itemprop="reviewBody">Lorem ipsum dolor sit amet consectetur adipisicing
-              elit. Dicta vel vitae qui
-              aliquid cumque
-              doloribus unde ut quibusdam asperiores. Quam excepturi ab corrupti quos quasi? Non, deserunt excepturi.
-              Debitis, vel!</p>
-          </div>
-
-        </article><!-- / отзыв -->
-
-      </div><!-- / обертка -->
-
-
-
-      <div class="container post-testimonial">
-        <a class="btn btn__testimon" href="testimonial.html">оставить отзыв</a>
-      </div>
+        <div class="container post-testimonial">
+          <a class="btn btn__testimon" href="testimonial.html">оставить отзыв</a>
+        </div>
 
       </div>
 
@@ -658,7 +730,8 @@
     <!-- ceo_txt  -->
     <section class="text__block">
       <div class="container">
-        <p class="text__block_txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis consequuntur, laboriosam
+        <p class="text__block_txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis consequuntur,
+          laboriosam
           optio est placeat quasi facere deleniti quisquam maxime quibusdam impedit vero nobis iste! Excepturi ex
           aspernatur ad nisi tempore.</p>
       </div>
@@ -726,8 +799,6 @@
               href="gdpr.html">GDPR</a></li>
         </ul>
 
-
-
         <div class="footer__social">
           <a href="facebook.com" target="_blank" class="footer__social-link">
             <i class="fab fa-facebook-f"></i>
@@ -754,10 +825,58 @@
   <!-- Scripts -->
 
   <!-- Glider -->
-  <script src="js/glider.min.js"></script>
+  <!-- <script src="js/glider.min.js"></script> -->
+
+  <!-- Swiper -->
+  <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
 
   <!-- User script -->
   <script src="js/main.js"></script>
+
+  <!-- Initialize slider -->
+  <script>
+    var discountsSlider = new Swiper('.swiper-container', {
+      // Optional parameters
+      direction: 'horizontal',
+      loop: true,
+      slidesPerView: 5,
+      spaceBetween: 30,
+      slidesOffsetBefore: 50,
+
+      autoplay: {
+        delay: 7000,
+      },
+
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+
+    var testimonialsSlider = new Swiper('.swiper-container_testimonials', {
+      // Optional parameters
+      direction: 'horizontal',
+      loop: true,
+      slidesPerView: 1,
+
+      autoplay: {
+        delay: 10000,
+      },
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next_testimonials',
+        prevEl: '.swiper-button-prev_testimonials',
+      },
+    });
+  </script>
 
   <!-- ./Scripts -->
 </body>

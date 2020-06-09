@@ -1,22 +1,4 @@
-@media (max-width: 1200px) {
-  .container {
-    padding: 0 10px;
-  }
-
-  .popular__grid {
-    grid-template-columns: repeat(3, 1fr);
-  } 
-}
-
-@media (max-width: 1020px) {
-  html {
-    font-size: 18px;
-  }
-
-  .popular__grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
+@media (max-width: 1240px) {
   .product-card__nav {
     display: block;
     margin: 0;
@@ -28,6 +10,49 @@
     display: block;
     padding: 0.5em 1em;
     margin: 0.5em;
+  }
+  
+}
+
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 10px;
+  }
+
+  .popular__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}
+
+@media (max-width: 1020px) {
+  html {
+    font-size: 18px;
+  }
+
+  .popular__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .category__preview {
+    margin: 1em .5em;
+  }
+  .category__preview .preview__title{
+    font-size: 2em;
+  }
+  .category__preview .preview__text{
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 992px) {
+  .category__preview .container{
+    flex-direction: column;
+    background-color: var(--bg-light2);
+    border-radius: 20px;
+    padding: 2em;
+  }
+  .category__preview .preview__title{
+    margin-top: 1em;
   }
   
   .category__preview {
@@ -148,11 +173,17 @@
     border-bottom: 1px solid #ddd;
     display: block;
     text-align: right;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .table_responsive td::before {
     content: attr(aria-label);
     float: left;
+  }
+
+  .cart__remove-cell {
+    text-align: center !important;
   }
   
   .footer > .container {
@@ -181,9 +212,11 @@
   .footer__social-link {
     font-size: 2em;
   }
+
   .testimonials__name{
     font-size: 1.2rem;
   }
+
   .product__col_info{
     max-width: 100%;
   }
@@ -192,14 +225,12 @@
     top: -5px;
     left: -5px;
   }
-
   .category__preview .container{
     padding: 1em;
   }
   .category__preview .preview__img{
     margin-right: 0;
   }
-  
   .category__preview .preview__title{
     font-size: 1.5em;
   }
@@ -236,13 +267,14 @@
   .product__col_slider {
     margin: 0 30px;
   }
+
   .testimonials__name{
     font-size: 1.1rem;
   }
+
   .testimonials__txt{
     font-size: .9em;
   }
-  
   .category__preview {
     margin: .4em .5em;
   }
@@ -252,7 +284,6 @@
   .advantages img{
     max-height: 80px;
   }
-  
   .category__preview .preview__title{
     font-size: 1.2em;
   }
@@ -282,7 +313,6 @@
     padding-left: 0.3em;
     padding-right: 0.3em;
   }
-
   .advantages img{
     max-height: 60px;
   }
