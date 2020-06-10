@@ -15,10 +15,10 @@
   <!-- каноническая ссылка  -->
   <link rel="canonical" hreflang="ru-RU" href="https://" />
 
-  <!-- Normalize -->
-  <link rel="stylesheet" href="css/normalize.css">
   <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Normalize -->
+  <link rel="stylesheet" href="css/normalize.css">
   <!-- Swiper -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
   <!-- fancybox -->
@@ -118,23 +118,23 @@
               <div class="swiper-wrapper">
                 <!-- Slide -->
                 <div class="swiper-slide">
-                  <a class="product__thumbnail" data-fancybox="gallery" href="img/1.jpg">
-                    <img src="img/1.jpg" alt="Product thumbnail" itemprop="image">
+                  <a class="product__thumbnail" data-fancybox="gallery" href="img/3.jpg">
+                    <img src="img/3.jpg" alt="Product thumbnail" itemprop="image">
                   </a>
                 </div>
                 <!-- ./Slide -->
                 <!-- Slide -->
                 <div class="swiper-slide">
-                  <div class="product__thumbnail">
-                    <img src="https://dummyimage.com/500.jpg" alt="Product thumbnail" itemprop="image">
-                  </div>
+                  <a class="product__thumbnail" data-fancybox="gallery" href="img/2.jpg">
+                    <img src="img/2.jpg" alt="Product thumbnail" itemprop="image">
+                  </a>
                 </div>
                 <!-- ./Slide -->
                 <!-- Slide -->
                 <div class="swiper-slide">
-                  <div class="product__thumbnail">
-                    <img src="https://dummyimage.com/500.jpg" alt="Product thumbnail" itemprop="image">
-                  </div>
+                  <a class="product__thumbnail" data-fancybox="gallery" href="img/3.jpg">
+                    <img src="img/3.jpg" alt="Product thumbnail" itemprop="image">
+                  </a>
                 </div>
                 <!-- ./Slide -->
                 <!-- Slide -->
@@ -317,10 +317,59 @@
               </article>
 
               <article class="product__review">
-                Отзыв 2
+                <!-- Указывается схема Person.-->
+                <span>
+                  <!-- В поле name указываем имя автора.-->
+                  <span class="testimonials__name">username</span>
+                </span>
+
+                <fieldset class="rating">
+                  <legend class="visually-hidden">Оценка</legend>
+                  <div class="rating__group">
+                    <input type="radio" class="rating__star" name="rating" value="1" aria-label="Плохо" checked>
+                    <input type="radio" class="rating__star" name="rating" value="2" aria-label="Неплохо">
+                    <input type="radio" class="rating__star" name="rating" value="3" aria-label="Нормально">
+                    <input type="radio" class="rating__star" name="rating" value="4" aria-label="Хорошо">
+                    <input type="radio" class="rating__star" name="rating" value="5" aria-label="Прекрасно">
+                  </div>
+                </fieldset>
+
+                <div>
+                  <p class="testimonials__txt" >Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Dicta vel vitae qui
+                    aliquid cumque
+                    doloribus unde ut quibusdam asperiores. Quam excepturi ab corrupti quos quasi? Non, deserunt
+                    excepturi.
+                    Debitis, vel!</p>
+                </div>
               </article>
+
               <article class="product__review">
-                Отзыв 3
+                <!-- Указывается схема Person.-->
+                <span>
+                  <!-- В поле name указываем имя автора.-->
+                  <span class="testimonials__name">username</span>
+                </span>
+
+                <fieldset class="rating">
+                  <legend class="visually-hidden">Оценка</legend>
+                  <div class="rating__group">
+                    <input type="radio" class="rating__star" name="rating" value="1" aria-label="Плохо" checked>
+                    <input type="radio" class="rating__star" name="rating" value="2" aria-label="Неплохо">
+                    <input type="radio" class="rating__star" name="rating" value="3" aria-label="Нормально">
+                    <input type="radio" class="rating__star" name="rating" value="4" aria-label="Хорошо">
+                    <input type="radio" class="rating__star" name="rating" value="5" aria-label="Прекрасно">
+                  </div>
+                </fieldset>
+
+                <div>
+                  <p class="testimonials__txt" >Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Dicta vel vitae qui
+                    aliquid cumque
+                    doloribus unde ut quibusdam asperiores. Quam excepturi ab corrupti quos quasi? Non, deserunt
+                    excepturi.
+                    Debitis, vel!</p>
+                </div>
               </article>
 
               <form action="" method="POST" class="product__review-form">
