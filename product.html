@@ -4,21 +4,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
   <title>название товара</title>
   <meta name="description" content="описание товара с таба описание">
 
+  <link href="https://fonts.googleapis.com/" rel="preconnect" crossorigin>
+  <link href="https://unpkg.com/"            rel="preconnect" crossorigin>
+  <link href="https://cdn.jsdelivr.net/"     rel="preconnect" crossorigin>
+
   <!-- Normalize -->
   <link rel="stylesheet" href="css/normalize.css">
-
   <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
-  <!-- Glider -->
-  <!-- <link rel="stylesheet" href="css/glider.min.css"> -->
-
   <!-- Swiper -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
-
+  <!-- fancybox -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
   <!-- User stylesheet -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/media.css">
@@ -53,9 +54,9 @@
             <a itemprop="url" href="index.html" class="nav__link">Главная</a>
           </li>
 
-          <li itemprop="name" class="nav__item">
+          <!-- <li itemprop="name" class="nav__item">
             <a itemprop="url" href="index.html#discounts" class="nav__link">Скидки</a>
-          </li>
+          </li> -->
 
           <!-- <li>
             <a itemprop="url" href="index.html#discounts" class="nav__link" title="discounts">Скидки <img class="nav__link_discount" src="img/sale.svg" alt=""></a>
@@ -88,11 +89,11 @@
     <div class="breadcumbs">
       <ol itemscope itemtype="http://schema.org/BreadcrumbList">
         <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-          <a itemprop="item" class="breadcumbs__item" href="index.html"><span itemprop="name">Домой</span></a>
+          <a itemprop="item" class="breadcumbs__item" href="index.html"><span itemprop="name">Главная</span></a>
           <meta itemprop="position" content="1" />
         </li>
         <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-          <a itemprop="item" class="breadcumbs__item breadcumbs__item_active" href="product.html"><span
+          <a itemprop="item" class="breadcumbs__item breadcumbs__item_active" href="#"><span
               itemprop="name">Вода</span></a>
           <meta itemprop="position" content="2" />
         </li>
@@ -113,16 +114,21 @@
 
           <!-- Product col -->
           <div class="product__col product__col_slider">
+            
 
             <!-- Slider main container -->
             <div class="swiper-container swiper-container_thumbnail">
+              <div class="product-card__discount">
+                <span class="product-card__discounter">скидка 25%</span>
+              </div>
+              
               <!-- Additional required wrapper -->
               <div class="swiper-wrapper">
                 <!-- Slide -->
                 <div class="swiper-slide">
-                  <div class="product__thumbnail">
-                    <img src="https://dummyimage.com/500.jpg" alt="Product thumbnail" itemprop="image">
-                  </div>
+                  <a class="product__thumbnail" data-fancybox="gallery" href="img/1.jpg">
+                    <img src="img/1.jpg" alt="Product thumbnail" itemprop="image">
+                  </a>
                 </div>
                 <!-- ./Slide -->
                 <!-- Slide -->
@@ -196,7 +202,6 @@
           </div>
           <!-- ./Product col -->
 
-          <!-- TODO stars , slider to litle bit left-->
           <!-- Product col -->
           <div class="product__col product__col_info">
             <h1 class="product__title" itemprop="name">Кола</h1>
@@ -235,7 +240,6 @@
               </div>
             </div>
 
-            <!-- наличие считаю лишним стоит убрать -->
             <form class="form product__form">
               <input type="number" class="product__count" min="1" step="1" value="1">
               <button type="submit" class="btn" title="в корзину">Добавить в корзину</button>
@@ -359,8 +363,8 @@
     </section>
     <!-- ./Product -->
 
-        <!-- Similar -->
-        <section class="similar" id="similar">
+    <!-- Similar -->
+    <section class="similar" id="similar">
           <div class="container">
             <h2 class="section-header">Похожие продукты</h2>
 
@@ -606,8 +610,8 @@
             </div>
             <!-- ./Slider -->
           </div>
-        </section>
-        <!-- ./Similar -->
+    </section>
+    <!-- ./Similar -->
 
   </main>
 
@@ -688,12 +692,11 @@
 
 
   <!-- Scripts -->
-
-  <!-- Glider -->
-  <!-- <script src="js/glider.min.js"></script> -->
-
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
   <!-- Swiper -->
   <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+  <!-- fancybox -->
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 
   <!-- User script -->
   <script src="js/main.js"></script>
@@ -705,6 +708,21 @@
       direction: 'horizontal',
       loop: true,
       slidesPerView: 1,
+
+      breakpoints: {
+        640: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 1,
+          spaceBetween: 40,
+        },
+        1024: {
+          slidesPerView: 1,
+          spaceBetween: 50,
+        },
+      },
 
       // If we need pagination
       pagination: {
@@ -723,13 +741,31 @@
       // Optional parameters
       direction: 'horizontal',
       loop: true,
-      slidesPerView: 5,
+      slidesPerView: 1,
       spaceBetween: 30,
-      slidesOffsetBefore: 50,
+      slidesOffsetBefore: 5,
+      mousewheel: true,
+      grabCursor: true,
 
       autoplay: {
         delay: 7000,
       },
+
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 40,
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 50,
+        },
+      },
+
 
       // If we need pagination
       pagination: {

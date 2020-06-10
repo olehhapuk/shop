@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/" rel="preconnect" crossorigin>
   <title>Shop</title>
+  <meta name="description" content="">
 
   <!-- Normalize -->
   <link rel="stylesheet" href="css/normalize.css">
@@ -18,6 +21,7 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 </head>
+
 <body>
   <!-- Navbar -->
   <nav class="nav">
@@ -48,19 +52,37 @@
   </nav>
   <!-- ./Navbar -->
 
+  <!-- breadcrumbs -->
+  <div class="container">
+    <!-- Breadcumbs -->
+    <div class="breadcumbs">
+      <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <a itemprop="item" class="breadcumbs__item" href="index.html"><span itemprop="name">Главная</span></a>
+          <meta itemprop="position" content="1" />
+        </li>
+
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <a itemprop="item" class="breadcumbs__item" href="cart.html"><span
+              itemprop="name">Корзина</span></a>
+          <meta itemprop="position" content="2" />
+        </li>
+
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <a itemprop="item" class="breadcumbs__item breadcumbs__item_active" href="#"><span
+              itemprop="name">Оформление заказа</span></a>
+          <meta itemprop="position" content="3" />
+        </li>
+
+      </ol>
+    </div>
+    <!-- ./Breadcumbs -->
+  </div>
+
   <main>
     <!-- Container -->
     <div class="container">
-
-      <!-- Breadcumbs -->
-      <div class="breadcumbs">
-        <a class="breadcumbs__item breadcumbs__item_active" href="index.html">Домой</a>
-        <a class="breadcumbs__item" href="product.html">Вода</a>
-      </div>
-      <!-- ./Breadcumbs -->
-
       <h2 class="section-header">Оформление заказа</h2>
-
     </div>
     <!-- ./Container -->
 
@@ -136,7 +158,7 @@
                 <th>Стимость</th>
               </tr>
             </thead>
-            
+
             <tbody>
               <tr>
                 <td>Кола х 1</td>
@@ -244,4 +266,5 @@
 
   <script src="js/main.js"></script>
 </body>
+
 </html>
