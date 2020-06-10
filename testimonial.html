@@ -17,8 +17,6 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/media.css">
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 
 
 </head>
@@ -42,6 +40,10 @@
             <a itemprop="url" href="index.html" class="nav__link">Главная</a>
           </li>
 
+          <!-- <li itemprop="name" class="nav__item">
+            <a itemprop="url" href="index.html#discounts" class="nav__link">Скидки</a>
+          </li> -->
+
           <!-- <li>
             <a itemprop="url" href="index.html#discounts" class="nav__link" title="discounts">Скидки <img class="nav__link_discount" src="img/sale.svg" alt=""></a>
           </li> -->
@@ -53,7 +55,7 @@
           <li itemprop="name" class="nav__item">
             <a itemprop="url" href="cart.html" class="nav__link nav__link_cart" aria-describedby="Корзина"
               title="shoping cart">
-              <i class="fas fa-shopping-cart"></i>
+              <img src="img/cart.svg" alt="cart" class="nav__icon">
               <sup class="badge">1</sup>
             </a>
           </li>
@@ -106,9 +108,9 @@
     </div>
   </main>
 
-  <footer class="footer">
+  <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
     <!-- Container -->
-    <div class="container">
+    <div class="container ">
       <!-- Footer col -->
       <div class="footer__col">
         <h3 class="footer__title">О нас</h3>
@@ -126,22 +128,22 @@
         <h3 class="footer__title">Контакты</h3>
 
         <a class="footer__text" href="tel:+420">
-          <i class="fas fa-phone-alt"></i>
+          <img class="footer__icon" src="img/phone.svg" alt="Phone number">
           <span>+420 420 420 420</span>
         </a>
 
         <a class="footer__text" href="mailto:roga_i_kopyta@seznam.cz">
-          <i class="far fa-envelope"></i>
+          <img class="footer__icon" src="img/mail.svg" alt="Email adress">
           <span>roga_i_kopyta@seznam.cz</span>
         </a>
 
         <span class="footer__text">
-          <i class="fas fa-map-marker-alt"></i>
+          <img class="footer__icon" src="img/pin.svg" alt="Adress">
           <span>Brno Táborská 278</span>
         </span>
 
         <span class="footer__text footer__text_work-time">
-          <i class="far fa-clock"></i>
+          <img class="footer__icon" src="img/clock.svg" alt="Work hours">
           <span>
             Время работы:<br>
             пн-сб с 9:00 до 20:00
@@ -152,30 +154,40 @@
 
       <!-- Footer col -->
       <div class="footer__col">
-        <h3 class="footer__title">Страницы</h3>
-
-        <a class="footer__text" href="index.html">Главная</a>
-        <a class="footer__text" href="contacts.html">Контакты</a>
-        <a class="footer__text" href="cart.html">Корзина</a>
-        <a class="footer__text" href="gdpr.html">GDPR</a>
+        <h3 class="footer__title" itemscope itemtype="http://www.schema.org/SiteNavigationElement">Страницы</h3>
+        <ul class="footer__list">
+          <li class="footer__list-item" itemtype="http://www.schema.org/SiteNavigationElement">
+            <a itemprop="url" class="footer__text" href="index.html">Главная</a>
+          </li>
+          <li class="footer__list-item" itemtype="http://www.schema.org/SiteNavigationElement">
+            <a itemprop="url" class="footer__text" href="contacts.html">Контакты</a>
+          </li>
+          <li class="footer__list-item" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
+            <a itemprop="url" class="footer__text" href="cart.html">Корзина</a>
+          </li>
+          <li class="footer__list-item" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
+            <a itemprop="url" class="footer__text" href="gdpr.html">GDPR</a>
+          </li>
+        </ul>
 
         <div class="footer__social">
           <a href="facebook.com" target="_blank" class="footer__social-link">
-            <i class="fab fa-facebook-f"></i>
+            <img src="img/facebook.svg" alt="facebook" class="footer__icon">
           </a>
 
           <a href="vk.com" target="_blank" class="footer__social-link">
-            <i class="fab fa-vk"></i>
+            <img src="img/vk.svg" alt="vk.com" class="footer__icon">
           </a>
 
           <a href="instagram.com" target="_blank" class="footer__social-link">
-            <i class="fab fa-instagram"></i>
+            <img src="img/instagram.svg" alt="instagram" class="footer__icon">
           </a>
         </div>
       </div>
       <!-- ./Footer col -->
     </div>
     <!-- ./Container -->
+    <div class="footer__copy"><span itemprop="copyrightYear">MySite.com 2020. Все права защищены</span></div>
   </footer>
 
 </body>
