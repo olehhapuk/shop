@@ -5,12 +5,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>название товара</title>
-  <meta name="description" content="описание товара с таба описание">
-
   <link href="https://fonts.googleapis.com/" rel="preconnect" crossorigin>
   <link href="https://unpkg.com/"            rel="preconnect" crossorigin>
   <link href="https://cdn.jsdelivr.net/"     rel="preconnect" crossorigin>
+
+  <title></title>
+  <meta name="description" content="описание товара с таба описание">
+
+  <!-- каноническая ссылка  -->
+  <link rel="canonical" hreflang="ru-RU" href="https://" />
 
   <!-- Normalize -->
   <link rel="stylesheet" href="css/normalize.css">
@@ -22,17 +25,10 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
   <!-- User stylesheet -->
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/media.css">
 
 </head>
 
 <body>
-
-  <style>
-    .swiper-container_thumbnail {
-      padding: 0;
-    }
-  </style>
 
   <header itemscope itemtype="http://schema.org/WPHeader">
   <meta itemprop="headline" content="Название сайта">
@@ -64,7 +60,7 @@
         </li>
 
         <li itemprop="name" class="nav__item">
-          <a itemprop="url" href="cart.html" class="nav__link nav__link_cart" aria-describedby="Корзина"
+          <a itemprop="url" href="cart.html" class="nav__link nav__link_cart"
             title="shoping cart">
             <img src="img/cart.svg" alt="cart" class="nav__icon">
             <sup class="badge">1</sup>
@@ -223,14 +219,14 @@
 
             
 
-            <div itemprop="offers" itemscope itemtype="https://schema.org/Offer" itemscope>
+            <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
               <!-- Указываем ссылку на товар -->
               <link itemprop="url" href="https://example.com/" />
               <meta itemprop="itemCondition" content="https://schema.org/NewCondition" />
               <p class="product__price"><span itemprop="price">30</span> <span itemprop="priceCurrency"
                   content="CZK">CZK</span></p><span class="product__pay">оплата при получении</span>
               <meta itemprop="priceValidUntil" content="2100-11-20" />
-              <link itemprop="availability" href="http://schema.org/InStock"></link>
+              <link itemprop="availability" href="http://schema.org/InStock">
               <div itemprop="seller" itemtype="http://schema.org/Organization" itemscope>
                 <meta itemprop="name" content="Дичь убитая веслом" />
               </div>
@@ -265,7 +261,7 @@
               amet consectetur adipisicing elit. Quam doloribus quaerat vero fugit eum perspiciatis voluptas cumque
               voluptatibus repellendus officiis culpa magnam, ullam beatae nostrum voluptatum veniam eius a nam.</p>
             <div class="product__details-text-item" id="detailsInfo">
-              <table class="table" cellspacing="0">
+              <table class="table">
                 <tr>
                   <th class="product__details-table-property">Свойство</th>
                   <th class="product__details-table-desc">Описание</th>

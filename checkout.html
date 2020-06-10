@@ -5,18 +5,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/" rel="preconnect" crossorigin>
-  <title>Shop</title>
+  <title></title>
   <meta name="description" content="">
-
-  <!-- Normalize -->
-  <link rel="stylesheet" href="css/normalize.css">
+  <!-- каноническая ссылка  -->
+  <link rel="canonical" hreflang="ru-RU" href="https://" />
 
   <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
+  <!-- Normalize -->
+  <link rel="stylesheet" href="css/normalize.css">
   <!-- User stylesheet -->
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/media.css">
 
 </head>
 
@@ -51,8 +50,7 @@
           </li>
 
           <li itemprop="name" class="nav__item">
-            <a itemprop="url" href="cart.html" class="nav__link nav__link_cart" aria-describedby="Корзина"
-              title="shoping cart">
+            <a itemprop="url" href="cart.html" class="nav__link nav__link_cart" title="shoping cart">
               <img src="img/cart.svg" alt="cart" class="nav__icon">
               <sup class="badge">1</sup>
             </a>
@@ -161,7 +159,7 @@
         <div class="checkout-col checkout-col_order">
           <h3 class="checkout-col__header">Ваш заказ</h3>
 
-          <table class="order__info table" cellspacing="0">
+          <table class="order__info table">
             <thead>
               <tr>
                 <th>Товар</th>
@@ -248,10 +246,10 @@
       <div class="footer__col">
         <h3 class="footer__title" itemscope itemtype="http://www.schema.org/SiteNavigationElement">Страницы</h3>
         <ul class="footer__list">
-          <li class="footer__list-item" itemtype="http://www.schema.org/SiteNavigationElement">
+          <li class="footer__list-item" itemscope  itemtype="http://www.schema.org/SiteNavigationElement">
             <a itemprop="url" class="footer__text" href="index.html">Главная</a>
           </li>
-          <li class="footer__list-item" itemtype="http://www.schema.org/SiteNavigationElement">
+          <li class="footer__list-item" itemscope  itemtype="http://www.schema.org/SiteNavigationElement">
             <a itemprop="url" class="footer__text" href="contacts.html">Контакты</a>
           </li>
           <li class="footer__list-item" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
