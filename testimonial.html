@@ -42,10 +42,6 @@
             <a itemprop="url" href="index.html" class="nav__link">Главная</a>
           </li>
 
-          <li itemprop="name" class="nav__item">
-            <a itemprop="url" href="index.html#discounts" class="nav__link">Скидки</a>
-          </li>
-
           <!-- <li>
             <a itemprop="url" href="index.html#discounts" class="nav__link" title="discounts">Скидки <img class="nav__link_discount" src="img/sale.svg" alt=""></a>
           </li> -->
@@ -77,20 +73,19 @@
       <h2 class="section-header">Отзыв о магазине</h2>
     </div>
 
-    <div class="container testimonial">
+    <div class="container testimonial-page">
 
       <form action="" method="POST">
 
         <label for="user__name">как вас зовут?</label>
-        <input class="testimonial__username" id="user__name" type="text" name="" required placeholder="ваше имя" minlength="2" maxlength="15">
+        <input class="testimonial-page__input testimonial-page__username" id="user__name" type="text" name="" required placeholder="ваше имя" minlength="2" maxlength="15">
 
 
         <label for="user__mail">Оставьте свой e-mail</label>
-        <input class="testimonial__mail" id="user__mail" type="email" name="" required placeholder="ваш e-mail">
+        <input class="testimonial-page__input testimonial-page__mail" id="user__mail" type="email" name="" required placeholder="ваш e-mail">
 
-        <span>Оставьте ваш отзыв</span>
-        <label for="user__text"></label>
-        <input class="testimonial__txt" id="user__text" type="text" name="" required placeholder="ваше имя">
+        <label for="user__text">Оставьте ваш отзыв</label>
+        <textarea class="testimonial-page__input testimonial-page__txt" id="user__text" name="" required placeholder="ваш отзыв"></textarea>
 
         <!-- Rating -->
         <fieldset class="rating">
@@ -105,10 +100,10 @@
         </fieldset>
         <!-- ./Rating -->
 
+        <button type="submit" class="btn testimonial-page__submit">Оставить отзыв</button>
+
       </form>
-
     </div>
-
   </main>
 
   <footer class="footer">

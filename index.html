@@ -71,7 +71,7 @@
           <li itemprop="name" class="nav__item">
             <a itemprop="url" href="cart.html" class="nav__link nav__link_cart" aria-describedby="Корзина"
               title="shoping cart">
-              <i class="fas fa-shopping-cart"></i>
+              <img src="img/cart.svg" alt="cart" class="nav__icon">
               <sup class="badge">1</sup>
             </a>
           </li>
@@ -105,7 +105,7 @@
         <h2 class="section-header">Акция</h2>
 
         <!-- Slider main container -->
-        <div class="swiper-container">
+        <div class="swiper-container swiper-container_discounts">
           <!-- Additional required wrapper -->
           <div class="swiper-wrapper">
             <!-- Slides -->
@@ -267,11 +267,11 @@
             </div>
           </div>
           <!-- If we need pagination -->
-          <div class="swiper-pagination"></div>
+          <div class="swiper-pagination swiper-pagination_discounts"></div>
 
           <!-- If we need navigation buttons -->
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev swiper-button-prev_discounts"></div>
+          <div class="swiper-button-next swiper-button-next_discounts"></div>
         </div>
 
       </div>
@@ -602,15 +602,15 @@
                     <link itemprop="url" href="https://example.com/review?10231">
                   </h2>
                   <div class="" itemprop="author" itemscope itemtype="https://schema.org/Person">
-                    <span class="testimonials__name" itemprop="name">username</span>
+                    <span class="testimonials__name" itemprop="name">username 1</span>
                   </div>
                   <!-- Rating -->
                   <fieldset class="rating">
                     <legend class="visually-hidden">Оценка</legend>
                     <div class="rating__group">
-                      <input type="radio" class="rating__star" name="rating" value="1" aria-label="Плохо" checked>
+                      <input type="radio" class="rating__star" name="rating" value="1" aria-label="Плохо">
                       <input type="radio" class="rating__star" name="rating" value="2" aria-label="Неплохо">
-                      <input type="radio" class="rating__star" name="rating" value="3" aria-label="Нормально">
+                      <input type="radio" class="rating__star" name="rating" value="3" aria-label="Нормально" checked>
                       <input type="radio" class="rating__star" name="rating" value="4" aria-label="Хорошо">
                       <input type="radio" class="rating__star" name="rating" value="5" aria-label="Прекрасно">
                     </div>
@@ -756,22 +756,22 @@
         <h3 class="footer__title">Контакты</h3>
 
         <a class="footer__text" href="tel:+420">
-          <img class="footer__icons" src="img/phone.svg" alt="" >
+          <img class="footer__icon" src="img/phone.svg" alt="Phone number">
           <span>+420 420 420 420</span>
         </a>
 
         <a class="footer__text" href="mailto:roga_i_kopyta@seznam.cz">
-          <img class="footer__icons" src="img/mail.svg" alt="" >
+          <img class="footer__icon" src="img/mail.svg" alt="Email adress">
           <span>roga_i_kopyta@seznam.cz</span>
         </a>
 
         <span class="footer__text">
-          <img class="footer__icons" src="img/pin.svg" alt="" >
+          <img class="footer__icon" src="img/pin.svg" alt="Adress">
           <span>Brno Táborská 278</span>
         </span>
 
         <span class="footer__text footer__text_work-time">
-          <img class="footer__icons" src="img/clock.svg" alt="" >
+          <img class="footer__icon" src="img/clock.svg" alt="Work hours">
           <span>
             Время работы:<br>
             пн-сб с 9:00 до 20:00
@@ -783,28 +783,32 @@
       <!-- Footer col -->
       <div class="footer__col">
         <h3 class="footer__title" itemscope itemtype="http://www.schema.org/SiteNavigationElement">Страницы</h3>
-        <ul>
-          <li itemtype="http://www.schema.org/SiteNavigationElement"><a itemprop="url" class="footer__text"
-              href="index.html">Главная</a></li>
-          <li itemtype="http://www.schema.org/SiteNavigationElement"><a itemprop="url" class="footer__text"
-              href="contacts.html">Контакты</a></li>
-          <li itemscope itemtype="http://www.schema.org/SiteNavigationElement"><a itemprop="url" class="footer__text"
-              href="cart.html">Корзина</a></li>
-          <li itemscope itemtype="http://www.schema.org/SiteNavigationElement"><a itemprop="url" class="footer__text"
-              href="gdpr.html">GDPR</a></li>
+        <ul class="footer__list">
+          <li class="footer__list-item" itemtype="http://www.schema.org/SiteNavigationElement">
+            <a itemprop="url" class="footer__text" href="index.html">Главная</a>
+          </li>
+          <li class="footer__list-item" itemtype="http://www.schema.org/SiteNavigationElement">
+            <a itemprop="url" class="footer__text" href="contacts.html">Контакты</a>
+          </li>
+          <li class="footer__list-item" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
+            <a itemprop="url" class="footer__text" href="cart.html">Корзина</a>
+          </li>
+          <li class="footer__list-item" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
+            <a itemprop="url" class="footer__text" href="gdpr.html">GDPR</a>
+          </li>
         </ul>
 
         <div class="footer__social">
           <a href="facebook.com" target="_blank" class="footer__social-link">
-            <i class="fab fa-facebook-f"></i>
+            <img src="img/facebook.svg" alt="facebook" class="footer__icon">
           </a>
 
           <a href="vk.com" target="_blank" class="footer__social-link">
-            <i class="fab fa-vk"></i>
+            <img src="img/vk.svg" alt="vk.com" class="footer__icon">
           </a>
 
           <a href="instagram.com" target="_blank" class="footer__social-link">
-            <i class="fab fa-instagram"></i>
+            <img src="img/instagram.svg" alt="instagram" class="footer__icon">
           </a>
         </div>
       </div>
@@ -826,7 +830,7 @@
 
   <!-- Initialize slider -->
   <script>
-    var discountsSlider = new Swiper('.swiper-container', {
+    var discountsSlider = new Swiper('.swiper-container_discounts', {
       // Optional parameters
       direction: 'horizontal',
       loop: true,
@@ -860,14 +864,14 @@
 
       // If we need pagination
       pagination: {
-        el: '.swiper-pagination',
+        el: '.swiper-pagination_discounts',
         clickable: true,
       },
 
       // Navigation arrows
       navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.swiper-button-next_discounts',
+        prevEl: '.swiper-button-prev_discounts',
       },
     });
 

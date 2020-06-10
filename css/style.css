@@ -66,7 +66,7 @@ input, textarea {
   border: 1px solid var(--border-color);
 }
 
-input:focus, textarea:focus, select:focus, option:hover {
+input:focus, textarea:focus, select:focus, option:hover, input:not(input[type="radio"]) {
   outline: none;
   border: 1px solid var(--accent-color_lighter);
   border-radius: 3px;
@@ -118,7 +118,8 @@ input:focus, textarea:focus, select:focus, option:hover {
 /* Main */
 
 main {
-  min-height: calc(100vh - (64px + 3em));
+  min-height: 100vh;
+  margin-top: 5em;
 }
 
 .main-title {
@@ -294,7 +295,7 @@ margin-top: 3em;
   display: flex;
   top: -10px;
   left: -10px;
-  z-index: 9999999;
+  z-index: 98;
 }
 
 .product-card__discounter {
@@ -479,18 +480,27 @@ margin-top: 3em;
 /* Navbar */
 
 .nav {
-  padding: 1em 2em;
+  padding: 0.7em 2em;
   background: var(--accent-color);
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 99;
 }
 
 .nav * {
   color: #fff;
 }
 
-.nav>.container {
+.nav > .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.nav__icon {
+  width: 1.3em;
 }
 
 .nav__collapse-btn {
@@ -518,6 +528,11 @@ margin-top: 3em;
 
 .nav__item:not(:last-child) {
   margin-right: 1em;
+}
+
+.nav__link {
+  display: block;
+  margin-top: 0.3em;
 }
 
 .nav__link_discount {
@@ -814,11 +829,7 @@ margin-top: 3em;
 
 /* Contacts */
 
-.contacts {
-  margin-top: 3em;
-}
-
-.contacts>.container {
+.contacts > .container {
   display: flex;
   justify-content: space-between;
 }
@@ -956,7 +967,7 @@ a.contacts__contact>span {
 .cart__remove-item {
   border: none;
   background: none;
-  color: var(--product-badge-clr);
+  color: var(--lighter-color);
   font-size: 1.3em;
 }
 
@@ -987,6 +998,9 @@ a.contacts__contact>span {
 .cart__price-all {
   text-align: right;
   margin-bottom: 0.5em;
+  margin-top: 0.3em;
+  font-weight: 700;
+  font-size: 1.2em;
 }
 
 .cart__checkout {
@@ -1025,7 +1039,7 @@ a.contacts__contact>span {
   text-align: center;
 }
 
-.footer>.container {
+.footer > .container {
   display: flex;
   /* justify-content: center; */
   text-align: left;
@@ -1045,20 +1059,20 @@ a.contacts__contact>span {
   display: block;
 }
 
-.footer__text:not(:last-child), ul li {
+.footer__text {
+  display: block;
   margin-bottom: .5em;
 }
 
-
-.footer__text>span {
+.footer__text > span {
   margin-left: .1em;
 }
 
-a.footer__text>span {
+a.footer__text > span {
   border-bottom: 1px solid var(--lighter-color);
 }
 
-.footer__text_work-time>span {
+.footer__text_work-time > span {
   display: inline-block;
 }
 
@@ -1070,11 +1084,11 @@ a.footer__text>span {
   margin-right: .3em;
 }
 
-.footer__icons{
+.footer__icon, .contacts__icon {
   width: 1.3em;
 }
 
-.footer__copy{
+.footer__copy {
   padding: .5em;
 }
 
@@ -1083,17 +1097,12 @@ a.footer__text>span {
 
 
 /* Product */
-.product{
+.product {
   margin-top: 1em;
 }
 
-.product .product__col_slider .swiper-container{
-max-height: 300px;
-}
-
-.product .product-card__discount{
-  top: 0px;
-  left: 0px;
+.product .product__col_slider .swiper-container_thumbnail {
+  max-height: 300px;
 }
 
 .product__info {
@@ -1114,15 +1123,21 @@ max-height: 300px;
   max-width: 500px;
   margin-right: 50px;
   margin-left: .5em;
+  position: relative;
 }
 
-.product__thumbnail>img {
+.product__thumbnail {
+  max-height: 300px;
+}
+
+.product__thumbnail > img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
   border-radius: 3px;
+  max-height: 300px;
 }
 
 .product__title {
@@ -1233,16 +1248,23 @@ max-height: 300px;
 
 /* PAGE TESTIMONIAL */
 
-.testimonial span,
-input {
+.testimonial-page__input {
   display: block;
+  padding: 0.3em 0.5em;
+  width: 300px;
+}
+
+.testimonial-page .rating {
+  margin-top: 0.3em;
+}
+
+.testimonial-page__submit {
+  margin-top: 1em;
 }
 
 /* testimonials stars */
 
-/* /testimonials stars */
-
-/* /PAGE TESTIMONIAL */
+/* ./PAGE TESTIMONIAL */
 /* ./Product */
 
 
@@ -1260,8 +1282,16 @@ input {
   padding: 2em;
 }
 
-.category__preview .preview__img{
-margin-right: 3em;
+.category__preview .preview__img {
+  margin-right: 3em;
+}
+
+.category__preview .preview__img > img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
 }
 
 .category__preview img {

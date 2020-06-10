@@ -1,31 +1,10 @@
 window.addEventListener('load', () => {
-  const glider = document.querySelector('.glider');
   const sidebarToggle = document.querySelector('.sidebar__toggle');
   const sidebarItem = document.querySelectorAll('.sidebar__list-item');
   const accordion = document.querySelectorAll('.product__details-title-item');
   const deliveryCheckbox = document.querySelector('#deliveryCheckbox');
   const deliveryInputContainer = document.querySelector('.form__input-container_delivery');
-
-  if (glider !== null) {
-    new Glider(glider, {
-      slidesToShow: 1,
-      itemWidth: 270,
-      arrows: {
-        prev: '.glider-prev',
-        next: '.glider-next'
-      },
-      draggable: false,
-      scrollLock: true,
-      scrollLockDelay: 100,
-      duration: 0.9,
-      responsive: [{
-        breakpoint: 425,
-        settings: {
-          slidesToShow: 'auto'
-        }
-      }]
-    });
-  }
+  const deliveryPrice = document.querySelector('#deliveryPrice');
 
   if (sidebarToggle !== null) {
     sidebarToggle.addEventListener('click', e => {
@@ -75,6 +54,7 @@ window.addEventListener('load', () => {
 
   deliveryCheckbox.addEventListener('change', e => {
     deliveryInputContainer.style.display = deliveryCheckbox.checked ? 'block' : 'none';
+    deliveryPrice.innerText = deliveryCheckbox.checked ? '30$' : 'Самовывоз';
   });
 
 });
