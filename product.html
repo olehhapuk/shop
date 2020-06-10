@@ -211,7 +211,7 @@
             </fieldset>
             
             <div class="product__rating_txt" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-              <span class="ocenka">Оценка:</span> <span itemprop="ratingValue">4.3</span> (<span itemprop="reviewCount">13</span> <span class="kol-vo">отзывов</span> )
+              <span class="ocenka">Оценка:</span> <span class="product__rating-value" itemprop="ratingValue">4.3</span> (<span itemprop="reviewCount">13</span> <span class="kol-vo">отзывов</span> )
             </div>
             <p class="product__description">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita quia accusamus dignissimos harum
@@ -223,7 +223,8 @@
               <!-- Указываем ссылку на товар -->
               <link itemprop="url" href="https://example.com/" />
               <meta itemprop="itemCondition" content="https://schema.org/NewCondition" />
-              <p class="product__price"><span itemprop="price">30</span> <span itemprop="priceCurrency"
+              <p class="product__price_old">500</p>
+              <p class="product__price"><span itemprop="price">300</span> <span itemprop="priceCurrency"
                   content="CZK">CZK</span></p><span class="product__pay">оплата при получении</span>
               <meta itemprop="priceValidUntil" content="2100-11-20" />
               <link itemprop="availability" href="http://schema.org/InStock">
@@ -235,7 +236,7 @@
             <form class="form product__form">
               <span class="product__instock">в наличии</span><br>
               <input type="number" class="product__count" min="1" step="1" value="1">
-              <button type="submit" class="btn" title="в корзину">Добавить в корзину</button>
+              <button type="submit" class="btn product__add-to-cart" title="в корзину">Добавить в корзину</button>
             </form>
 
             <span class="product__delivery">доставка: 100czk,</span>
