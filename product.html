@@ -5,82 +5,75 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>название товара</title>
-  <meta name="description" content="описание товара с таба описание">
-
   <link href="https://fonts.googleapis.com/" rel="preconnect" crossorigin>
   <link href="https://unpkg.com/"            rel="preconnect" crossorigin>
   <link href="https://cdn.jsdelivr.net/"     rel="preconnect" crossorigin>
 
-  <!-- Normalize -->
-  <link rel="stylesheet" href="css/normalize.css">
+  <title></title>
+  <meta name="description" content="описание товара с таба описание">
+
+  <!-- каноническая ссылка  -->
+  <link rel="canonical" hreflang="ru-RU" href="https://" />
+
   <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Normalize -->
+  <link rel="stylesheet" href="css/normalize.css">
   <!-- Swiper -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
   <!-- fancybox -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
   <!-- User stylesheet -->
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/media.css">
-
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 
 </head>
 
 <body>
 
-  <style>
-    .swiper-container_thumbnail {
-      padding: 0;
-    }
-  </style>
-
   <header itemscope itemtype="http://schema.org/WPHeader">
-    <meta itemprop="headline" content="Название сайта">
-    <meta itemprop="description" content="Описание сайта">
-    <!-- Navbar -->
-    <nav class="nav">
-      <!-- Container -->
-      <div class="container">
+  <meta itemprop="headline" content="Название сайта">
+  <meta itemprop="description" content="Описание сайта">
+  <!-- Navbar -->
+  <nav class="nav">
+    <!-- Container -->
+    <div class="container">
 
-        <a href="index.html" class="nav__logo">Shop</a>
+      <a href="index.html" class="nav__logo">Shop</a>
 
-        <!-- Nav menu -->
-        <ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="nav__menu">
+      <!-- Nav menu -->
+      <ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="nav__menu">
 
-          <li itemprop="name" class="nav__item">
-            <a itemprop="url" href="index.html" class="nav__link">Главная</a>
-          </li>
+        <li itemprop="name" class="nav__item">
+          <a itemprop="url" href="index.html" class="nav__link">Главная</a>
+        </li>
 
-          <!-- <li itemprop="name" class="nav__item">
-            <a itemprop="url" href="index.html#discounts" class="nav__link">Скидки</a>
-          </li> -->
+        <!-- <li itemprop="name" class="nav__item">
+          <a itemprop="url" href="index.html#discounts" class="nav__link">Скидки</a>
+        </li> -->
 
-          <!-- <li>
-            <a itemprop="url" href="index.html#discounts" class="nav__link" title="discounts">Скидки <img class="nav__link_discount" src="img/sale.svg" alt=""></a>
-          </li> -->
+        <!-- <li>
+          <a itemprop="url" href="index.html#discounts" class="nav__link" title="discounts">Скидки <img class="nav__link_discount" src="img/sale.svg" alt=""></a>
+        </li> -->
 
-          <li itemprop="name" class="nav__item">
-            <a itemprop="url" href="contacts.html" class="nav__link" title="contacts">Контакты</a>
-          </li>
+        <li itemprop="name" class="nav__item">
+          <a itemprop="url" href="contacts.html" class="nav__link" title="contacts">Контакты</a>
+        </li>
 
-          <li itemprop="name" class="nav__item">
-            <a itemprop="url" href="cart.html" class="nav__link nav__link_cart" aria-describedby="Корзина"
-              title="shoping cart">
-              <i class="fas fa-shopping-cart"></i>
-              <sup class="badge">1</sup>
-            </a>
-          </li>
+        <li itemprop="name" class="nav__item">
+          <a itemprop="url" href="cart.html" class="nav__link nav__link_cart"
+            title="shoping cart">
+            <img src="img/cart.svg" alt="cart" class="nav__icon">
+            <sup class="badge">1</sup>
+          </a>
+        </li>
 
-        </ul>
-        <!-- ./Nav menu -->
-      </div>
-      <!-- ./Container -->
+      </ul>
+      <!-- ./Nav menu -->
+    </div>
+    <!-- ./Container -->
 
-    </nav>
-    <!-- ./Navbar -->
+  </nav>
+  <!-- ./Navbar -->
   </header>
 
   <!-- breadcrumbs -->
@@ -125,23 +118,23 @@
               <div class="swiper-wrapper">
                 <!-- Slide -->
                 <div class="swiper-slide">
-                  <a class="product__thumbnail" data-fancybox="gallery" href="img/1.jpg">
-                    <img src="img/1.jpg" alt="Product thumbnail" itemprop="image">
+                  <a class="product__thumbnail" data-fancybox="gallery" href="img/3.jpg">
+                    <img src="img/3.jpg" alt="Product thumbnail" itemprop="image">
                   </a>
                 </div>
                 <!-- ./Slide -->
                 <!-- Slide -->
                 <div class="swiper-slide">
-                  <div class="product__thumbnail">
-                    <img src="https://dummyimage.com/500.jpg" alt="Product thumbnail" itemprop="image">
-                  </div>
+                  <a class="product__thumbnail" data-fancybox="gallery" href="img/2.jpg">
+                    <img src="img/2.jpg" alt="Product thumbnail" itemprop="image">
+                  </a>
                 </div>
                 <!-- ./Slide -->
                 <!-- Slide -->
                 <div class="swiper-slide">
-                  <div class="product__thumbnail">
-                    <img src="https://dummyimage.com/500.jpg" alt="Product thumbnail" itemprop="image">
-                  </div>
+                  <a class="product__thumbnail" data-fancybox="gallery" href="img/3.jpg">
+                    <img src="img/3.jpg" alt="Product thumbnail" itemprop="image">
+                  </a>
                 </div>
                 <!-- ./Slide -->
                 <!-- Slide -->
@@ -218,7 +211,7 @@
             </fieldset>
             
             <div class="product__rating_txt" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-              <span class="ocenka">Оценка:</span> <span itemprop="ratingValue">4.3</span> (<span itemprop="reviewCount">13</span> <span class="kol-vo">отзывов</span> )
+              <span class="ocenka">Оценка:</span> <span class="product__rating-value" itemprop="ratingValue">4.3</span> (<span itemprop="reviewCount">13</span> <span class="kol-vo">отзывов</span> )
             </div>
             <p class="product__description">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita quia accusamus dignissimos harum
@@ -226,23 +219,28 @@
 
             
 
-            <div itemprop="offers" itemscope itemtype="https://schema.org/Offer" itemscope>
+            <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
               <!-- Указываем ссылку на товар -->
               <link itemprop="url" href="https://example.com/" />
               <meta itemprop="itemCondition" content="https://schema.org/NewCondition" />
-              <p class="product__price"><span itemprop="price">30</span> <span itemprop="priceCurrency"
-                  content="CZK">CZK</span></p>
+              <p class="product__price_old">500</p>
+              <p class="product__price"><span itemprop="price">300</span> <span itemprop="priceCurrency"
+                  content="CZK">CZK</span></p><span class="product__pay">оплата при получении</span>
               <meta itemprop="priceValidUntil" content="2100-11-20" />
-              <link itemprop="availability" href="http://schema.org/InStock"><span class="product__instock">в наличии</span></link>
+              <link itemprop="availability" href="http://schema.org/InStock">
               <div itemprop="seller" itemtype="http://schema.org/Organization" itemscope>
                 <meta itemprop="name" content="Дичь убитая веслом" />
               </div>
             </div>
 
             <form class="form product__form">
+              <span class="product__instock">в наличии</span><br>
               <input type="number" class="product__count" min="1" step="1" value="1">
-              <button type="submit" class="btn" title="в корзину">Добавить в корзину</button>
+              <button type="submit" class="btn product__add-to-cart" title="в корзину">Добавить в корзину</button>
             </form>
+
+            <span class="product__delivery">доставка: 100czk,</span>
+            <span class="product__delivery2">бесплатно при заказе свыше чем на 1500czk</span>
 
 
           </div>
@@ -264,7 +262,7 @@
               amet consectetur adipisicing elit. Quam doloribus quaerat vero fugit eum perspiciatis voluptas cumque
               voluptatibus repellendus officiis culpa magnam, ullam beatae nostrum voluptatum veniam eius a nam.</p>
             <div class="product__details-text-item" id="detailsInfo">
-              <table class="table" cellspacing="0">
+              <table class="table">
                 <tr>
                   <th class="product__details-table-property">Свойство</th>
                   <th class="product__details-table-desc">Описание</th>
@@ -320,10 +318,59 @@
               </article>
 
               <article class="product__review">
-                Отзыв 2
+                <!-- Указывается схема Person.-->
+                <span>
+                  <!-- В поле name указываем имя автора.-->
+                  <span class="testimonials__name">username</span>
+                </span>
+
+                <fieldset class="rating">
+                  <legend class="visually-hidden">Оценка</legend>
+                  <div class="rating__group">
+                    <input type="radio" class="rating__star" name="rating" value="1" aria-label="Плохо" checked>
+                    <input type="radio" class="rating__star" name="rating" value="2" aria-label="Неплохо">
+                    <input type="radio" class="rating__star" name="rating" value="3" aria-label="Нормально">
+                    <input type="radio" class="rating__star" name="rating" value="4" aria-label="Хорошо">
+                    <input type="radio" class="rating__star" name="rating" value="5" aria-label="Прекрасно">
+                  </div>
+                </fieldset>
+
+                <div>
+                  <p class="testimonials__txt" >Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Dicta vel vitae qui
+                    aliquid cumque
+                    doloribus unde ut quibusdam asperiores. Quam excepturi ab corrupti quos quasi? Non, deserunt
+                    excepturi.
+                    Debitis, vel!</p>
+                </div>
               </article>
+
               <article class="product__review">
-                Отзыв 3
+                <!-- Указывается схема Person.-->
+                <span>
+                  <!-- В поле name указываем имя автора.-->
+                  <span class="testimonials__name">username</span>
+                </span>
+
+                <fieldset class="rating">
+                  <legend class="visually-hidden">Оценка</legend>
+                  <div class="rating__group">
+                    <input type="radio" class="rating__star" name="rating" value="1" aria-label="Плохо" checked>
+                    <input type="radio" class="rating__star" name="rating" value="2" aria-label="Неплохо">
+                    <input type="radio" class="rating__star" name="rating" value="3" aria-label="Нормально">
+                    <input type="radio" class="rating__star" name="rating" value="4" aria-label="Хорошо">
+                    <input type="radio" class="rating__star" name="rating" value="5" aria-label="Прекрасно">
+                  </div>
+                </fieldset>
+
+                <div>
+                  <p class="testimonials__txt" >Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Dicta vel vitae qui
+                    aliquid cumque
+                    doloribus unde ut quibusdam asperiores. Quam excepturi ab corrupti quos quasi? Non, deserunt
+                    excepturi.
+                    Debitis, vel!</p>
+                </div>
               </article>
 
               <form action="" method="POST" class="product__review-form">
@@ -762,6 +809,7 @@
         1024: {
           slidesPerView: 4,
           spaceBetween: 50,
+          slidesOffsetBefore: 12,
         },
       },
 

@@ -4,40 +4,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shop</title>
+  <title></title>
   <meta name="description" content="Shop description">
-  <link href="https://fonts.googleapis.com/" rel="preconnect" crossorigin>
-  <link href="https://unpkg.com/"            rel="preconnect" crossorigin>
 
+  <link href="https://fonts.googleapis.com/" rel="preconnect" crossorigin>
+  <link href="https://unpkg.com/" rel="preconnect" crossorigin>
+  
   <!-- каноническая ссылка  -->
   <link rel="canonical" hreflang="ru" href="https://" />
 
   <!-- Normalize -->
   <link rel="stylesheet" href="css/normalize.css">
-
   <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
   <!-- Swiper -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
-
   <!-- User stylesheet -->
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/media.css">
 
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"> -->
 
 </head>
 
 <body>
-
-  <style>
-    .swiper-container_testimonials {
-      padding: 0;
-      height: auto;
-    }
-  </style>
 
   <header itemscope itemtype="http://schema.org/WPHeader">
     <meta itemprop="headline" content="Название сайта">
@@ -69,8 +59,7 @@
           </li>
 
           <li itemprop="name" class="nav__item">
-            <a itemprop="url" href="cart.html" class="nav__link nav__link_cart" aria-describedby="Корзина"
-              title="shoping cart">
+            <a itemprop="url" href="cart.html" class="nav__link nav__link_cart" title="shoping cart">
               <img src="img/cart.svg" alt="cart" class="nav__icon">
               <sup class="badge">1</sup>
             </a>
@@ -124,7 +113,7 @@
 
 
                 <div>
-                  <span class="product-card__price-old">500<span> CZK</span></span>
+                  <span class="product-card__price-old">500</span>
                   <span class="product-card__price">400</span> <span>CZK</span>
                 </div>
 
@@ -465,7 +454,7 @@
 
 
             <div>
-              <span class="product-card__price-old">500<span> CZK</span></span>
+              <span class="product-card__price-old">500</span>
               <span class="product-card__price">400</span> <span>CZK</span>
             </div>
 
@@ -601,6 +590,13 @@
                   <h2 itemprop="name">
                     <link itemprop="url" href="https://example.com/review?10231">
                   </h2>
+                  <meta  itemprop="url" content="https://">
+
+                  <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Organization">
+                    <meta itemprop="name" content="Дичь убитая веслом" />
+                    <meta itemprop="address" content="Brno, Taborska 288" />
+                    <meta itemprop="telephone" content="420420420420" />
+                  </div>
                   <div class="" itemprop="author" itemscope itemtype="https://schema.org/Person">
                     <span class="testimonials__name" itemprop="name">username 1</span>
                   </div>
@@ -637,16 +633,23 @@
                   <h2 itemprop="name">
                     <link itemprop="url" href="https://example.com/review?10231">
                   </h2>
+                  <meta  itemprop="url" content="https://">
+
+                  <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Organization">
+                    <meta itemprop="name" content="Дичь убитая веслом" />
+                    <meta itemprop="address" content="Brno, Taborska 288" />
+                    <meta itemprop="telephone" content="420420420420" />
+                  </div>
                   <div class="" itemprop="author" itemscope itemtype="https://schema.org/Person">
-                    <span class="testimonials__name" itemprop="name">username</span>
+                    <span class="testimonials__name" itemprop="name">username 1</span>
                   </div>
                   <!-- Rating -->
                   <fieldset class="rating">
                     <legend class="visually-hidden">Оценка</legend>
                     <div class="rating__group">
-                      <input type="radio" class="rating__star" name="rating" value="1" aria-label="Плохо" checked>
+                      <input type="radio" class="rating__star" name="rating" value="1" aria-label="Плохо">
                       <input type="radio" class="rating__star" name="rating" value="2" aria-label="Неплохо">
-                      <input type="radio" class="rating__star" name="rating" value="3" aria-label="Нормально">
+                      <input type="radio" class="rating__star" name="rating" value="3" aria-label="Нормально" checked>
                       <input type="radio" class="rating__star" name="rating" value="4" aria-label="Хорошо">
                       <input type="radio" class="rating__star" name="rating" value="5" aria-label="Прекрасно">
                     </div>
@@ -673,16 +676,23 @@
                   <h2 itemprop="name">
                     <link itemprop="url" href="https://example.com/review?10231">
                   </h2>
+                  <meta  itemprop="url" content="https://">
+
+                  <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Organization">
+                    <meta itemprop="name" content="Дичь убитая веслом" />
+                    <meta itemprop="address" content="Brno, Taborska 288" />
+                    <meta itemprop="telephone" content="420420420420" />
+                  </div>
                   <div class="" itemprop="author" itemscope itemtype="https://schema.org/Person">
-                    <span class="testimonials__name" itemprop="name">username</span>
+                    <span class="testimonials__name" itemprop="name">username 1</span>
                   </div>
                   <!-- Rating -->
                   <fieldset class="rating">
                     <legend class="visually-hidden">Оценка</legend>
                     <div class="rating__group">
-                      <input type="radio" class="rating__star" name="rating" value="1" aria-label="Плохо" checked>
+                      <input type="radio" class="rating__star" name="rating" value="1" aria-label="Плохо">
                       <input type="radio" class="rating__star" name="rating" value="2" aria-label="Неплохо">
-                      <input type="radio" class="rating__star" name="rating" value="3" aria-label="Нормально">
+                      <input type="radio" class="rating__star" name="rating" value="3" aria-label="Нормально" checked>
                       <input type="radio" class="rating__star" name="rating" value="4" aria-label="Хорошо">
                       <input type="radio" class="rating__star" name="rating" value="5" aria-label="Прекрасно">
                     </div>
@@ -725,17 +735,13 @@
     <!-- ceo_txt  -->
     <section class="text__block">
       <div class="container">
-        <p class="text__block_txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis consequuntur,
-          laboriosam
-          optio est placeat quasi facere deleniti quisquam maxime quibusdam impedit vero nobis iste! Excepturi ex
-          aspernatur ad nisi tempore.</p>
+        <p class="text__block_txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, tempora placeat tenetur repellat corporis quas velit non impedit vitae numquam quibusdam ipsum vero eius et aperiam beatae pariatur, quae id.</p>
       </div>
-      
+
     </section><!-- / ceo_txt  -->
 
   </main>
 
-  <!-- Footer -->
   <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
     <!-- Container -->
     <div class="container ">
@@ -757,7 +763,7 @@
 
         <a class="footer__text" href="tel:+420">
           <img class="footer__icon" src="img/phone.svg" alt="Phone number">
-          <span>+420 420 420 420</span>
+          <span>+420420420420</span>
         </a>
 
         <a class="footer__text" href="mailto:roga_i_kopyta@seznam.cz">
@@ -784,10 +790,10 @@
       <div class="footer__col">
         <h3 class="footer__title" itemscope itemtype="http://www.schema.org/SiteNavigationElement">Страницы</h3>
         <ul class="footer__list">
-          <li class="footer__list-item" itemtype="http://www.schema.org/SiteNavigationElement">
+          <li class="footer__list-item" itemscope  itemtype="http://www.schema.org/SiteNavigationElement">
             <a itemprop="url" class="footer__text" href="index.html">Главная</a>
           </li>
-          <li class="footer__list-item" itemtype="http://www.schema.org/SiteNavigationElement">
+          <li class="footer__list-item" itemscope  itemtype="http://www.schema.org/SiteNavigationElement">
             <a itemprop="url" class="footer__text" href="contacts.html">Контакты</a>
           </li>
           <li class="footer__list-item" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
@@ -799,15 +805,15 @@
         </ul>
 
         <div class="footer__social">
-          <a href="facebook.com" target="_blank" class="footer__social-link">
+          <a href="facebook.com" target="_blank" rel="nofollow noopener noreferrer" class="footer__social-link">
             <img src="img/facebook.svg" alt="facebook" class="footer__icon">
           </a>
 
-          <a href="vk.com" target="_blank" class="footer__social-link">
+          <a href="vk.com" target="_blank" rel="nofollow noopener noreferrer" class="footer__social-link">
             <img src="img/vk.svg" alt="vk.com" class="footer__icon">
           </a>
 
-          <a href="instagram.com" target="_blank" class="footer__social-link">
+          <a href="instagram.com" target="_blank" rel="nofollow noopener noreferrer" class="footer__social-link">
             <img src="img/instagram.svg" alt="instagram" class="footer__icon">
           </a>
         </div>
@@ -817,7 +823,6 @@
     <!-- ./Container -->
     <div class="footer__copy"><span itemprop="copyrightYear">MySite.com 2020. Все права защищены</span></div>
   </footer>
-  <!-- ./Footer -->
 
 
 
