@@ -1038,6 +1038,8 @@ a.contacts__contact>span {
 .cart__checkout {
   float: right;
   margin-bottom: 1em;
+  padding: .48em .7em;
+  border-radius: 7px;
 }
 
 /* ./Cart */
@@ -1312,7 +1314,43 @@ textarea {
   min-width: 300px;
   min-height: 25px;
 }
+/* counter */
+input[type="number"] {
+  -webkit-appearance: textfield;
+     -moz-appearance: textfield;
+          appearance: textfield;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none;
+}
 
+.counter{
+  display: inline;
+}
+
+.counter button {
+  width: 30px;
+  background-color: #fff;
+  color:#1780f0;
+  border: none;
+  font-size: 25px;
+  margin: 0px 1px;
+  border-radius: 5px;
+}
+
+.counter button:hover {
+  background-color: #1780f0;
+  color:#fff;
+  border: none;
+  font-size: 25px;
+}
+
+.fieldCount{
+  max-width: 50px;
+  text-align: center;
+}
+/* / counter */
 /* ./Product */
 
 
