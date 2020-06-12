@@ -76,27 +76,27 @@
   <!-- ./Navbar -->
   </header>
 
-  <!-- breadcrumbs -->
-  <div class="container">
-    <!-- Breadcumbs -->
-    <div class="breadcumbs">
-      <ol itemscope itemtype="http://schema.org/BreadcrumbList">
-        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-          <a itemprop="item" class="breadcumbs__item" href="index.html"><span itemprop="name">Главная</span></a>
-          <meta itemprop="position" content="1" />
-        </li>
-        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-          <a itemprop="item" class="breadcumbs__item breadcumbs__item_active" href="#"><span
-              itemprop="name">Вода</span></a>
-          <meta itemprop="position" content="2" />
-        </li>
-      </ol>
-    </div>
-    <!-- ./Breadcumbs -->
-  </div>
-
+  
   <main>
-
+    <!-- breadcrumbs -->
+    <div class="container">
+      <!-- Breadcumbs -->
+      <div class="breadcumbs">
+        <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a itemprop="item" class="breadcumbs__item" href="index.html"><span itemprop="name">Главная</span></a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a itemprop="item" class="breadcumbs__item breadcumbs__item_active" href="#"><span
+                itemprop="name">Вода</span></a>
+            <meta itemprop="position" content="2" />
+          </li>
+        </ol>
+      </div>
+      <!-- ./Breadcumbs -->
+    </div>
+    
     <!-- Product -->
     <section class="product" itemscope itemtype="https://schema.org/Product">
 
@@ -139,44 +139,9 @@
                 <!-- ./Slide -->
                 <!-- Slide -->
                 <div class="swiper-slide">
-                  <div class="product__thumbnail">
+                  <a class="product__thumbnail" data-fancybox="gallery" href="https://dummyimage.com/500.jpg">
                     <img src="https://dummyimage.com/500.jpg" alt="Product thumbnail" itemprop="image">
-                  </div>
-                </div>
-                <!-- ./Slide -->
-                <!-- Slide -->
-                <div class="swiper-slide">
-                  <div class="product__thumbnail">
-                    <img src="https://dummyimage.com/500.jpg" alt="Product thumbnail" itemprop="image">
-                  </div>
-                </div>
-                <!-- ./Slide -->
-                <!-- Slide -->
-                <div class="swiper-slide">
-                  <div class="product__thumbnail">
-                    <img src="https://dummyimage.com/500.jpg" alt="Product thumbnail" itemprop="image">
-                  </div>
-                </div>
-                <!-- ./Slide -->
-                <!-- Slide -->
-                <div class="swiper-slide">
-                  <div class="product__thumbnail">
-                    <img src="https://dummyimage.com/500.jpg" alt="Product thumbnail" itemprop="image">
-                  </div>
-                </div>
-                <!-- ./Slide -->
-                <!-- Slide -->
-                <div class="swiper-slide">
-                  <div class="product__thumbnail">
-                    <img src="https://dummyimage.com/500.jpg" alt="Product thumbnail" itemprop="image">
-                  </div>
-                </div>
-                <!-- ./Slide -->
-                <!-- Slide -->
-                <div class="swiper-slide">
-                  <div class="product__thumbnail">
-                    <img src="https://dummyimage.com/500.jpg" alt="Product thumbnail" itemprop="image">
-                  </div>
+                  </a>
                 </div>
                 <!-- ./Slide -->
               </div>
@@ -749,23 +714,22 @@
 
   <!-- Initialize slider -->
   <script>
+    $.fancybox.defaults.backFocus = false;
+    
     var thumbnailSlider = new Swiper('.swiper-container_thumbnail', {
       // Optional parameters
       direction: 'horizontal',
-      loop: true,
+      loop: false,
       slidesPerView: 1,
 
       breakpoints: {
         640: {
-          slidesPerView: 1,
           spaceBetween: 20,
         },
         768: {
-          slidesPerView: 1,
           spaceBetween: 40,
         },
         1024: {
-          slidesPerView: 1,
           spaceBetween: 50,
         },
       },
