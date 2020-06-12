@@ -95,8 +95,9 @@ input:not(input[type="radio"]) {
 
 /* Swiper */
 .swiper-container {
-  height: 300px;
-  padding: 10px 0 90px;
+  height: auto;
+  padding-top: 10px;
+  padding-bottom: 40px;
 }
 /* ./Swiper */
 
@@ -378,6 +379,10 @@ main {
 }
 
 .sidebar__toggle {
+  padding: .48em .7em;
+  border-radius: 7px;
+  font-size: 1.2em;
+  text-transform: uppercase;
   display: none;
 }
 
@@ -1262,7 +1267,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .category__preview .preview__title {
-  font-size: 2.5em;
+  font-size: 2em;
   line-height: .7;
   color: var(--accent-color);
   margin-bottom: .4em;
@@ -1305,14 +1310,15 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .category__preview .preview__title {
-  font-size: 2.5em;
+  font-size: 2em;
   line-height: .7;
   color: var(--accent-color);
   margin-bottom: .4em;
+  text-transform: uppercase;
 }
 
 .category__preview .preview__text {
-  font-size: 1.5em;
+  font-size: 1.3em;
 }
 
 /* / PAGE CATEGORY */
@@ -1448,7 +1454,7 @@ input[type=number]::-webkit-outer-spin-button {
 
   .sidebar {
     margin-right: 0;
-    margin-bottom: 0.7em;
+    margin-bottom: 2em;
   }
 
   .sidebar__header {
