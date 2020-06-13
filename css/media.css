@@ -80,6 +80,9 @@
 
 
 @media (max-width: 820px) {
+  .popular__grid{
+    margin-top: 1.3em;
+  }
   .main-title {
     margin-top: 1.3em;
   }

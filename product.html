@@ -200,7 +200,11 @@
 
             <form class="form product__form">
               <span class="product__instock">в наличии</span><br>
-              <input type="number" class="product__count" min="1" step="1" value="1">
+              <div class="counter">
+                <button type="button" class="but counterBut dec">-</button>
+                <input type="number" pattern="\d*" inputmode="numeric" class="field fieldCount" min="1" step="1" value="1">
+                <button type="button" class="but counterBut inc">+</button>
+              </div>
               <button type="submit" class="btn product__add-to-cart" title="в корзину">Добавить в корзину</button>
             </form>
 
