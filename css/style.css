@@ -260,6 +260,7 @@ main {
 }
 
 .product__add-to-cart{
+  margin-top: 5px;
   padding: .48em .7em;
   border-radius: 7px;
   }
@@ -1049,7 +1050,7 @@ a.footer__text>span {
 }
 
 .product__col_info {
-  max-width: 310px;
+  max-width: 500px;
 }
 
 .product__col_info>p,
@@ -1208,6 +1209,8 @@ input[type=number]::-webkit-outer-spin-button {
 .fieldCount{
   max-width: 50px;
   text-align: center;
+  height: 27px;
+  padding: 0 0;
 }
 /* / counter */
 /* ./Product */
