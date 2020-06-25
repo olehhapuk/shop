@@ -486,6 +486,10 @@ main {
   transition: transform 0.2s;
 }
 
+.nav__toggler {
+  display: none;
+}
+
 .nav * {
   color: #fff;
 }
@@ -1662,8 +1666,34 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 @media (max-width: 543px) {
-  .nav>.container {
-    flex-direction: column;
+  .nav__toggler {
+    display: inline-block;
+  }
+
+  .nav {
+    position: relative;
+  }
+
+  .nav__menu {
+    display: none;
+    position: absolute;
+    padding: 1em 3em;
+    left: 0;
+    right: 0;
+    top: 100%;
+    background: var(--accent-color);
+  }
+  
+  .nav__item:not(:last-child) {
+    margin-bottom: 0.7em;
+  }
+
+  .nav__link {
+    display: inline-block;
+  }
+
+  .nav__menu_active {
+    display: block;
   }
 
   .nav__logo {

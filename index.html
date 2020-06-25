@@ -37,8 +37,9 @@
 
         <a href="index.html" class="nav__logo">Shop</a>
 
+        <button type="button" class="btn nav__toggler" id="navToggler" data-target="navMenu">=</button>
         <!-- Nav menu -->
-        <ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="nav__menu">
+        <ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="nav__menu" id="navMenu">
 
           <li itemprop="name" class="nav__item">
             <a itemprop="url" href="index.html" class="nav__link">Главная</a>
@@ -387,15 +388,10 @@
 
             <li class="sidebar__list-item" data-target="list_1">
 
-              <span  class="sidebar__list-link sidebar__list-first_link">Категория 1</span>
+              <span class="sidebar__list-link sidebar__list-first_link" data-target="list_1">Категория 1</span>
 
               <!-- Sidebar list inner -->
               <ul class="sidebar__list sidebar__list_inner" id="list_1">
-
-                <li class="sidebar__list-item sidebar__list-first_item">
-                  <a href="category.html" class="sidebar__list-link">категория</a>
-                </li>
-
                 <li class="sidebar__list-item">
                   <a href="category.html" class="sidebar__list-link">Подкатегория 1</a>
                 </li>

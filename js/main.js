@@ -6,6 +6,12 @@ window.addEventListener('load', () => {
   const deliveryCheckbox = document.querySelector('#deliveryCheckbox');
   const deliveryInputContainer = document.querySelector('.form__input-container_delivery');
   const deliveryPrice = document.querySelector('#deliveryPrice');
+  const navToggler = document.querySelector("#navToggler");
+
+  navToggler.addEventListener('click', e => {
+    const target = document.getElementById(e.target.dataset.target);
+    target.classList.toggle('nav__menu_active');
+  });
 
   let prevScrollpos = window.pageYOffset;
   window.onscroll = function() {
@@ -21,7 +27,6 @@ window.addEventListener('load', () => {
   if (sidebarToggle !== null) {
     sidebarToggle.addEventListener('click', e => {
       const target = document.querySelector('.sidebar__list');
-  
       target.classList.toggle('sidebar__list_open');
     });
   }
