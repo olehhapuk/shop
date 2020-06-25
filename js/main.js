@@ -16,12 +16,14 @@ window.addEventListener('load', () => {
   let prevScrollpos = window.pageYOffset;
   window.onscroll = function() {
     const currentScrollPos = window.pageYOffset;
-    if (prevScrollpos > currentScrollPos) {
-      navbar.style.transform = 'translateY(0)';
-    } else {
-      navbar.style.transform = 'translateY(-100%)';
+    if (currentScrollPos > 30) {
+      if (prevScrollpos > currentScrollPos) {
+        navbar.style.transform = 'translateY(0)';
+      } else {
+        navbar.style.transform = 'translateY(-100%)';
+      }
+      prevScrollpos = currentScrollPos;
     }
-    prevScrollpos = currentScrollPos;
   }
 
   if (sidebarToggle !== null) {
