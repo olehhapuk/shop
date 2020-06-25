@@ -9,7 +9,7 @@ window.addEventListener('load', () => {
   const navToggler = document.querySelector("#navToggler");
 
   navToggler.addEventListener('click', e => {
-    const target = document.getElementById(e.target.dataset.target);
+    const target = document.getElementById('navMenu');
     target.classList.toggle('nav__menu_active');
   });
 
