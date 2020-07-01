@@ -496,6 +496,10 @@ main {
   align-items: center;
 }
 
+.logowrap{
+  max-width: 2em;
+}
+
 .nav__icon {
   width: 1.3em;
 }
@@ -798,6 +802,9 @@ main {
   height: 370px;
 }
 
+.contacts_logowrap{
+  max-width: 5em;
+}
 .contacts__title {
   margin-bottom: .5em;
 }

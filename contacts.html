@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/" rel="preconnect" crossorigin>  
+  <link href="https://fonts.googleapis.com/" rel="preconnect" crossorigin>
   <title></title>
   <meta name="description" content="">
   <!-- каноническая ссылка  -->
@@ -64,22 +64,23 @@
       <div class="container">
         <div class="contacts__col contacts__col_info" itemscope itemtype="http://schema.org/Organization">
 
+          <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+            <img class="contacts_logowrap" itemprop="contentUrl" src="img/dich_blue_with.svg" alt="Logo dich">
+<!-- ---- <meta itemprop="width" content="ширина_логотипа_в_пикселях"> ----- -->
+<!-- ---- <meta itemprop="height" content="высота_логотипа_в_пикселях"> ---- -->
+          </div>
+
           <h1 itemprop="name">Дичь убитая веслом</h1>
           <p class="contacts__description">Магазин русских продуктов в Брно</p>
 
-          <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
-            <img itemprop="contentUrl" src="ссылка_на_логотип_" alt="Logo">
-            <meta itemprop="width" content="ширина_логотипа_в_пикселях">
-            <meta itemprop="height" content="высота_логотипа_в_пикселях">
-          </div>
           <link itemprop="url" href="ссылка_на_сайт">
           <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
             <span class="contacts__contact">
               <img src="img/pin(1).svg" class="contacts__icon" alt="">
-              <span itemprop="streetAddress">Táborská 236</span>, 
+              <span itemprop="streetAddress">Táborská 236</span>,
               <span itemprop="addressLocality">Brno</span>, <br>
-              <span itemprop="addressRegion">Juhomoravský kraj</span>, 
-              <span itemprop="addressCountry">Czechia</span>, 
+              <span itemprop="addressRegion">Juhomoravský kraj</span>,
+              <span itemprop="addressCountry">Czechia</span>,
               <span itemprop="postalCode">61500</span>
             </span>
 
@@ -212,6 +213,6 @@
     <!-- ./Container -->
     <div class="footer__copy"><span itemprop="copyrightYear">MySite.com 2020. Все права защищены</span></div>
   </footer>
-  
+
 </body>
 </html>

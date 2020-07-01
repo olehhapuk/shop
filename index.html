@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="ru">
+<!-- ----------------------------- префикс OG ------------------------------ -->
+<html lang="ru" prefix="og: http://ogp.me/ns#">
 
 <head>
   <meta charset="UTF-8">
@@ -22,6 +23,27 @@
   <!-- User stylesheet -->
   <link rel="stylesheet" href="css/style.css">
 
+<!-- ---------------------------- OG ru version ---------------------------- -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ru-obchod.cz">
+<meta property="og:title" content="Дичь убитая веслом">
+<meta property="og:description" content="Магазин русских товаров в Брно, Taborska 236">
+<meta property="og:url" content="https://ru-obchod.cz">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:image" content="https://ru-obchod.cz/img/main_ru.jpg">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="640">
+
+<!-- ------------------------------ favicons ------------------------------- -->
+<link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+<link rel="manifest" href="img/favicons/site.webmanifest">
+<link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="img/favicons/favicon.ico">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-config" content="img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
 
 </head>
 
@@ -35,7 +57,13 @@
       <!-- Container -->
       <div class="container">
 
-        <a href="index.html" class="nav__logo">Shop</a>
+        <a href="index.html" class="nav__logo">
+          <img class="logowrap" src="img/dich_white_logo_without.svg" alt="ru-obchod logo">
+          <div class="logo_text_wraper">
+            <a class="logo_text" href="index.html">Дичь убитая веслом</a>
+            <span>e-shop</span>
+          </div>
+        </a>
 
         <!-- Nav menu -->
         <ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="nav__menu">
@@ -44,13 +72,9 @@
             <a itemprop="url" href="index.html" class="nav__link">Главная</a>
           </li>
 
-          <!-- <li itemprop="name" class="nav__item">
+          <li itemprop="name" class="nav__item">
             <a itemprop="url" href="index.html#discounts" class="nav__link">Скидки</a>
-          </li> -->
-
-          <!-- <li>
-            <a itemprop="url" href="index.html#discounts" class="nav__link" title="discounts">Скидки <img class="nav__link_discount" src="img/sale.svg" alt=""></a>
-          </li> -->
+          </li>
 
           <li itemprop="name" class="nav__item">
             <a itemprop="url" href="contacts.html" class="nav__link" title="contacts">Контакты</a>
